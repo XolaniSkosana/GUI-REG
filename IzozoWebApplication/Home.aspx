@@ -324,18 +324,7 @@
 	
 	
 
-	<!-- ALL JS FILES -->
-	<script src="yamifood/js/jquery-3.2.1.min.js"></script>
-	<script src="yamifood/js/popper.min.js"></script>
-	<script src="yamifood/js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-	<script src="yamifood/js/jquery.superslides.min.js"></script>
-	<script src="yamifood/js/images-loded.min.js"></script>
-	<script src="yamifood/js/isotope.min.js"></script>
-	<script src="yamifood/js/baguetteBox.min.js"></script>
-	<script src="yamifood/js/form-validator.min.js"></script>
-    <script src="yamifood/js/contact-form-script.js"></script>
-    <script src="yamifood/js/custom.js"></script>
+	
 
 
 </asp:Content>

@@ -57,3 +57,7 @@ C:\Users\kenneth\Desktop\IzozoWebApplication\obj\Debug\IzozoWebApplication.cspro
 C:\Users\kenneth\Desktop\IzozoWebApplication\obj\Debug\IzozoWebApplication.csproj.CopyComplete
 C:\Users\kenneth\Desktop\IzozoWebApplication\obj\Debug\IzozoWebApplication.dll
 C:\Users\kenneth\Desktop\IzozoWebApplication\obj\Debug\IzozoWebApplication.pdb
+C:\Users\kenneth\Source\Repos\XolaniSkosana\GUI-REG\IzozoWebApplication\obj\Debug\IzozoWebApplication.csprojAssemblyReference.cache
+C:\Users\kenneth\Source\Repos\XolaniSkosana\GUI-REG\IzozoWebApplication\obj\Debug\IzozoWebApplication.csproj.CoreCompileInputs.cache
+C:\Users\kenneth\Source\Repos\XolaniSkosana\GUI-REG\IzozoWebApplication\obj\Debug\IzozoWebApplication.dll
+C:\Users\kenneth\Source\Repos\XolaniSkosana\GUI-REG\IzozoWebApplication\obj\Debug\IzozoWebApplication.pdb
