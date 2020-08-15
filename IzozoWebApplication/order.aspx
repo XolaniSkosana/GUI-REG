@@ -1,6 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+	
+<style>
+div.scrollmenu {
+  
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: gainsboro;
+}
+</style>
     <!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -14,53 +35,42 @@
 	<!-- End All Pages -->
 	
 	<!-- Start Gallery -->
-	<div class="gallery-box">
+<%--	<div class="gallery-box">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-12">
+				
+			</div>
+			</div>
+		</div>--%>
+	<br />
+	<br />
+	<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Choose you takeaway outlet</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>Choose your takeaway outlet</h2>
 					</div>
 				</div>
+<!-- Start Takeaway Outlet -->
+			<div class=" scrollmenu">
+				 <table style="width: 100%;">
+					<tr>
+						<td>&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
+							<img class="img-fluid" src="yamifood/images/Breakfast&Branch.PNG" alt="Gallery Images" >
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
+							<img class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
+							<img class="img-fluid" src="yamifood/images/T-Junction.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
+							<img class="img-fluid" src="yamifood/images/TnT.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
+							<img class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images">
+						</a></td>
+					</tr>
+				</table>
 			</div>
-			<div class="tz-gallery">
-				<div class="row">
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-01.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-01.jpg" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-02.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-02.jpg" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-03.jpg" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-04.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-04.jpg" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-05.jpg" alt="Gallery Images">
-						</a>
-					</div> 
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-06.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-06.jpg" alt="Gallery Images">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Gallery -->
 	
 	<!-- Start Customer Reviews -->
 	<div class="customer-reviews-box">
@@ -68,8 +78,30 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Customer Reviews</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>Choose your meal</h2>
+				<table style="width: 100%;">
+					<tr>
+						<td>&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
+							<img class="img-fluid" src="yamifood/images/Breakfast&Branch.PNG" alt="Gallery Images" >
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
+							<img class="img-fluid" src="yamifood/images/Burger.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
+							<img class="img-fluid" src="yamifood/images/Chicken.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
+							<img class="img-fluid" src="yamifood/images/Kota.PNG" alt="Gallery Images">
+						</a></td>
+						
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
+							<img class="img-fluid" src="yamifood/images/Pizza.PNG" alt="Gallery Images">
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
+							<img class="img-fluid" src="yamifood/images/Veggie.PNG.jpg" alt="Gallery Images">
+						</a></td>
+					</tr>
+					</table>
 					</div>
 				</div>
 			</div>
