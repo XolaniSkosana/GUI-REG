@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Testing.aspx.cs" Inherits="Testing" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Testing.aspx.cs" Inherits="Testing" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
  <style>
@@ -31,6 +32,17 @@ div.scrollmenu a:hover {
 					</div>
 				</div>
 			</div>
+
+			<!--search-->
+				<link rel="stylesheet" type="text/css" href="searchbar.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome.min.css" />
+
+	<div class="main">
+		<input type="text" name="box" placeholder="Search anything you want" />
+		<div class="btn">
+			<a href="#"><i class="fa fa-search"></i></a>
+		</div>
+	</div>
 
 <%--			<div class="tz-gallery">
 				<div class="row">

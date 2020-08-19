@@ -67,7 +67,7 @@
 			<div class="row special-list">
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-01.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Drinks 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -78,18 +78,20 @@
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-02.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Drinks 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $9.79</h5>
 						</div>
+						
 					</div>
+					<h3>Pizza</h3>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-03.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Drinks 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -100,7 +102,7 @@
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Lunch 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -111,7 +113,7 @@
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-05.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/salad.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Lunch 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -122,7 +124,7 @@
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-06.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/chicken.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Lunch 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -133,7 +135,7 @@
 				
 				<div class="col-lg-4 col-md-6 special-grid dinner">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-07.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/dessert.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">
 							<h4>Special Dinner 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>

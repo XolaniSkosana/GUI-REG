@@ -19,7 +19,20 @@ div.scrollmenu a {
 }
 
 div.scrollmenu a:hover {
-  background-color: gainsboro;
+  background-color: tan;
+}
+.main{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, 50%);
+}
+.input{
+	border:3px solid #32e17c;
+	height:40px;
+	width:300px;
+	border-radius:50px;
+	padding: 0px 10px;
 }
 </style>
     <!-- Start All Pages -->
@@ -53,100 +66,157 @@ div.scrollmenu a:hover {
 			<div class=" scrollmenu">
 				 <table style="width: 100%;">
 					<tr>
-						<td>&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
-							<img class="img-fluid" src="yamifood/images/Breakfast&Branch.PNG" alt="Gallery Images" >
+						<td>&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
+							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="~/yamifood/images/Papas.PNG" />
+							<h3 style="color:black; font-weight:bold;">Papas</h3>
 						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
-							<img class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images">
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
-							<img class="img-fluid" src="yamifood/images/T-Junction.PNG" alt="Gallery Images">
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
+							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
+							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="~/yamifood/images/Grillos1.PNG" />
+							<h3 style="color:black; font-weight:bold">Grillos</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
-							<img class="img-fluid" src="yamifood/images/TnT.PNG" alt="Gallery Images">
+							
+							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="~/yamifood/images/TnT.PNG" />
+							<h3 style="color:black; font-weight:bold">TnT</h3>
 						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
-							<img class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images">
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/T-junction.PNG">
+							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
+							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="~/yamifood/images/T-junction.PNG" />
+							<h3 style="color:black; font-weight:bold">T-junction</h3>
 						</a></td>
+						
 					</tr>
 				</table>
 			</div>
 	
 	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
+	<br />
+	<div class="col-lg-12">
 					<div class="heading-title text-center">
 						<h2>Choose your meal</h2>
-				<table style="width: 100%;">
-					<tr>
-						<td>&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
-							<img class="img-fluid" src="yamifood/images/Breakfast&Branch.PNG" alt="Gallery Images" >
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
-							<img class="img-fluid" src="yamifood/images/Burger.PNG" alt="Gallery Images">
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
-							<img class="img-fluid" src="yamifood/images/Chicken.PNG" alt="Gallery Images">
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
-							<img class="img-fluid" src="yamifood/images/Kota.PNG" alt="Gallery Images">
-						</a></td>
-						
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
-							<img class="img-fluid" src="yamifood/images/Pizza.PNG" alt="Gallery Images">
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
-							<img class="img-fluid" src="yamifood/images/Veggie.PNG.jpg" alt="Gallery Images">
-						</a></td>
-					</tr>
-					</table>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-1.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
-								<h6 class="text-dark m-0">Web Developer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-3.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
-								<h6 class="text-dark m-0">Web Designer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-7.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong></h5>
-								<h6 class="text-dark m-0">Seo Analyst</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
+					
+				
+	<!--Start Meal list-->
+	<div class="row special-list">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Kota</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R10-R30</h5>
+                            <asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnKota" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
 						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
+					</div>
 				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Pizza</h4>
+							<p>Currently available at ...</p>
+							<h5>Prices range from R20-R200</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button1" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Burger</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R40-R120</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button2" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image">
+                        
+						<div class="why-text">
+							<h4>Breakfast/Brunch Meal</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R50-R300</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button3" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/salad.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Salad</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R80-R200</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button4" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/chicken.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Chicken</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R30-R300</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button5" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/dessert.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Dessert</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R20-R150</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button6" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/soup.jfif" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Soup</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R10-R30</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button7" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/cookedmeal.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Home-Cooked Meal</h4>
+							<p>Currently available at...</p>
+							<h5>Prices range from R30-R100</h5>
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="Button8" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" />
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
+				
+						
 	<!-- End Customer Reviews -->
 </asp:Content>
 
