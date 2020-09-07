@@ -1,2 +1,49 @@
 
 /** ADD YOUR AWESOME CODES HERE **/
+.box
+{
+ position:absolute;
+ top: 100px;  
+ left:50%;
+ width:3000px;
+ transform: translate(-50%,-50%);  
+}
+input
+{
+ position:relative;
+ display:inline-block;
+ font-size:20px;
+ box-sizing:border-box;
+ transition:.5;    
+}
+input[type="text"]
+{
+     background:#fff;
+     width:500px;
+     height: 50px;
+     border:none;
+     outline:none;
+     padding:0 50px;
+     color: #000;
+}
+input[type="submit"]
+{
+ position:relative;
+ left:-5px;
+ width: 250px;
+ height:50px;
+ border:none;
+ outline:none;
+ cursor: pointer;
+ background:#ffc107;
+ color: #000;   
+}
+  .listing li a
+  {
+    font-size:16px;
+    color:#fff;
+      }
+  .listing li a:hover
+  {
+   color:brown;    
+  }

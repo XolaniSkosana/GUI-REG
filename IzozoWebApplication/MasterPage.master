@@ -29,6 +29,41 @@
     <link rel="stylesheet" href="yamifood/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="yamifood/css/custom.css">
+	<style>
+	 nav ul .search-icon{
+		 height:40px;
+		 width:240px;
+		 display:flex;
+		 background:#f2f2f2;
+		 border-radius:5px;
+	 }
+	 nav ul .search-icon input{
+		 height:100%;
+		 width:200px;
+		 border:none;
+		 outline:none;
+		 padding: 0 10px;
+		 color:#000;
+		 font-size:16px;
+		 border-radius:5px 0 0 5px;
+	 }
+	 nav ul .search-icon .icon{
+		 height:100%;
+		 width: 40px;
+		 line-height:40px;
+		 text-align:center;
+		 border:1px solid #cccccc;
+		 border-radius:0 5px 5px 0;
+	 }
+	 nav u 
+	 nav ul .search-icon .icon span{
+		 color:#222222;
+		 font-size:18px;
+	 }
+	</style>	
+		
+	<%--LinkButton shopping icon--%>
+		
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -36,15 +71,16 @@
     <![endif]-->
 
 </head>
-
+	
 <body>
+	<a href="https://icons8.com/icon/9671/shopping-cart"></a>
 	<form id="form1" runat="server">
 	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container"> 
-				<a class="navbar-brand" href="index.html">
-					<img src="yamifood/images/logo.png" alt="logo" height="120" width="200" />
+			<div class="container">
+				<a class="navbar-brand" href="home.html">
+					<img src="yamifood/images/logo.png" alt="" height="90" width="250"/>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
@@ -52,39 +88,55 @@
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active"><a class="nav-link" href="home.aspx">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="menu.aspx">Menu</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="specials.aspx">Specials</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Order</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="reservation.html">Reservation</a>
 								<a class="dropdown-item" href="order.aspx">Takeaway</a>
-								<a class="dropdown-item" href="order.aspx#grocery">Grocery</a>
+								<a class="dropdown-item" href="order.aspx#Grocery">Grocery</a>
+							</div>
+						</li>
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="A1" data-toggle="dropdown">Join us</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="become a supplier.aspx">Become a supplier</a>
+								<a class="dropdown-item" href="blog-details.html">Become a courier</a>
+                                <a class="dropdown-item" href="blog-details.html">Our suppliers</a>
+                                <a class="dropdown-item" href="blog-details.html">About us</a>
+                                <a class="dropdown-item" href="blog-details.html">Contact us</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My account</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">blog</a>
-								<a class="dropdown-item" href="blog-details.html">blog Single</a>
+								<a class="dropdown-item" href="blog.html">My cart</a>
+								<a class="dropdown-item" href="blog-details.html">Track my order</a>
+                                <a class="dropdown-item" href="blog-details.html">Personal information</a>
+                                <a class="dropdown-item" href="blog-details.html">My orders</a>
 							</div>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.aspx">Login/Register</a></li>
+						<li class="nav-item"><a class="nav-link" href="cart.aspx"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+						<%--<li class="search-icon">
+							<input type="search" placeholder="Search" />
+							<label class="icon">
+							<span class="fa fa-search fa-2x"> </span>
+								</label>
+						</li>--%>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<!-- End header -->
-	
-	<div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+		<div>
+		 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
+	</div>
+  </form>
+
 	
-	<!-- End Customer Reviews -->
-	<!-- Start Contact info -->
+	 <!-- Start Contact info -->
 	<div class="contact-imfo-box">
 		<div class="container">
 			<div class="row">
@@ -93,7 +145,7 @@
 					<div class="overflow-hidden">
 						<h4>Phone</h4>
 						<p class="lead">
-							+01 123-456-4590
+							+27 13-456-4590
 						</p>
 					</div>
 				</div>
@@ -111,7 +163,7 @@
 					<div class="overflow-hidden">
 						<h4>Location</h4>
 						<p class="lead">
-							800, Lorem Street, US
+							800, Lorem Street, 
 						</p>
 					</div>
 				</div>
@@ -124,22 +176,42 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
-					<h3>About Us</h3>
-					<p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.</p>
+					<h3>Information</h3>
+					<ul class="listing">
+						<li ><a href="#">Delivery</a></li>
+						<li ><a href="#">Trading hours</a></li>
+						<li ><a href="#">Contact us</a></li>
+						<li ><a href="#">Terms and conditions</a></li>
+					</ul>
+				</div>
+                <div class="col-lg-3 col-md-6">
+					<h3>Order</h3>
+					<ul class="listing">
+						<li ><a href="#">Takeaway</a></li>
+						<li ><a href="#">Grocery</a></li>
+						<li ><a href="#">Specials</a></li>
+					</ul>
+				</div>
+                <div class="col-lg-3 col-md-6">
+					<h3>Join us</h3>
+					<ul class="listing">
+						<li ><a href="#">Become a supplier</a></li>
+						<li ><a href="#">Become a courier</a></li>
+						<li ><a href="#">Our suppliers</a></li>
+						<li ><a href="#">About us</a></li>
+					</ul>
 				</div>
 				<div class="col-lg-3 col-md-6">
-					<h3>Opening hours</h3>
-					<p><span class="text-color">Monday: </span>Closed</p>
-					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+					<h3>My account</h3>
+					<ul class="listing">
+						<li ><a href="#">My cart</a></li>
+						<li ><a href="#">Track my order</a></li>
+						<li ><a href="#">Personal information</a></li>
+                        <li ><a href="#">My orders</a></li>
+                        <li ><a href="#">Product reviews</a></li>
+					</ul>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Contact information</h3>
-					<p class="lead">Ipsum Street, Lorem Tower, MO, Columbia, 508000</p>
-					<p class="lead"><a href="#">+01 2000 800 9999</a></p>
-					<p><a href="#"> info@admin.com</a></p>
-				</div>
+				
 				<div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>
 					<div class="subscribe_form">
@@ -164,8 +236,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<p class="company-name">All Rights Reserved. &copy; 2018 <a href="#">Yamifood Restaurant</a> Design By : 
-					<a href="https://html.design/">html design</a></p>
+						<p class="company-name">IZOZO is a registered trademark of the ITIE Group.</p>
 					</div>
 				</div>
 			</div>
@@ -187,7 +258,7 @@
 	<script src="yamifood/js/form-validator.min.js"></script>
     <script src="yamifood/js/contact-form-script.js"></script>
     <script src="yamifood/js/custom.js"></script>
-</form>
+
 </body>  
 
 </html>

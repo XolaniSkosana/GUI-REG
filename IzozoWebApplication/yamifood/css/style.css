@@ -23,6 +23,7 @@ body {
     font-size: 15px;
     font-family: 'Athiti', sans-serif;
     line-height: 1.80857;
+    top:0px;
 }
 
 
@@ -160,9 +161,11 @@ button:focus{
 .top-navbar{
 	position: relative;
 	z-index: 10;
+
 }
 
 .top-navbar .navbar{
+    top:0px;
 	padding: 15px 0px;
 	position: fixed;
 	width: 100%;
@@ -170,6 +173,7 @@ button:focus{
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	z-index: 100;
+   
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
@@ -207,7 +211,7 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .cover-slides{
-	height: 100vh;
+	height: 500px;
 }
 .slides-navigation a {
 	background: #cfa671;
@@ -310,9 +314,6 @@ button:focus{
 .about-section-box{
 	padding: 70px 0px;
 }
-.about-section-box .img-fluid{
-	box-shadow: -10px -10px 0px #d0a772;
-}
 .inner-column{}
 .inner-column h1{
 	font-family: 'Arbutus Slab', serif;
@@ -375,16 +376,26 @@ button:focus{
 .heading-title{
 	margin-bottom: 50px;
 }
-.heading-title h2{
-	color: #010101;
+    .heading-title h2 {
+        /*color: #010101;
 	font-size: 28px;
-	font-family: 'Arbutus Slab', serif;
-}
-.heading-title p{
-	font-size: 18px;
+	font-family: 'Arbutus Slab', serif;*/
+        color: #010101;
+        font-size: 30px;
+        font-family: 'Athiti', sans-serif;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    .heading-title p {
+        /*font-size: 18px;
 	font-weight: 200;
-	margin: 0px;
-}
+	margin: 0px;*/
+        color: #010101;
+        font-size: 30px;
+        font-family: 'Athiti', sans-serif;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
 
 .filter-button-group {
     border: 1px solid #e4e4e4;
@@ -413,7 +424,7 @@ button:focus{
 }
 
 .gallery-single{
-	margin: 30px 0px;
+	margin: 30px 40px;
 }
 
 .gallery-single {
@@ -744,7 +755,7 @@ button:focus{
     background: url(../images/all-bg.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: 0 0;
+    background-position: 0 100px;
     position: relative;
 }
 .all-page-title .container{
@@ -765,7 +776,7 @@ button:focus{
 .all-page-title h1{
 	font-size: 38px;
 	color: #ffffff;
-	font-family: 'Arbutus Slab', serif;
+	font-family: 'Athiti' sans-serif;
 	padding: 0px;
 }
 
@@ -1323,30 +1334,3 @@ blockquote {
     transition: opacity 0.2s ease-out;
 	font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

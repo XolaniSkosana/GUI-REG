@@ -2,50 +2,61 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- 
-    <!-- Start slides -->
+ <style>
+	 body{
+		 font-family:'Athiti', sans-serif;
+	 }
+ </style>
+   <!-- Start slides -->
 	<div id="slides" class="cover-slides">
 		<ul class="slides-container">
 			<li class="text-center">
-				<img src="yamifood/images/slider-01.jpg" alt="">
+				<img src="yamifood/images/15.jpg" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br>Yamifood Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+							<div class="box">
+                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                  <input type="submit" name="" value="ORDER NOW" />
+                            </div>
 						</div>
 					</div>
 				</div>
 			</li>
 			<li class="text-center">
-				<img src="yamifood/images/slider-02.jpg" alt="">
+				<img src="yamifood/images/7.jpg" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Yamifood Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+							<div class="box">
+                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                  <input type="submit" name="" value="ORDER NOW" />
+                            </div>
 						</div>
 					</div>
 				</div>
 			</li>
 			<li class="text-center">
-				<img src="yamifood/images/slider-03.jpg" alt="">
+				<img src="yamifood/images/gallery-img-01.jpg" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Yamifood Restaurant</strong></h1>
-							<p class="m-b-40">See how your users experience your website in realtime or view  <br> 
-							trends to see any changes in performance over time.</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a></p>
+							<div class="box">
+                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                  <input type="submit" name="" value="ORDER NOW" />
+                            </div>
 						</div>
 					</div>
 				</div>
 			</li>
 		</ul>
+        <div class="box">
+              <input type="text" name="" placeholder="Enter your location" />
+              <input type="submit" name="" value="ORDER NOW" />
+        </div>
 		<div class="slides-navigation">
 			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
@@ -53,50 +64,13 @@
 	</div>
 	<!-- End slides -->
 	
-	<!-- Start About -->
-	<div class="about-section-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<img src="yamifood/images/about-img.jpg" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
-					<div class="inner-column">
-						<h1>Welcome To <span>Yamifood Restaurant</span></h1>
-						<h4>Little Story</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-						<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End About -->
-	
-	<!-- Start QT -->
-	<div class="qt-box qt-background">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto text-left">
-					<p class="lead ">
-						" If you're not the one cooking, stay out of the way and compliment the chef. "
-					</p>
-					<span class="lead">Michael Strahan</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End QT -->
-	
 	<!-- Start Menu -->
 	<div class="menu-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Special Menu</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>You can buy</h2>
 					</div>
 				</div>
 			</div>
@@ -104,74 +78,23 @@
 				<div class="col-lg-12">
 					<div class="special-menu text-center">
 						<div class="button-group filter-button-group">
-							<button class="active" data-filter="*">All</button>
-							<button data-filter=".drinks">Drinks</button>
-							<button data-filter=".lunch">Lunch</button>
-							<button data-filter=".dinner">Dinner</button>
+							<button class="active" data-filter=".takeaway">Takeaway</button>
+							<button data-filter=".fruits">Fruits</button>
+							<button data-filter=".dinner">Vegetables</button>
+                            <button data-filter=".lunch">Backery</button>
+							<button data-filter=".lunch">Groceries</button>
+							<button data-filter=".drinks">Beverages</button>
+                            <button data-filter=".dinner">Egg & dairy</button>
 						</div>
 					</div>
 				</div>
 			</div>
 				
 			<div class="row special-list">
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-01.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Drinks 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $7.79</h5>
-						</div>
-					</div>
-				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
+				<div class="col-lg-4 col-md-6 special-grid takeaway">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-02.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Drinks 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $9.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-03.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Drinks 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $10.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $15.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-05.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $18.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-06.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/img-06.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Special Lunch 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -180,9 +103,42 @@
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid takeaway">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-07.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/img-07.jpg" class="img-fluid" alt="Image" />
+						<div class="why-text">
+							<h4>Special Dinner 1</h4>
+							<p>Sed id magna vitae eros sagittis euismod.</p>
+							<h5> $25.79</h5>
+						</div>
+					</div>
+				</div>
+
+                <div class="col-lg-4 col-md-6 special-grid fruits">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/img-09.jpg" class="img-fluid" alt="Image" />
+						<div class="why-text">
+							<h4>Special Dinner 3</h4>
+							<p>Sed id magna vitae eros sagittis euismod.</p>
+							<h5> $24.79</h5>
+						</div>
+					</div>
+				</div>
+
+                <div class="col-lg-4 col-md-6 special-grid fruits">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/g.jpg" class="img-fluid" alt="Image" />
+						<div class="why-text">
+							<h4>Special Dinner 3</h4>
+							<p>Sed id magna vitae eros sagittis euismod.</p>
+							<h5> $24.79</h5>
+						</div>
+					</div>
+				</div>
+
+                <div class="col-lg-4 col-md-6 special-grid fruits">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/gallery-img-02.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Special Dinner 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -191,9 +147,9 @@
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid fruits">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-08.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/gallery-img-06.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Special Dinner 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -202,9 +158,9 @@
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid fruits">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-09.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/gallery-img-04.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Special Dinner 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
@@ -212,7 +168,29 @@
 						</div>
 					</div>
 				</div>
-				
+
+                <div class="col-lg-4 col-md-6 special-grid fruits">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/gallery-img-05.jpg" class="img-fluid" alt="Image" />
+						<div class="why-text">
+							<h4>Special Dinner 3</h4>
+							<p>Sed id magna vitae eros sagittis euismod.</p>
+							<h5> $24.79</h5>
+						</div>
+					</div>          
+				</div>
+
+                <div class="col-lg-4 col-md-6 special-grid fruits">
+					<div class="gallery-single fix">
+						<img src="yamifood/images/15.jpg" class="img-fluid" alt="Image" />
+						<div class="why-text">
+							<h4>Special Dinner 3</h4>
+							<p>Sed id magna vitae eros sagittis euismod.</p>
+							<h5> $24.79</h5>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -224,111 +202,85 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Gallery</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>Places around you</h2>
 					</div>
 				</div>
 			</div>
-		<div class=" scrollmenu">
-		
-			
-			<table class="tz-gallery">
-				<tr class="row">
-					<td class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-01.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-01.jpg" alt="Gallery Images">
-						</a>
-					</td>
-					<td class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/Papas.PNG">
-							<img class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images">
-						</a>
-					</td>
-					<td class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-03.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-03.jpg" alt="Gallery Images">
-						</a>
-					</td>
-					<td class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-04.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-04.jpg" alt="Gallery Images">
-						</a>
-					</td>
-					<td class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-05.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-05.jpg" alt="Gallery Images">
-						</a>
-					</td> 
-					<td class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="yamifood/images/gallery-img-06.jpg">
-							<img class="img-fluid" src="yamifood/images/gallery-img-06.jpg" alt="Gallery Images">
-						</a>
-					</td>
-				</tr>
-			</table>
-	
+			<div class=" scrollmenu">
+				 <table style="width: 100%;">
+					<tr>
+						<td>&nbsp;<a class="lightbox" href="images/Capture3.png">
+							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Capture3.png"  Width="350px" Height="300px" />
+							<h3 style="color:black; font-weight:bold;">Cultura</h3>
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture4.png">
+							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
+							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Capture4.png" Width="350px" Height="300px" />
+							<h3 style="color:black; font-weight:bold">Ekangala</h3>
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture5.png">
+							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/Capture5.png" Width="350px" Height="300px" />
+							<h3 style="color:black; font-weight:bold">Bronkhorstspruit</h3>
+						</a></td>
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture6.png">
+							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
+							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/Capture6.png" Width="350px" Height="300px" />
+							<h3 style="color:black; font-weight:bold">Rethabiseng</h3>
+						</a></td>
+						
+					</tr>
+				</table>
+			</div>
+		</div>
 	</div>
-	
-
-
-
 	<!-- End Gallery -->
 	
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
+	<!-- Start About -->
+	<div class="about-section-box">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Customer Reviews</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="yamifood/images/Capture.png" alt="" class="img-fluid" width="500" height="500" />
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1>Specials</h1>
+						<p>You can save more on trusted brands, just because you buying online</p>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">View deals</a>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-1.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
-								<h6 class="text-dark m-0">Web Developer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-3.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
-								<h6 class="text-dark m-0">Web Designer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="yamifood/images/profile-7.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong></h5>
-								<h6 class="text-dark m-0">Seo Analyst</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
+            <br />
+            <div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="yamifood/images/Capture1.png" alt="" class="img-fluid" width="500" height="500" />
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1>Become a supplier</h1>
+						<p>You can reach more customers by selling your products in our store. </p>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Apply now</a>
+					</div>
+				</div>
+			</div>
+            <br />
+            <div class="row">
+				
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1>Become a courier</h1>
+						<p>Deliver with your van or motorbike and earn extra cash</p>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Apply now</a>
+					</div>
+				</div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="yamifood/images/Capture2.png" alt="" class="img-fluid" width="500" height="500" />
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End Customer Reviews -->
-	
+	<!-- End About -->
 	
 
 	
