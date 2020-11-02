@@ -6,6 +6,8 @@
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
 	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
+	<!-- <td style="font-size:18px"> <br /><br />Baby Soft Fresh White toilet tissue has special micro-pillow technology that gives it the perfect balance of softness and strength to leave you and your family feeling clean, fresh and confident.</td>-->
+
 	
      <div class="login-reg-panel" style="height:500px";>
 		<div class="login-info-box">
@@ -27,18 +29,18 @@
 				<h2>LOGIN</h2>
                 <asp:TextBox CssClass="textBox" ID="username" runat="server" placeholder="Username"></asp:TextBox>
 				<asp:TextBox CssClass="textBox" ID="password" runat="server" placeholder="Password" TextMode="Password" height="50"></asp:TextBox>
-                <asp:Button CssClass="button" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"/>
+                <asp:Button CssClass="button" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" BackColor="#ffcc00" Width="250"/>
 				<a href="#">Forgot password?</a>
 			</div>
 			<div class="register-show">
 				<h2>REGISTER</h2>
-                <asp:TextBox ID="name" runat="server" placeholder="Name"></asp:TextBox>
+                <asp:TextBox  ID="name" runat="server" placeholder="Name"></asp:TextBox>
 				<asp:TextBox ID="surname" runat="server" placeholder="Surname"></asp:TextBox>
 				<asp:TextBox ID="userN" runat="server" placeholder="Username"></asp:TextBox>
 				<asp:TextBox ID="email" runat="server" placeholder="Email"></asp:TextBox>
 				<asp:TextBox ID="CreatePasswd" runat="server" placeholder="Create your Password" ></asp:TextBox>
 				<asp:TextBox ID="confPassword" runat="server" placeholder="Confirm your Password"></asp:TextBox>
-				<asp:Button CssClass="button" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click"/>
+				<asp:Button CssClass="button" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#ffcc00" Width="250"/>
 			</div>
 		</div>
 	</div>
@@ -72,5 +74,9 @@ $('.login-reg-panel input[type="radio"]').on('change', function() {
     }
 });
     </script>
+
+	
+	
+
 </asp:Content>
 

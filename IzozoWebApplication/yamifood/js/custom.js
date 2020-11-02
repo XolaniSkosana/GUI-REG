@@ -1,4 +1,4 @@
-(function($) {
+ $(document).ready(function($) {
     "use strict";
 	
 	/* ..............................................
@@ -81,16 +81,15 @@
 		animation: 'fadeIn',
 		noScrollbars: true
 	});
-	
-	
-	
 	/* ..............................................
     Datepicker
     ................................................. */
-	
-	$('.datepicker').pickadate();
-	
-	$('.time').pickatime();
+
+
+		// Data Picker Initialization
+		$('.datepicker').pickadate();
+
+		$('.time').pickatime();
 	
 	
 	

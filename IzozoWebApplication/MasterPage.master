@@ -5,6 +5,8 @@
 <html>
     
 	<head>
+<script src="JQuery/jquery-3.5.1.js" type="text/javascript"></script>
+
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
@@ -12,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title>Yamifood Restaurant - Responsive HTML5 Template</title> 
+    <title>IzozoQHA</title> 
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -99,8 +101,8 @@
                         <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="A1" data-toggle="dropdown">Join us</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="become a supplier.aspx">Become a supplier</a>
-								<a class="dropdown-item" href="blog-details.html">Become a courier</a>
+								<a class="dropdown-item" href="Become a supplier.aspx">Become a supplier</a>
+								<a class="dropdown-item" href="Become a courier.aspx">Become a courier</a>
                                 <a class="dropdown-item" href="blog-details.html">Our suppliers</a>
                                 <a class="dropdown-item" href="blog-details.html">About us</a>
                                 <a class="dropdown-item" href="blog-details.html">Contact us</a>
@@ -109,7 +111,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My account</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">My cart</a>
+								<a class="dropdown-item" href="shoppingCart">My cart</a>
 								<a class="dropdown-item" href="blog-details.html">Track my order</a>
                                 <a class="dropdown-item" href="blog-details.html">Personal information</a>
                                 <a class="dropdown-item" href="blog-details.html">My orders</a>
@@ -133,7 +135,7 @@
 		 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 	</div>
-  </form>
+
 
 	
 	 <!-- Start Contact info -->
@@ -247,18 +249,32 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
 	<!-- ALL JS FILES -->
-	<script src="yamifood/js/jquery-3.2.1.min.js"></script>
-	<script src="yamifood/js/popper.min.js"></script>
-	<script src="yamifood/js/bootstrap.min.js"></script>
+	<script src="yamifood/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/popper.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- ALL PLUGINS -->
-	<script src="yamifood/js/jquery.superslides.min.js"></script>
-	<script src="yamifood/js/images-loded.min.js"></script>
-	<script src="yamifood/js/isotope.min.js"></script>
-	<script src="yamifood/js/baguetteBox.min.js"></script>
-	<script src="yamifood/js/form-validator.min.js"></script>
-    <script src="yamifood/js/contact-form-script.js"></script>
-    <script src="yamifood/js/custom.js"></script>
+	<script src="yamifood/js/jquery.superslides.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/images-loded.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/isotope.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/baguetteBox.min.js" type="text/javascript"></script>
+	<script src="yamifood/js/form-validator.min.js" type="text/javascript"></script>
+    <script src="yamifood/js/contact-form-script.js" type="text/javascript"></script>
+    <script src="yamifood/js/custom.js" type="text/javascript"></script>
+	<script type="text/javascript">
+  // Your code goes here.
+  $(document).ready(function () {
 
+  // Data Picker Initialization
+    let $input = $('.datepicker').pickadate();
+    let picker = $input.pickadate('picker');
+    let date = new Date(1999, 1, 23);
+    picker.set('select', date);
+
+  });
+
+
+    </script>
+  </form>
 </body>  
 
 </html>

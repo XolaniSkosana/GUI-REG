@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IzozoWebApplication"
+    "\\IzozoWebApplication",
+    "\\IzozoWebApplication\\yamifood",
+    "\\IzozoWebApplication\\yamifood\\css",
+    "\\IzozoWebApplication\\yamifood\\js"
   ],
-  "SelectedNode": "\\IzozoWebApplication\\home.aspx",
+  "SelectedNode": "\\IzozoWebApplication\\packages",
   "PreviewInSolutionExplorer": false
 }

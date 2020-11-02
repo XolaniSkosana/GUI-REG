@@ -384,6 +384,7 @@ button:focus{
         font-size: 30px;
         font-family: 'Athiti', sans-serif;
         font-weight: bolder;
+        text-align:center;
         text-transform: uppercase;
     }
     .heading-title p {
