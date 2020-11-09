@@ -5,7 +5,111 @@
 	<link rel="stylesheet" href="myStyle.css" type="text/css" />
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
 	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3school.com/lib/w3.css" />
+	<style>
 
+.login-button {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+    
+}
+.login-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+}
+
+.login-show a {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"] {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.reg-button{
+     max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+}
+.register-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+}
+  .login-reg-panel #label-login
+    {
+        border: 1px solid #9E9E9E;
+        padding: 0 5px;
+        width: 150px;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+   .login-reg-panel #label-register
+   {
+        border: 1px solid #9E9E9E;
+        padding: 0 5px;
+        width: 150px;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        
+   }
+	 @media screen and (max-width:380px){
+    .login-reg-panel {
+        width: 300px;
+        font-size:12px;
+    }
+
+    .white-panel {
+        display:none;
+    }
+	.loginRegTextBoxes{
+
+	}
+    .label-register{
+        font-size:12px;
+    }
+}
+	</style>
 	<!-- <td style="font-size:18px"> <br /><br />Baby Soft Fresh White toilet tissue has special micro-pillow technology that gives it the perfect balance of softness and strength to leave you and your family feeling clean, fresh and confident.</td>-->
 
 	
@@ -27,20 +131,21 @@
 		<div class="white-panel" style="height:650px;";>
 			<div class="login-show">
 				<h2>LOGIN</h2>
-                <asp:TextBox CssClass="textBox" ID="username" runat="server" placeholder="Username"></asp:TextBox>
-				<asp:TextBox CssClass="textBox" ID="password" runat="server" placeholder="Password" TextMode="Password" height="50"></asp:TextBox>
-                <asp:Button CssClass="button" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" BackColor="#ffcc00" Width="250"/>
+                <asp:TextBox ID="username" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px; "></asp:TextBox>
+				<asp:TextBox ID="password" runat="server" placeholder="Password" TextMode="Password" height="50" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+                <asp:Button CssClass="login-button" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  Width="250"  height="50"/>
 				<a href="#">Forgot password?</a>
 			</div>
 			<div class="register-show">
 				<h2>REGISTER</h2>
-                <asp:TextBox  ID="name" runat="server" placeholder="Name"></asp:TextBox>
-				<asp:TextBox ID="surname" runat="server" placeholder="Surname"></asp:TextBox>
-				<asp:TextBox ID="userN" runat="server" placeholder="Username"></asp:TextBox>
-				<asp:TextBox ID="email" runat="server" placeholder="Email"></asp:TextBox>
-				<asp:TextBox ID="CreatePasswd" runat="server" placeholder="Create your Password" ></asp:TextBox>
-				<asp:TextBox ID="confPassword" runat="server" placeholder="Confirm your Password"></asp:TextBox>
-				<asp:Button CssClass="button" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" BackColor="#ffcc00" Width="250"/>
+                <asp:TextBox  ID="name" runat="server" placeholder="Name" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="surname" runat="server" placeholder="Surname" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="userN" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="email" runat="server" placeholder="Email" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="cellNo" runat="server" placeholder="Cellphone Number" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="CreatePasswd" runat="server" placeholder="Create your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;" ></asp:TextBox>
+				<asp:TextBox ID="confPassword" runat="server" placeholder="Confirm your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:Button CssClass="reg-button" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" Width="250" height="50"/>
 			</div>
 		</div>
 	</div>
