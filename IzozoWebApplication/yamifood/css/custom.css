@@ -345,3 +345,19 @@ ul li a {
         flex-direction: column-reverse;
     }
 } 
+@media screen and (max-width:2999px){
+    body {
+        width: 100%;
+        margin:0;
+        padding: 0 0 2em;
+    }
+    .box{
+       width:100%;
+    }
+    input{
+        width:70%;
+    }
+    .btn4{
+        width:30%;
+    }
+}

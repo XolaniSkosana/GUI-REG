@@ -24,6 +24,7 @@ body {
     font-family: 'Athiti', sans-serif;
     line-height: 1.80857;
     top:0px;
+	min-width: 640px;
 }
 
 
