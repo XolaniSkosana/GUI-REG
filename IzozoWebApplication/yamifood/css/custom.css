@@ -361,3 +361,34 @@ ul li a {
         width:30%;
     }
 }
+
+@media screen and (max-width: 800px){
+    .service{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service {
+        width: 100%;
+    }
+}
+/* about us*/
+.services {
+    background: #f1f1f1;
+    text-align: center;
+}
+.services h1 {
+        display: inline-block;
+        text-transform: uppercase;
+        border-bottom: 4px solid #3498db;
+        font-size: 20px;
+        padding-bottom: 10px;
+        margin-top: 40px;
+}
+.service:hover {
+    background: #ddd;
+}
+.service i {
+    color: #3498db;
+}

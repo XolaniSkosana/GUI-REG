@@ -105,7 +105,7 @@
 								<a class="dropdown-item" href="Become a supplier.aspx">Become a supplier</a>
 								<a class="dropdown-item" href="Become a courier.aspx">Become a courier</a>
                                 <a class="dropdown-item" href="blog-details.html">Our suppliers</a>
-                                <a class="dropdown-item" href="blog-details.html">About us</a>
+                                <a class="dropdown-item" href="about us.aspx">About us</a>
                                 <a class="dropdown-item" href="blog-details.html">Contact us</a>
 							</div>
 						</li>
