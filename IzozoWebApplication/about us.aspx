@@ -33,6 +33,7 @@
 				<h2 style="font-size: 18px; text-transform: uppercase; font-weight: 500; margin: 0;">Food</h2>
 				<p style="color: gray; font-size: 15px; font-weight: 500;">We care and provide for all things edible with special care to food quality and affordability.</p>
 			</div>
+
 			<div class="service" style="vertical-align: top; display: inline-block; width: calc(100% / 4); margin: 0 -2px; padding: 20px; box-sizing: border-box; cursor: pointer; transition: 0.4s;">
 				<i class="fa fa-medkit" style="color: burlywood; font-size: 34px; margin-bottom: 30px"></i>
 				<h2 style="font-size: 18px; text-transform: uppercase; font-weight: 500; margin: 0;">Pharmaceuticals</h2>
