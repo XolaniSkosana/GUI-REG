@@ -165,4 +165,27 @@ public partial class product : System.Web.UI.Page
 
         milkQuantity.Text = quantity.ToString();
     }
+
+    protected void btnQuantity1_Click(object sender, EventArgs e)
+    {
+        int quantity = int.Parse(lblQuantity.Text);
+
+        if (quantity > 0)
+        {
+            quantity = quantity - 1;
+
+        }
+        else
+        {
+            quantity = 0;
+        }
+        lblQuantity.Text = quantity.ToString();
+    }
+
+    protected void btnQuantity2_Click(object sender, EventArgs e)
+    {
+        int quantity = int.Parse(lblQuantity.Text);
+        quantity++;
+        lblQuantity.Text = quantity.ToString();
+    }
 }
