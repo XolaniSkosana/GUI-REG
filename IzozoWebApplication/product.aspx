@@ -6,21 +6,12 @@
     <link rel="stylesheet" href="yamifood/css/custom.css" />
 
 
-<!----------------------------------------------------Heading------------------------------------------------------------------------------>
-<div class="all-page-title page-breadcrumb" style="font-family:'Athiti', sans-serif">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12" style="position:absolute; font-family: 'athiti', sans-serif; ">
-					
-					<h1 style="font-weight:900"><b>NEED MORE?</b></h1>
-					<br />
-					<asp:Button runat="server" ID="btnShopMore" Text="Shop More"  Font-Bold="true" font-size="20" ForeColor="White" BackColor="#ffcc00" Width="300" />
-				</div>
-			</div>
-		</div>
-    </div>
+
 <!-----------------------------------------------------Style------------------------------------------------------------------------------>
 <style>
+   body{
+       font-family:'Athiti', sans-serif;
+   }
     /*Style for Tabs*/
 .pc-tab > input,
 .pc-tab section > div {
@@ -361,7 +352,7 @@ div.scrollmenu a:hover {
 }
 .btn-outline-new-white:hover {
     color:white;
-    background-color:black;
+    background-color:rgba(0,0,0,0.8);
       
     
     border:none;
@@ -370,6 +361,20 @@ div.scrollmenu a:hover {
 	background-color:tan;
 }
 </style>
+
+<!----------------------------------------------------Heading------------------------------------------------------------------------------>
+<div class="all-page-title page-breadcrumb" style="font-family:'Athiti', sans-serif">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12" style="position:absolute; font-family: 'athiti', sans-serif; ">
+					
+					<h1 style="font-weight:900"><b>NEED MORE?</b></h1>
+					<br />
+					<asp:Button runat="server" ID="btnShopMore" CssClass="btnProduct btn-lg btn-circle btn-outline-new-white" Width="330"  Font-Size="larger" Text="Shop More"   />
+				</div>
+			</div>
+		</div>
+    </div>
 <!-----------------------------------------------------Apples Panel (Done)------------------------------------------------------------------------------>
 <div>
 <asp:Panel ID="ApplesPanel" Visible="false" runat="server" >
@@ -4376,7 +4381,7 @@ div.scrollmenu a:hover {
             </div>
 
             <div class="tab2">
-                <asp:Button ID="cookingOilReviewButton" CssClass="tab3" runat="server" Text="Review this item" Font-Bold="true" Font-Size="X-Large" ForeColor="Black" BackColor="#ffcc00" Width="330" BorderStyle="None" Height="50" OnClick="cookingOilReviewButton_Click"  />
+                <asp:Button ID="cookingOilReviewButton" CssClass="btnProduct btn-lg btn-circle btn-outline-new-white" runat="server" Text="Review this item"  Font-Size="X-Large" Width="330" OnClick="cookingOilReviewButton_Click"  />
                 <br /><br />
                 <asp:Panel ID="cookingOilReviewPanel1" runat="server">
                 <asp:Label ID="Label82" runat="server" Text="Deelicious" Font-Bold="true" Font-Size="Medium" ForeColor="Black"></asp:Label><br />
@@ -4395,11 +4400,11 @@ div.scrollmenu a:hover {
                 <section >
                    <asp:Label ID="Label83" runat="server" Text="REVIEW TITLE" Font-Bold="true"></asp:Label>
                  <br />
-                <asp:TextBox ID="TextBox49" runat="server"  BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" ></asp:TextBox>
+                <asp:TextBox ID="TextBox49" runat="server"  BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;" ></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label84" runat="server" Text="REVIEW DESCRIPTION" Font-Bold="true"></asp:Label><br />
-                <asp:TextBox ID="TextBox50" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" height="100" ></asp:TextBox>
+                <asp:TextBox ID="TextBox50" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" height="100" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;" ></asp:TextBox>
                 <br />
                 <br />
                    <asp:Label ID="Label85" runat="server" Text="YOUR RATING" Font-Bold="true"></asp:Label><br />
@@ -4411,12 +4416,12 @@ div.scrollmenu a:hover {
                 <br />
                 <br />
                 <asp:Label ID="Label86" runat="server" Text="YOUR NAME(OPTIONAL)" Font-Bold="true"></asp:Label><br />
-                <asp:TextBox ID="TextBox51" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40"></asp:TextBox>
+                <asp:TextBox ID="TextBox51" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
                 <br />
                 <br />
                 
 
-                <asp:Button ID="Button143" runat="server" Text="Submit review" Font-Bold="true" Font-Size="X-Large" ForeColor="Black" BackColor="#ffcc00" Height="50" Width="330" BorderStyle="None" />
+                <asp:Button ID="Button143" CssClass="btnProduct btn-lg btn-circle btn-outline-new-white" runat="server" Text="Submit review" Font-Bold="true" Font-Size="X-Large" Width="330" />
                     </section>
                     </asp:Panel>
             </div>
@@ -4661,11 +4666,11 @@ div.scrollmenu a:hover {
                 <section >
                    <asp:Label ID="Label3" runat="server" Text="REVIEW TITLE" Font-Bold="true"></asp:Label>
                  <br />
-                <asp:TextBox ID="TextBox1" runat="server"  BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server"  BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label4" runat="server" Text="REVIEW DESCRIPTION" Font-Bold="true"></asp:Label><br />
-                <asp:TextBox ID="TextBox2" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" height="100"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" height="100" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
                 <br />
                 <br />
                    <asp:Label ID="Label5" runat="server" Text="YOUR RATING" Font-Bold="true"></asp:Label><br />
@@ -4677,7 +4682,7 @@ div.scrollmenu a:hover {
                 <br />
                 <br />
                 <asp:Label ID="Label6" runat="server" Text="YOUR NAME(OPTIONAL)" Font-Bold="true"></asp:Label><br />
-                <asp:TextBox ID="TextBox3" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" ></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
                 <br />
                 <br />
                 
