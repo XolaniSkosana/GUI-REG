@@ -93,21 +93,19 @@
         cursor: pointer;
         
    }
-	 @media screen and (max-width:380px){
-    .login-reg-panel {
-        width: 300px;
-        font-size:12px;
-    }
+   .white-panel {
+   /* background-color: rgba(255,255, 255, 1);*/
+    background-color: rgb(210,180,140);
+    height: 700px;
+    position: absolute;
+    top: -50px;
+    width: 50%;
+    right: calc(50% - 50px);
+    transition: .3s ease-in-out;
+    z-index: 0;
+}
 
-    .white-panel {
-        display:none;
-    }
-	.loginRegTextBoxes{
 
-	}
-    .label-register{
-        font-size:12px;
-    }
 }
 	</style>
 	<!-- <td style="font-size:18px"> <br /><br />Baby Soft Fresh White toilet tissue has special micro-pillow technology that gives it the perfect balance of softness and strength to leave you and your family feeling clean, fresh and confident.</td>-->
@@ -128,7 +126,7 @@
 			<input type="radio" name="active-log-panel" id="log-login-show"/>
 		</div>
 							
-		<div class="white-panel" style="height:650px;";>
+		<div class="white-panel" style="height:700px;";>
 			<div class="login-show">
 				<h2>LOGIN</h2>
                 <asp:TextBox ID="username" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px; "></asp:TextBox>
