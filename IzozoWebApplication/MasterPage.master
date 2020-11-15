@@ -106,7 +106,7 @@
 								<a class="dropdown-item" href="Become a courier.aspx">Become a courier</a>
                                 <a class="dropdown-item" href="blog-details.html">Our suppliers</a>
                                 <a class="dropdown-item" href="about us.aspx">About us</a>
-                                <a class="dropdown-item" href="blog-details.html">Contact us</a>
+                                <a class="dropdown-item" href="contact us.aspx">Contact us</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
@@ -182,8 +182,13 @@
 					<h3>Information</h3>
 					<ul class="listing">
 						<li ><a href="#">Delivery</a></li>
+<<<<<<< HEAD
 						<li ><a href="tradingHours.aspx">Trading hours</a></li>
 						<li ><a href="#">Contact us</a></li>
+=======
+						<li ><a href="#">Trading hours</a></li>
+						<li ><a href="contact us.aspx">Contact us</a></li>
+>>>>>>> 8d570a5aa383762dad7da3c074192251b80ac9b0
 						<li ><a href="#">Terms and conditions</a></li>
 					</ul>
 				</div>
@@ -198,10 +203,10 @@
                 <div class="col-lg-3 col-md-6">
 					<h3>Join us</h3>
 					<ul class="listing">
-						<li ><a href="#">Become a supplier</a></li>
-						<li ><a href="#">Become a courier</a></li>
+						<li ><a href="become a supplier.aspx">Become a supplier</a></li>
+						<li ><a href="become a courier.aspx">Become a courier</a></li>
 						<li ><a href="#">Our suppliers</a></li>
-						<li ><a href="#">About us</a></li>
+						<li ><a href="about us.aspx">About us</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-6">
