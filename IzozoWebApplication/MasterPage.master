@@ -182,7 +182,7 @@
 					<h3>Information</h3>
 					<ul class="listing">
 						<li ><a href="#">Delivery</a></li>
-						<li ><a href="#">Trading hours</a></li>
+						<li ><a href="tradingHours.aspx">Trading hours</a></li>
 						<li ><a href="#">Contact us</a></li>
 						<li ><a href="#">Terms and conditions</a></li>
 					</ul>
