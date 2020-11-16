@@ -13,7 +13,7 @@
 	<div class="about-container" style="background: #f1f1f1; text-align: center;">
 		<h1 style="display: inline-block; text-transform: uppercase; border-bottom: 4px solid #3498db; font-size: 20px; padding-bottom: 10px; margin-top: 40px;"> Whom we are to you;</h1>
 		<div class="sec" style="max-width: 1000px; margin: auto; overflow: hidden; padding: 20px;">
-			<h2 style="font-size: 18px; text-transform: uppercase; font-weight: 500; margin: 0;">Acess to market</h2>
+			<h2 style="font-size: 18px; text-transform: uppercase; font-weight: 500; margin: 0;">Access to market</h2>
 			<p style="color: gray; font-size: 15px; font-weight: 500;">Getting people to trust your product or service requires investments in assurance and marketing. Hence, established enterprises market themselves using digital interfaces that are most preferred by customers due to the perceived brand reputation and customer loyalty which make market penetration difficult for SMMEs. Our online store showcases local products and services enabling remote Business-to-customer (B2C) and Business-to-Business (B2B) trading across multiple industries.</p>
 		</div>
 		<div class="sec" style="max-width: 1000px; margin: auto; overflow: hidden; padding: 20px;">
