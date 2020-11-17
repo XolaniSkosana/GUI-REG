@@ -15,9 +15,9 @@
  
      <!-- Site Metas -->
     <title>Izozo</title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.icon" type="image/x-icon">
@@ -25,14 +25,13 @@
     <link href="fonts/font/flaticon.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
+    <link href="yamifood/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css">    
+    <link href="yamifood/css/style.css" rel="stylesheet" type="text/css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link href="yamifood/css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-
+    <link href="yamifood/css/custom.css" rel="stylesheet" type="text/css" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -47,7 +46,7 @@
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
        <a class="navbar-brand" href="home.aspx">
-					<img src="images/logo.png" alt="" height="90px" width="250px" />
+					<img src="yamifood/images/logo.png" alt="" height="90px" width="250px" />
 				</a>
 			<div class="step_progressbar">
 				<ul>
