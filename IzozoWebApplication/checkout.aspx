@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title>Izozo</title>  
+    <title>IzozoQHA</title>  
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -22,7 +22,8 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.icon" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link href="fonts/font/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="font/flaticon.css" rel="stylesheet" type="text/css" />
+
 
     <!-- Bootstrap CSS -->
     <link href="yamifood/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -61,13 +62,13 @@
     </div>
 	<!-- End header -->
     <br /><br /><br /><br />
-    <br />
+    <br /><br />
 	
     <div id="content">
        <div style="height: 1000px; margin-right:5px; float:left;">
 			<asp:Label ID="Label1" runat="server" style="font-size: x-large; font-weight: 700; color: Black;" Text="DELIVERY METHOD"></asp:Label><br />
            <asp:Label ID="Label2" runat="server" 
-                style="font-size: 20px;  color: Black; border-radius: 5px; border: 1px solid #777; padding: 8px;  border-bottom: none;" 
+                style="font-size: 20px;  color: Black; border-radius: 5px; border: 1px solid #777; padding: 8px;  border-bottom: none; text-align:left;" 
                 Width="850px"><asp:RadioButton ID="RadioButton1" runat="server" />&nbsp;<i class="flaticon-delivery-truck" style="font-weight: bold"></i>&nbsp;Delivery</asp:Label>&nbsp;<br />
            <asp:Label ID="Label3" runat="server" 
                 style="font-size: 20px; color: Black; border-radius: 5px; border: 1px solid #777;  padding: 8px;" 
@@ -114,8 +115,7 @@
 
             <asp:Label ID="Label4" runat="server" Text="" style="font-weight: bold; color: Black; background-color: white; padding: 5px"><i class="fa fa-lock fa-fw"></i>Secure Checkout</asp:Label><br /><br />
 
-            <asp:LinkButton ID="LinkButton1" CssClass="btn1" runat="server">LinkButton</asp:LinkButton>
-            <asp:Button ID="Button1" CssClass="btn1" runat="server" Text="Continue" />
+            <asp:LinkButton ID="LinkButton1" CssClass="btn1" runat="server" style="text-align:center;" >Continue</asp:LinkButton>
         </div>
   </div>
 
