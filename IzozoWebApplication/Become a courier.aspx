@@ -13,46 +13,46 @@
 	</div>
 <br />
 <br />
- <div class="container2">
+ 
    <h1>WHY BECOME A COURIER</h1>
    <div class="holdingcontainer">
       <div class="internalcontainnerL">
-        <img src="yamifood/images/Capture09.png" width="400px" height="250px"  alt="" />
+        <img src="yamifood/images/Capture09.png" width="350px" height="200px"  alt="" />
         <h2>Own your time </h2>
          <p>Choose to work full-time or part-time. </p>
       </div>
       <div class="internalcontainnerR">
-        <img src="yamifood/images/Capture10.png"width="400px" height="250px"  alt="" />
+        <img src="yamifood/images/Capture10.png" width="350px" height="200px"  alt="" />
         <h2>Earn from tips</h2>
          <p>Make extra cash from tips when you give good service. </p>
       </div>
       <div class="internalcontainnerML">
-         <img src="yamifood/images/Capture11.png" width="400px" height="250px" alt="" />
+         <img src="yamifood/images/Capture11.png" width="350px" height="200px" alt="" />
          <h2>Day or night</h2>
          <p>YChoose your own shift and work after work if you want. </p>
       </div>
    </div>
-</div>
-<div class="container2">
+
+
    <h1>WHAT YOU NEED</h1>
    <div class="holdingcontainer">
       <div class="internalcontainnerL">
-        <img src="yamifood/images/Capture12.png" width="300px" height="300px"  alt="" />
+        <img src="yamifood/images/Capture12.png" width="250px" height="250px"  alt="" />
         <h2>Motorbike </h2>
          <p>You can use your bike to deliver our takeaway.</p>
       </div>
       <div class="internalcontainnerR">
-        <img src="yamifood/images/Capture08.png"width="300px" height="300px"  alt="" />
+        <img src="yamifood/images/Capture08.png" width="250px" height="250px"  alt="" />
         <h2>Van</h2>
          <p>You can use your van to deliver our grocery. </p>
       </div>
       <div class="internalcontainnerML">
-         <img src="yamifood/images/Capture13.png" width="300px" height="300px" alt="" />
+         <img src="yamifood/images/Capture13.png" width="250px" height="250px" alt="" />
          <h2>Smartphone</h2>
          <p>Use your phone with internet connection to locate your deliveries.</p>
       </div>
       <div class="internalcontainnerMR">
-         <img src="yamifood/images/Capture07.png" width="300px" height="300px" alt="" />
+         <img src="yamifood/images/Capture07.png" width="250px" height="250px" alt="" />
          <h2>License</h2>
         <p> Aclear criminal record and a drivers license.</p>
       </div>
@@ -62,7 +62,7 @@
        <center>
        <asp:Button ID="Button3" CssClass="btn1" runat="server" Text="Sign up" />
        </center>
-</div>
+
  <script  type="text/javascript">
     /* function basicPopup() {
          //var popupWindow = window.open("D.aspx", 'popUpWindow', 'height=300,width=600,left=100,top=30,resizable=No,scrollbars=No,toolbar=no,menubar=no,location=no,directories=no, status=No');

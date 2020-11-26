@@ -23,7 +23,7 @@
      transform: translateY(-20px);
  }
  
- @media (max-width:991px)
+ @media screen and (max-width:991px)
  {
    .contact
    {
