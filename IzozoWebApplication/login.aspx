@@ -10,7 +10,7 @@
 	<style>
 
 .login-button {
-    max-width: 150px;
+    max-width: 200px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -23,7 +23,7 @@
     
 }
 .login-show input[type="button"] {
-    max-width: 150px;
+    max-width: 200px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -49,7 +49,7 @@
     outline: none;
 }
 .reg-button{
-     max-width: 150px;
+     max-width: 200px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 .register-show input[type="button"] {
-    max-width: 150px;
+    max-width: 200px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -76,7 +76,7 @@
     {
         border: 1px solid #9E9E9E;
         padding: 0 5px;
-        width: 150px;
+        width: 200px;
         display: block;
         text-align: center;
         border-radius: 3px;
@@ -86,7 +86,7 @@
    {
         border: 1px solid #9E9E9E;
         padding: 0 5px;
-        width: 150px;
+        width: 200px;
         display: block;
         text-align: center;
         border-radius: 3px;
