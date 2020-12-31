@@ -10,7 +10,7 @@
 	<style>
 
 .login-button {
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -23,7 +23,7 @@
     
 }
 .login-show input[type="button"] {
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -49,7 +49,7 @@
     outline: none;
 }
 .reg-button{
-     max-width: 200px;
+     max-width: 150px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 .register-show input[type="button"] {
-    max-width: 200px;
+    max-width: 150px;
     width: 100%;
     background: #444444;
     color: #f9f9f9;
@@ -76,7 +76,7 @@
     {
         border: 1px solid #9E9E9E;
         padding: 0 5px;
-        width: 200px;
+        width: 150px;
         display: block;
         text-align: center;
         border-radius: 3px;
@@ -86,7 +86,7 @@
    {
         border: 1px solid #9E9E9E;
         padding: 0 5px;
-        width: 200px;
+        width: 150px;
         display: block;
         text-align: center;
         border-radius: 3px;
@@ -150,34 +150,36 @@
     
 
 	<script>
-    $(document).ready(function(){
-    $('.login-info-box').fadeOut();
-    $('.login-show').addClass('show-log-panel');
-});
+	    $(document).ready(function () {
+	        $('.login-info-box').fadeOut();
+	        $('.login-show').addClass('show-log-panel');
+	    });
 
 
-$('.login-reg-panel input[type="radio"]').on('change', function() {
-    if($('#log-login-show').is(':checked')) {
-        $('.register-info-box').fadeOut(); 
-        $('.login-info-box').fadeIn();
-        
-        $('.white-panel').addClass('right-log');
-        $('.register-show').addClass('show-log-panel');
-        $('.login-show').removeClass('show-log-panel');
-        
-    }
-    else if($('#log-reg-show').is(':checked')) {
-        $('.register-info-box').fadeIn();
-        $('.login-info-box').fadeOut();
-        
-        $('.white-panel').removeClass('right-log');
-        
-        $('.login-show').addClass('show-log-panel');
-        $('.register-show').removeClass('show-log-panel');
-    }
-});
+	    $('.login-reg-panel input[type="radio"]').on('change', function () {
+	        if ($('#log-login-show').is(':checked')) {
+	            $('.register-info-box').fadeOut();
+	            $('.login-info-box').fadeIn();
+
+	            $('.white-panel').addClass('right-log');
+	            $('.register-show').addClass('show-log-panel');
+	            $('.login-show').removeClass('show-log-panel');
+
+	        }
+	        else if ($('#log-reg-show').is(':checked')) {
+	            $('.register-info-box').fadeIn();
+	            $('.login-info-box').fadeOut();
+
+	            $('.white-panel').removeClass('right-log');
+
+	            $('.login-show').addClass('show-log-panel');
+	            $('.register-show').removeClass('show-log-panel');
+	        }
+	    });
     </script>
 
+	
+	
 	
 	
 
