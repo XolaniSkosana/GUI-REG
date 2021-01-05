@@ -118,4 +118,29 @@ public partial class order : System.Web.UI.Page
     {
         
     }
+
+    protected void btnCake_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnBread_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnYoghurt_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnPizza_Click(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void btnBananas_Click(object sender, EventArgs e)
+    {
+        
+    }
 }

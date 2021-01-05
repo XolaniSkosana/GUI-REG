@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="product.aspx.cs" Inherits="product" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product.aspx.cs" Inherits="product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -633,7 +633,7 @@ div.scrollmenu a:hover {
 </div>
 <!-----------------------------------------------------Bananas Panel (Done)------------------------------------------------------------------------------>
 <div>
-<asp:Panel ID="BananasPanel" Visible="false" runat="server" >
+<asp:Panel ID="BananasPanel" Visible="false" runat="server" OnLoad="BananasPanel_Load" >
 <!--Start slideshow-->
     <div class="SScontainer">
 

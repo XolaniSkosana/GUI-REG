@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
  <link rel="stylesheet" type="text/css" href="loginStyle.css" />
@@ -129,25 +129,28 @@
 		<div class="white-panel" style="height:700px;";>
 			<div class="login-show">
 				<h2>LOGIN</h2>
-                <asp:TextBox ID="username" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px; "></asp:TextBox>
-				<asp:TextBox ID="password" runat="server" placeholder="Password" TextMode="Password" height="50" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+                <asp:TextBox ID="txtLoginUsername" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px; "></asp:TextBox>
+				<asp:TextBox ID="txtLoginPassword" runat="server" placeholder="Password" TextMode="Password" height="50" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
                 <asp:Button CssClass="login-button" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  Width="250"  height="50"/>
+                <asp:Label ID="lblLogin" runat="server" Text="LoginLabel" ></asp:Label>
 				<a href="#">Forgot password?</a>
 			</div>
 			<div class="register-show">
 				<h2>REGISTER</h2>
-                <asp:TextBox  ID="name" runat="server" placeholder="Name" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:TextBox ID="surname" runat="server" placeholder="Surname" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:TextBox ID="userN" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:TextBox ID="email" runat="server" placeholder="Email" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:TextBox ID="cellNo" runat="server" placeholder="Cellphone Number" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:TextBox ID="CreatePasswd" runat="server" placeholder="Create your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;" ></asp:TextBox>
-				<asp:TextBox ID="confPassword" runat="server" placeholder="Confirm your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
-				<asp:Button CssClass="reg-button" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" Width="250" height="50"/>
+                <asp:TextBox  ID="txtRegName" runat="server" placeholder="Name" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="txtRegSurname" runat="server" placeholder="Surname" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="txtRegUsername" runat="server" placeholder="Username" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="txtRegEmail" runat="server" placeholder="Email" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="txtRegPhoneNo" runat="server" placeholder="Cellphone Number" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:TextBox ID="txtRegPassword" runat="server" placeholder="Create your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;" ></asp:TextBox>
+				<asp:TextBox ID="txtRegConfPassword" runat="server" placeholder="Confirm your Password" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>
+				<asp:Button CssClass="reg-button" ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" Width="250" height="50"/>
+                <asp:Label ID="lblReg" runat="server" Text="regLabel" ></asp:Label>
 			</div>
 		</div>
 	</div>
-    
+    <div>
+        <asp:Label ID="testDB" runat="server" Text="Label"></asp:Label></div>
 
 	<script>
     $(document).ready(function(){

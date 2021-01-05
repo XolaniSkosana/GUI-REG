@@ -188,4 +188,9 @@ public partial class product : System.Web.UI.Page
         quantity++;
         lblQuantity.Text = quantity.ToString();
     }
+
+    protected void BananasPanel_Load(object sender, EventArgs e)
+    {
+       
+    }
 }

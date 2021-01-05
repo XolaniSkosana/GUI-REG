@@ -35,27 +35,27 @@
 	</style>
 
 	<div class="regContainer">
-        <asp:TextBox ID="TextBox1" CssClass="regTextBox" placeholder="Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
+        <asp:TextBox ID="txtRegName" CssClass="regTextBox" placeholder="Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
         <br />
         <br />
 
 
-        <asp:TextBox CssClass="regTextBox" ID="TextBox2" runat="server"  placeholder="Surname" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox CssClass="regTextBox" ID="txtRegSurname" runat="server"  placeholder="Surname" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
         <br />
-		<asp:TextBox ID="TextBox6" CssClass="regTextBox" runat="server"  placeholder="Email Address" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="txtRegEmail" CssClass="regTextBox" runat="server"  placeholder="Email Address" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		<br />
         <br />
-		<asp:TextBox ID="TextBox7" CssClass="regTextBox" runat="server"  placeholder="Cellphone Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="txtRegPhoneNo" CssClass="regTextBox" runat="server"  placeholder="Cellphone Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		 <br />
         <br />
-        <asp:TextBox ID="TextBox3" CssClass="regTextBox" runat="server"  placeholder="Username" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox ID="txtRegUsername" CssClass="regTextBox" runat="server"  placeholder="Username" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		 <br />
         <br />
-		<asp:TextBox ID="TextBox4" CssClass="regTextBox" runat="server" placeholder="Password" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
+		<asp:TextBox ID="txtRegPassword" CssClass="regTextBox" runat="server" placeholder="Password" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
         <br />
         <br />
-        <asp:TextBox ID="TextBox5" CssClass="regTextBox" placeholder="Confirm Password" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox ID="txtRegConfPassword" CssClass="regTextBox" placeholder="Confirm Password" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
         <br />
 		
