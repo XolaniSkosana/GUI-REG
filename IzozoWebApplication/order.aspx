@@ -342,7 +342,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Bananas</h4>
 							<h5> R27.80</h5>
-							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" OnClick="/>
+							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
 							
 						</div>
 					</div>
