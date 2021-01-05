@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
  <link rel="stylesheet" type="text/css" href="loginStyle.css" />
@@ -150,34 +150,36 @@
     
 
 	<script>
-    $(document).ready(function(){
-    $('.login-info-box').fadeOut();
-    $('.login-show').addClass('show-log-panel');
-});
+	    $(document).ready(function () {
+	        $('.login-info-box').fadeOut();
+	        $('.login-show').addClass('show-log-panel');
+	    });
 
 
-$('.login-reg-panel input[type="radio"]').on('change', function() {
-    if($('#log-login-show').is(':checked')) {
-        $('.register-info-box').fadeOut(); 
-        $('.login-info-box').fadeIn();
-        
-        $('.white-panel').addClass('right-log');
-        $('.register-show').addClass('show-log-panel');
-        $('.login-show').removeClass('show-log-panel');
-        
-    }
-    else if($('#log-reg-show').is(':checked')) {
-        $('.register-info-box').fadeIn();
-        $('.login-info-box').fadeOut();
-        
-        $('.white-panel').removeClass('right-log');
-        
-        $('.login-show').addClass('show-log-panel');
-        $('.register-show').removeClass('show-log-panel');
-    }
-});
+	    $('.login-reg-panel input[type="radio"]').on('change', function () {
+	        if ($('#log-login-show').is(':checked')) {
+	            $('.register-info-box').fadeOut();
+	            $('.login-info-box').fadeIn();
+
+	            $('.white-panel').addClass('right-log');
+	            $('.register-show').addClass('show-log-panel');
+	            $('.login-show').removeClass('show-log-panel');
+
+	        }
+	        else if ($('#log-reg-show').is(':checked')) {
+	            $('.register-info-box').fadeIn();
+	            $('.login-info-box').fadeOut();
+
+	            $('.white-panel').removeClass('right-log');
+
+	            $('.login-show').addClass('show-log-panel');
+	            $('.register-show').removeClass('show-log-panel');
+	        }
+	    });
     </script>
 
+	
+	
 	
 	
 

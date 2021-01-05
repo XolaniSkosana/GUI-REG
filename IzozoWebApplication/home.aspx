@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -10,6 +10,18 @@
 	text-transform: uppercase;
 	padding: 19px 36px;
 }
+@media screen and (max-width:2999px)
+ {
+   input[type="text"]
+   {
+      width:70%; 
+   }
+   .btn4
+   {
+     width:30%    
+   }
+ }
+ 
 .btn{
 	display: inline-block;
 	font-weight: 600;
@@ -54,7 +66,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="box">
-                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <input type="text" name="" placeholder="Enter your location" style="float:left"/>
                                   <asp:Button CssClass="btn4" runat="server" Text="ORDER NOW" />
                             </div>
 						</div>
@@ -67,7 +79,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="box">
-                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <input type="text" name="" placeholder="Enter your location" style="float:left"/>
                                   <asp:Button CssClass="btn4" runat="server" Text="ORDER NOW" />
                             </div>
 						</div>
@@ -80,7 +92,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="box">
-                                  <input type="text" name="" placeholder="Enter your location" />
+                                  <input type="text" name="" placeholder="Enter your location" style="float:left"/>
                                   <asp:Button CssClass="btn4" runat="server" Text="ORDER NOW" />
                             </div>
 						</div>
@@ -443,23 +455,23 @@
 			<div class=" scrollmenu">
 				 <table style="width: 100%;">
 					<tr>
-						<td>&nbsp;<a class="lightbox" href="images/Capture3.png">
+						<td>&nbsp;<a class="lightbox" href="yamifood/images/Capture3.png">
 							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
-							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Capture3.png"  Width="350px" Height="300px" />
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Capture3.png"  Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold;">Cultura</h3>
 						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture4.png">
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Capture4.png">
 							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
-							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Capture4.png" Width="350px" Height="300px" />
+							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Capture4.png" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">Ekangala</h3>
 						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture5.png">
-							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/Capture5.png" Width="350px" Height="300px" />
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Capture5.png">
+							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/Capture5.png" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">Bronkhorstspruit</h3>
 						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="images/Capture6.png">
+						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Capture6.png">
 							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
-							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/Capture6.png" Width="350px" Height="300px" />
+							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/Capture6.png" Width="250px" Height="200px" /><br />
 							<h3 style="color:black; font-weight:bold">Rethabiseng</h3>
 						</a></td>
 						

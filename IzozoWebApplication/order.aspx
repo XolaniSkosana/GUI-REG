@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
+﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	 <link rel="stylesheet" href="myStyle.css" />
@@ -87,17 +87,6 @@ border:thin;
 .btn-outline-new-white:active{
 	background-color:tan;
 }
-.mySearchBox{
-	Width:700px;
-}
-
-@media screen and (max-width:300px)
-{
-	.mySearchBox{
-	Width:100px;
-	font-size:small;
-}
-}
 
 
 </style>
@@ -123,8 +112,8 @@ border:thin;
 	<!-- End All Pages -->
 
 	<!--Search Box-->
-	<div style="position:sticky; position:-webkit-sticky; top:150px; text-align:center; z-index:3 ">
-		<asp:TextBox ID="TextBox3" runat="server" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px;"></asp:TextBox>
+	<div style="position:sticky; position: -webkit-sticky; top:100px; text-align:center; z-index:3 "  >
+		<asp:TextBox ID="TextBox3" runat="server" CssClass="responsive-textbox" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px; "></asp:TextBox>
 		<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" ></i></a>
 		<%--<asp:Button ID="Button9" runat="server" Text="Search" CssClass="btn btn-lg btn-circle btn-outline-new-white" />--%>
 	</div>
@@ -135,36 +124,36 @@ border:thin;
 					</div>
 				</div>
 <!-- Start Takeaway Outlet -->
-	<div class="button-group filter-button-group">
+	
 			<div class=" scrollmenu">
 				
 				 <table style="width: 100%;">
 					<tr>
 						<td>&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
 							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
-							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="~/yamifood/images/Papas.PNG" />
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Papas.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold;">Papas</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
 							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
-							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="~/yamifood/images/Grillos1.PNG" />
+							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Grillos1.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">Grillos</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
 							
-							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="~/yamifood/images/TnT.PNG" />
+							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/TnT.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">TnT</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/T-junction.PNG">
 							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
-							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="~/yamifood/images/T-junction.PNG" />
+							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/T-junction.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">T-junction</h3>
 						</a></td>
 						
 					</tr>
 				</table>
 			</div>
-			</div>
+		
 	
 	<!-- Start Customer Reviews -->
 	<br />
@@ -179,7 +168,7 @@ border:thin;
 	<div class="row special-list">
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Kota</h4>
 							<p>Currently available at...</p>
@@ -191,7 +180,7 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Pizza</h4>
 							<p>Currently available at ...</p>
@@ -204,7 +193,7 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Burger</h4>
 							<p>Currently available at...</p>
@@ -216,8 +205,7 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image">
-                        
+						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Breakfast/Brunch Meal</h4>
 							<p>Currently available at...</p>
