@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 using System.Data.Odbc;
 using System.Configuration;
@@ -15,6 +16,16 @@ public partial class login : System.Web.UI.Page
 {
     OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString);
 
+=======
+using System.Data.Odbc;
+using System.Data.SqlClient;
+using System.Configuration;
+
+
+public partial class login : System.Web.UI.Page
+{
+    OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["Dsn=izozoDS;Driver={MariaDB ODBC 3.1 Driver};tcpip=1;server=localhost;uid=root;database=izozodb"].ConnectionString);
+>>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
     protected void Page_Load(object sender, EventArgs e)
     {
         
@@ -32,6 +43,7 @@ public partial class login : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+<<<<<<< HEAD
         //try { conn.Open(); }
         //catch (Exception ex)
         //{
@@ -132,6 +144,25 @@ public partial class login : System.Web.UI.Page
         lblReg.Text = "successfully registered";
         Response.Redirect("login.aspx");
 
+=======
+        conn.Open();
+        int numRows = int.Parse("SELECT COUNT(custUsername, custPassword) FROM tblCustomer WHERE custUsername = '" + username.Text + "' AND custPassword = '" + password.Text+"'");
+        
+
+        if (numRows == 1)
+        {
+            Response.Write("You have successfully logged in");
+        }
+        else
+        {
+            Response.Write("Inalid details");
+        }
+
+
+
+
+        conn.Close();
+>>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
 
     }
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
+=======
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IzozoWebApplication/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
+>>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <style>
@@ -10,7 +14,11 @@
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
+<<<<<<< HEAD
     transition: 0.5s;
+=======
+    trannsition: 0.5s;
+>>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
     color: #666;    
  }
  .contactForm .inputBox input:focus ~ span;
@@ -23,7 +31,11 @@
      transform: translateY(-20px);
  }
  
+<<<<<<< HEAD
  @media (max-width:991px)
+=======
+ @media screen and (max-width:991px)
+>>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
  {
    .contact
    {
