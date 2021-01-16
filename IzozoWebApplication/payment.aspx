@@ -34,6 +34,22 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    .step_progressbar li.active
+{
+ color: green; 
+ font-weight: bold;   
+}
+li.active + li:after
+{
+  background-color: Green;    
+}
+.step_progressbar + li.active:before
+{
+  background-color: Green;
+  color: #fff;   
+}
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">

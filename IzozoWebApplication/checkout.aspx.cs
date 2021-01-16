@@ -11,4 +11,8 @@ public partial class checkout : System.Web.UI.Page
     {
 
     }
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("payment.aspx");
+    }
 }

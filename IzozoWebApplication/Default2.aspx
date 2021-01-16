@@ -1,10 +1,5 @@
-<<<<<<< HEAD
+
 <%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
-
-=======
-<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
->>>>>>> 89c242b6464bd0248f612b9e955e1959d3a8876e
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <style>
  .contactForm .inputBox span
@@ -15,14 +10,9 @@
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
-<<<<<<< HEAD
-
     transition: 0.5s;
-
     trannsition: 0.5s;
-=======
     transition: 0.5s;
->>>>>>> 89c242b6464bd0248f612b9e955e1959d3a8876e
     color: #666;    
  }
  .contactForm .inputBox input:focus ~ span;
@@ -36,11 +26,6 @@
  }
  
 
- @media (max-width:991px)
-<<<<<<< HEAD
-
-=======
->>>>>>> 89c242b6464bd0248f612b9e955e1959d3a8876e
  @media screen and (max-width:991px)
  {
    .contact
@@ -131,7 +116,7 @@
 <asp:TextBox ID="TextBox5" placeholder="Type your message here....." required="required" style="width: 100%; text-indent: left;" runat="server"></asp:TextBox>
          </div>
       </div>
-                 
+                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
                     <asp:Button ID="Button1" runat="server" Text="Send" 
                          style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;" 

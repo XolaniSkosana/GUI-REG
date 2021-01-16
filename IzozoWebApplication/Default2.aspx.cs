@@ -20,77 +20,43 @@ public partial class Default2 : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-     try
+        try
         {
-            var from = "youremail@gmail.com";
-            var to = "youremail@gmail.com";
-            const string password = "yourpassword";
-            string mail_subject = TextBox4.Text.ToString();
-            string mail_message = "From: " + TextBox3.Text + "\n";
-            mail_message += "Email: " + TextBox1.Text + "\n";
-            mail_message += "Phone: " + TextBox2.Text + "\n";
-            mail_message += "Subject: " + TextBox4.Text + "\n";
-            mail_message += "Message: " + TextBox5.Text + "\n";
-
-            var smtp = new SmtpClient();
+            if (Page.IsValid)
             {
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 995; 
-                smtp.EnableSsl = true;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential(from, password);
-                smtp.Timeout = 20000;
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("izozoemail");
+                mailMessage.To.Add("izozoemail");
+                mailMessage.Subject = TextBox4.Text;
+
+                mailMessage.Body = "<b>Sender Name : </b>" + TextBox3.Text + "<br/>"
+                      + "<b>Sender Email : </b>" + TextBox1.Text + "<br/>"
+                      + "<b>Sender Phone Number : </b>" + TextBox2.Text + "<br/>"
+                      + "<b>Message: </b>" + TextBox5.Text;
+                mailMessage.IsBodyHtml = true;
+
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 25);
+                smtpClient.EnableSsl = true;
+                smtpClient.Credentials = new System.Net.NetworkCredential("izozoemail", "emailpassword");
+                smtpClient.Send(mailMessage);
+
+                Label1.ForeColor = System.Drawing.Color.DarkGreen;
+                Label1.Text = "Thank you for contacting us";
+
+                TextBox1.Enabled = false;
+                TextBox2.Enabled = false;
+                TextBox3.Enabled = false;
+                TextBox4.Enabled = false;
+                TextBox5.Enabled = false;
+                Button1.Enabled = false;
             }
-
-            smtp.Send(from, to, mail_subject, mail_message);
-
-            Confirm();
-            confirm.Text = "Thank you for your Email";
-
-            TextBox3.Text = "";
-            TextBox1.Text = "";
-            TextBox2.Text = "";
-            TextBox4.Text = "";
-            TextBox5.Text = "";
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            confirm.Text = "Something went wrong! Please try again";
-            confirm.ForeColor = Color.Red;
+            // Log - event viewer or table
+            Label1.ForeColor = System.Drawing.Color.DarkGreen;
+            Label1.ForeColor = System.Drawing.Color.Red;
+            Label1.Text = "The was an unkown problem, please try again later";
         }
-       
-    }
-    private void Confirm()
-    {
-        string ToEmail = TextBox1.Text.Trim();
-        string UserName = TextBox3.Text;
-        string Subject2 = TextBox4.Text;
-
-        MailMessage mailMassage = new MailMessage("emailAddress@gmail.com", ToEmail);
-
-        StringBuilder sbEmailBody = new StringBuilder();
-        sbEmailBody.Append("Dear" + UserName);
-        sbEmailBody.Append("<br/><br/>");
-        sbEmailBody.Append("Thank you for your email");
-        sbEmailBody.Append("<br/><br/>");
-        sbEmailBody.Append("We received your email regarding" + Subject2 + "<br/>");
-        sbEmailBody.Append("We will be back to you as soon as possible");
-        sbEmailBody.Append("<br/><br/><br/>");
-        sbEmailBody.Append("Sincerely, ");
-        sbEmailBody.Append("");
-
-        mailMassage.IsBodyHtml = true;
-
-        mailMassage.Body = sbEmailBody.ToString();
-        mailMassage.Subject = "Re: Thank you for your email";
-        SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", emailPortNumber);
-        smtpClient.Credentials = new System.Net.NetworkCredential()
-        {
-            UserName = "youremail@gmail.com",
-            Password = "yourpassword"
-        };
-
-        smtpClient.EnableSsl = true;
-        smtpClient.Send(mailMassage);
     }
 }

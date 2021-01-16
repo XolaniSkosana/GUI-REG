@@ -115,7 +115,8 @@
 
             <asp:Label ID="Label4" runat="server" Text="" style="font-weight: bold; color: Black; background-color: white; padding: 5px"><i class="fa fa-lock fa-fw"></i>Secure Checkout</asp:Label><br /><br />
 
-            <asp:LinkButton ID="LinkButton1" CssClass="btn1" runat="server" style="text-align:center;" >Continue</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" CssClass="btn1" runat="server" 
+                    style="text-align:center;" onclick="LinkButton1_Click" PostBackUrl="~/payment.aspx" >Continue</asp:LinkButton>
         </div>
   </div>
 
