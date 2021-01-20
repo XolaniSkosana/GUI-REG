@@ -17,7 +17,9 @@ using System.IO;
 
     public partial class login : System.Web.UI.Page
     {
-        OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString);
+
+        //Connection Setup
+        OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoWebConnectionString"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,13 +42,18 @@ using System.IO;
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
         try
         {
+=======
+>>>>>>> 5159e28be7fdb83531a84a48a6a68e5fa8fdfba1
             conn.Open();
-
             string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
+<<<<<<< HEAD
 
             
+=======
+>>>>>>> 5159e28be7fdb83531a84a48a6a68e5fa8fdfba1
             OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
@@ -54,10 +61,23 @@ using System.IO;
             {
                 Session["User"] = txtLoginUsername.Text.Trim();
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+<<<<<<< HEAD
                     "alert('Log In Successful!'); window.location='Default.aspx';", true);
 
             }
          
+=======
+                "alert('Log In Successful!'); window.location='home.aspx';", true);
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                "alert('Invalid login details,please check your username or password')", true);
+
+            }
+            conn.Close();   
+
+>>>>>>> 5159e28be7fdb83531a84a48a6a68e5fa8fdfba1
         }
         catch (Exception)
         {
@@ -67,6 +87,7 @@ using System.IO;
         }
         finally
         {
+<<<<<<< HEAD
             conn.Close();
 
         }
@@ -108,6 +129,24 @@ using System.IO;
         }
         finally
         {
+=======
+
+        try
+        {
+            conn.Open();
+            string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, custUsername, custPassword, custStreetName, custTown, custCity, custStandNo, custUnitNo, custPostCode, custEmail) " +
+                         "VALUES (NULL, '" + txtRegName.Text + "', '" + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + txtRegUsername.Text + "', '" + txtRegPassword.Text + "', NULL, NULL, NULL, NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
+            OdbcCommand cmd = new OdbcCommand(str, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            lblReg.Text = "successfully registered";
+            Response.Redirect("login.aspx");
+        }
+        catch(Exception)
+        {
+            Console.WriteLine(e);
+        }
+>>>>>>> 5159e28be7fdb83531a84a48a6a68e5fa8fdfba1
             conn.Close();
         }
     }

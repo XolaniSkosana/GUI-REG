@@ -1,4 +1,8 @@
+<<<<<<< HEAD:IzozoWebApplication/searchBtnTest.aspx
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="searchBtnTest.aspx.cs" Inherits="searchBtnTest" %>
+=======
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Order2Test.aspx.cs" Inherits="Order2Test" %>
+>>>>>>> 5159e28be7fdb83531a84a48a6a68e5fa8fdfba1:IzozoWebApplication/Order2Test.aspx
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link rel="stylesheet" href="myStyle.css" />
