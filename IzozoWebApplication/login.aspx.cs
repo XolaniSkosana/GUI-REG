@@ -21,8 +21,11 @@ using System.IO;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+        if (Session["User"] != null)
+        {
+            Response.Redirect("login.aspx")
         }
+    }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
@@ -37,125 +40,77 @@ using System.IO;
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
-            //try { conn.Open(); }
-            //catch (Exception ex)
-            //{
-            //    conn = null;
-            //}
-            //return conn;
-            OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString);
+        try
+        {
             conn.Open();
 
             string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
 
-
+            
             OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1)
             {
+                Session["User"] = txtLoginUsername.Text.Trim();
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                "alert('Log In Successful!'); window.location='home.aspx';", true);
+                    "alert('Log In Successful!'); window.location='Default.aspx';", true);
+
+            }
+         
+        }
+        catch (Exception)
+        {
+            lblLogin.Text = "Please try again";
+            lblLogin.Visible = true;
+            throw;
+        }
+        finally
+        {
+            conn.Close();
+
+        }
+
+    }
+
+    protected void btnRegister_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            conn.Open();
+
+            string str1 = "SELECT * from tblCustomer WHERE custUsername = '" + txtRegUsername + "' AND custEmail = '" + txtRegEmail + "'";
+            OdbcDataAdapter sda = new OdbcDataAdapter(str1, conn);
+            DataTable dtbl = new DataTable();
+            sda.Fill(dtbl);
+
+
+            if (dtbl.Rows.Count > 0)//Check if user exists in the DB
+            {
+                lblReg.Text = "User already exists!";
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                "alert('An error occured during log in validation! Please try again or contact support.')", true);
+                //Enter user details into DB
+                string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, custUsername, custPassword, custStreetName, custTown, custCity, custStandNo, custUnitNo, custPostCode, custEmail) " +
+                    "VALUES (NULL, '" + txtRegName.Text + "', '" + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + txtRegUsername.Text + "', '" + txtRegPassword.Text + "', NULL, NULL, NULL, NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
+                OdbcCommand cmd = new OdbcCommand(str, conn);
+                cmd.ExecuteNonQuery();
 
+                Response.Redirect("login.aspx");
             }
-            conn.Close();
-
-            /*conn.Open();
-           int numRows = int.Parse("SELECT COUNT(custUsername, custPassword) FROM tblCustomer WHERE custUsername = '" + username.Text + "' AND custPassword = '" + password.Text+"'");
-
-
-           if (numRows == 1)
-           {
-               Response.Write("You have successfully logged in");
-           }
-           else
-           {
-               Response.Write("Inalid details");
-           }*/
-
-
-            //OdbcCommand cmd = new OdbcCommand(str, conn);
-            //OdbcDataReader dr = cmd.ExecuteReader();
-
-            //if(dr.Read())
-            //{
-            //    dr.Close();
-            //    lblLogin.Text = "Login Successful";
-            //}
-            //else
-            //{
-            //    dr.Close();
-            //    lblLogin.Text = "Account not found";
-            //}
-
-
-            //OdbcDataAdapter da = new OdbcDataAdapter(str, conn);
-            //DataSet dt = new DataSet();
-            //da.Fill(dt);
-
-            //if (dt.Tables[0].Rows.Count > 0)
-            //{
-            //    lblLogin.Text = "successful login";
-            //    conn.Close();
-            //}
-            //else if(dt.Tables[0].Rows.Count == 0)
-            //{
-            //    lblLogin.Text = "No rows returned";
-            //}
-            //else
-            //{
-            //    lblLogin.Text = "incorrect username/password";
-            //}
-
-
-            //OdbcDataAdapter adapt = new OdbcDataAdapter(str, conn);
-            //DataSet dtss = new DataSet();   
-            //adapt.Fill(dtss);
-
-            //if (dtss.Tables[0].Rows.Count > 0)
-            //{
-            //    lblLogin.Text = "successful login";
-            //    conn.Close();
-
-            //}
-            //else
-            //{
-            //    lblLogin.Text = "incorrect username/password";
-            //}
-
         }
-
-        protected void btnRegister_Click(object sender, EventArgs e)
+        catch (Exception)
         {
-            //string DatabaseConnStr = ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString;
-            //OdbcConnection conn = new OdbcConnection(DatabaseConnStr);
-
-            //string str = "INSERT INTO tblcategory(categoryID, categoryName) VALUES ('123456786789', 'takeaway')";
-            //OdbcCommand cmd = new OdbcCommand(str, conn);
-
-            //Inserting values into customer table;
-
-            conn.Open();
-            string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, custUsername, custPassword, custStreetName, custTown, custCity, custStandNo, custUnitNo, custPostCode, custEmail) " +
-                "VALUES (NULL, '" + txtRegName.Text + "', '" + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + txtRegUsername.Text + "', '" + txtRegPassword.Text + "', NULL, NULL, NULL, NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
-            OdbcCommand cmd = new OdbcCommand(str, conn);
-            cmd.ExecuteNonQuery();
+            lblReg.Text = "Something went wrong!";
+            lblReg.Visible = true;
+            throw;
+        }
+        finally
+        {
             conn.Close();
-            lblReg.Text = "successfully registered";
-            Response.Redirect("login.aspx");
-
-
-
-
-
-
-
-            conn.Close();
-
         }
     }
+
+  
+}

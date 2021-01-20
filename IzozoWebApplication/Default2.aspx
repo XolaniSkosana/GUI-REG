@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
-=======
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/IzozoWebApplication/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
->>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="IzozoWebApplication_Default2" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <style>
@@ -14,11 +11,11 @@
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
-<<<<<<< HEAD
+
     transition: 0.5s;
-=======
-    trannsition: 0.5s;
->>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
+
+    transition: 0.5s;
+
     color: #666;    
  }
  .contactForm .inputBox input:focus ~ span;
@@ -30,12 +27,11 @@
      font-size: 12px;
      transform: translateY(-20px);
  }
- 
-<<<<<<< HEAD
+
  @media (max-width:991px)
-=======
+
  @media screen and (max-width:991px)
->>>>>>> 66192773d26fc16464dec42de696c4091b4fc9bd
+
  {
    .contact
    {
@@ -48,7 +44,7 @@
    } 
    .container-contact .contactInfor
    {
-     margin-bottom: 40px;    
+     margin-bottom: 40px;      
    } 
    .container-contact .contactInfor, .contactForm
    {
@@ -97,16 +93,16 @@
                <form>
                  <h2 style="font-size: 30px; font-weight: 500;">Send Message</h2>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
-                    <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;" />
-                    <span>Full Name(s)</span>
+                    <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;"placeholder ="Full Name(s)" />
+                    <!--<span>Full Name(s)</span>-->
                  </div>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
-                    <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;" />
-                    <span>Email</span>
+                    <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;" placeholder ="Email" />
+                    <!--<span>Email</span>-->
                  </div>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
-                    <textarea required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; resize: none;"></textarea>
-                    <span >Type your message...</span>
+                    <textarea required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; resize: none;" placeholder ="Type your message"></textarea>
+                    <!--<span >Type your message...</span>-->
                  </div>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
                     <asp:Button ID="Button1" runat="server" Text="Send" style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;"></asp:Button>
