@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
-
+﻿<%@Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- <link rel="stylesheet" type="text/css" href="loginStyle.css" />
+    <link rel="stylesheet" type="text/css" href="loginStyle.css" />
 	<link rel="stylesheet" href="myStyle.css" type="text/css" />
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
 	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -103,10 +102,7 @@
     right: calc(50% - 50px);
     transition: .3s ease-in-out;
     z-index: 0;
-}
-
-
-}
+    }
 	</style>
 	<!-- <td style="font-size:18px"> <br /><br />Baby Soft Fresh White toilet tissue has special micro-pillow technology that gives it the perfect balance of softness and strength to leave you and your family feeling clean, fresh and confident.</td>-->
 
