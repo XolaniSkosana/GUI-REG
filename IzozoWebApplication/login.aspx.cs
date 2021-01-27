@@ -11,10 +11,9 @@ using System.Configuration;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
+using Xceed.Wpf.Toolkit;
 
-
-
-    public partial class login : System.Web.UI.Page
+public partial class login : System.Web.UI.Page
     {
 
         //Connection Setup
@@ -37,29 +36,24 @@ using System.IO;
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
-
         try
         {
-
             conn.Open();
-            string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
-
-
-            
-
+            string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + 
+                         txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
             OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+            if (dtbl.Rows.Count != 0)
             {
-                //Session["User"] = txtLoginUsername.Text.Trim();
-                //if (Session["User"] != null)
-                //{
-                //    Response.Redirect("home.aspx");
-                //}
-                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                 "alert('log in successful!'); window.location='home.aspx';", true);
+                Session["User"] = txtLoginUsername.Text.Trim();
+                if (Session["User"] != null)
+                {
+                    //    Response.Redirect("home.aspx");
+                    ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                    "alert('log in successful!'); window.location='home.aspx';", true);
+                }
+               
 
             }
             else
@@ -72,15 +66,13 @@ using System.IO;
 
 
         }
-        catch
-        {
-            lblLogin.Text = "Please try again";
-            lblLogin.Visible = true;
-        }
-        finally
+        catch(Exception ex)
         {
 
-            conn.Close();
+            //lblLogin.Visible = true;
+            //lblLogin.Text = "Please try again";
+
+            Response.Write("Error: "+ ex.Message);
 
         }
 

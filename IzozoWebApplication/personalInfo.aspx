@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="personalInfo.aspx.cs" Inherits="personalInfo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="personalInfo.aspx.cs" Inherits="personalInfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -55,41 +55,44 @@
 	<br />
 	<div class="regContainer">
 		<h1 style="text-align:center">PERSONAL INFORMATION</h1>
-        <asp:TextBox ID="TextBox1" CssClass="regTextBox" placeholder="Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
+        <asp:TextBox ID="name" CssClass="regTextBox" placeholder="Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
         <br />
         <br />
 
 
-        <asp:TextBox CssClass="regTextBox" ID="TextBox2" runat="server"  placeholder="Surname" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox CssClass="regTextBox" ID="surname" runat="server"  placeholder="Surname" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
         <br />
-		<asp:TextBox ID="TextBox6" CssClass="regTextBox" runat="server"  placeholder="Email Address" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="email" CssClass="regTextBox" runat="server"  placeholder="Email Address" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		<br />
         <br />
-		<asp:TextBox ID="TextBox7" CssClass="regTextBox" runat="server"  placeholder="Cellphone Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="cellNo" CssClass="regTextBox" runat="server"  placeholder="Cellphone Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		 <br />
         <br />
-        <asp:TextBox ID="TextBox3" CssClass="regTextBox" runat="server"  placeholder="Username" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox ID="username" CssClass="regTextBox" runat="server"  placeholder="Username" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		 <br />
         <br />
-		<asp:TextBox ID="TextBox4" CssClass="regTextBox" runat="server" placeholder="Street Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
+		<asp:TextBox ID="streetNo" CssClass="regTextBox" runat="server" placeholder="Street Number" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
         <br />
         <br />
-        <asp:TextBox ID="TextBox5" CssClass="regTextBox" placeholder="Street Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+        <asp:TextBox ID="streetName" CssClass="regTextBox" placeholder="Street Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
         <br />
-		<asp:TextBox ID="TextBox8" CssClass="regTextBox" placeholder="Town" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="standNo" CssClass="regTextBox" placeholder="Stand Number" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		<br />
         <br />
-		<asp:TextBox ID="TextBox9" CssClass="regTextBox" placeholder="Unit Number" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="town" CssClass="regTextBox" placeholder="Town" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		<br />
         <br />
-		<asp:TextBox ID="TextBox10" CssClass="regTextBox" placeholder="Stand Number" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="unitNo" CssClass="regTextBox" placeholder="Unit Number" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 		<br />
         <br />
-		<asp:TextBox ID="TextBox11" CssClass="regTextBox" placeholder="Postal Code" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<asp:TextBox ID="custCity" CssClass="regTextBox" placeholder="Cust City" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
+		<br />
+        <br />
+		<asp:TextBox ID="postalCode" CssClass="regTextBox" placeholder="Postal Code" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
 
-        
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 	</div>
 </asp:Content>
 
