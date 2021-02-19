@@ -154,6 +154,6 @@ border:thin;
 		
 		
     </asp:DataList>
-     <asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:izozodbConnectionString %>" ProviderName="<%$ ConnectionStrings:izozodbConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblOutlet"></asp:SqlDataSource>
+     <asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:izozoWebConnectionString %>" ProviderName="<%$ ConnectionStrings:izozoWebConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblitem"></asp:SqlDataSource>
 </asp:Content>
 

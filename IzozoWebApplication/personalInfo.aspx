@@ -4,7 +4,7 @@
 
     <style>
 	 .regContainer{
-	height: 950px;
+	height: 1050px;
 	width:700px;
     margin-top:0px;
 	margin-bottom:20px;
@@ -20,7 +20,21 @@
 		 border-radius:2px 2px;
 		 width:200px;
 
-	 }
+	 }.button{
+		 background-color: #d0a772;
+		color: #fff;
+		font-size: 16px;
+		border-radius: 4px;
+		font-weight: 600;
+		line-height: 50px;
+		display: inline-block;
+		padding: 0 10px;
+		width:72%;
+		height: 50px;
+		border: none;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	  }
 	 @media screen and (Max-width:380px)
 	 {
 		 .regContainer{
@@ -91,8 +105,9 @@
 		<br />
         <br />
 		<asp:TextBox ID="postalCode" CssClass="regTextBox" placeholder="Postal Code" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
-
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+		<br />
+		<br />
+        <asp:Button CssClass ="button" ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
 	</div>
 </asp:Content>
 
