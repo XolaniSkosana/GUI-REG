@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
+﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-	 <link rel="stylesheet" href="myStyle.css" />
+     <link rel="stylesheet" href="myStyle.css" />
 	
 <script src="JQuery/jquery-3.5.1.js" type="text/javascript"></script>
 <script>

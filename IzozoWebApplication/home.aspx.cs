@@ -4,12 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.Odbc;
+using System.Configuration;
 
 public partial class home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+        if (Session["User"] != null)
+        {
+            Master.userNameText = "Welcome " + Session["User"]+ " ";
+            Master.LogOutbt.Visible = true;
+            Master.loginButton.Visible = false;
+        }
+        else
+        {
+           // Master.userNameText.Enabled = false;
+            Master.LogOutbt.Visible = false;
+            Master.loginButton.Visible = true;
+
+            //Response.Redirect("home.aspx")
+        } 
     }
 
     protected void all_Click(object sender, EventArgs e)
