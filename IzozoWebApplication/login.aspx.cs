@@ -49,12 +49,10 @@ public partial class login : System.Web.UI.Page
                 Session["User"] = txtLoginUsername.Text.Trim();
                 if (Session["User"] != null)
                 {
-                    //    Response.Redirect("home.aspx");
+                    //Response.Redirect("home.aspx");
                     ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
                     "alert('log in successful!'); window.location='home.aspx';", true);
                 }
-               
-
             }
             else
             {
@@ -84,7 +82,8 @@ public partial class login : System.Web.UI.Page
         {
             conn.Open();
 
-            string str1 = "SELECT * from tblCustomer WHERE custUsername = '" + txtRegUsername + "' AND custEmail = '" + txtRegEmail + "'";
+            string str1 = "SELECT * from tblCustomer WHERE custUsername = '" + txtRegUsername + 
+                         "'AND custEmail = '" + txtRegEmail + "'";
             OdbcDataAdapter sda = new OdbcDataAdapter(str1, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
@@ -92,17 +91,25 @@ public partial class login : System.Web.UI.Page
 
             if (dtbl.Rows.Count > 0)//Check if user exists in the DB
             {
-                lblReg.Text = "User already exists!";
+                lblReg.Text = "User email already exists please use a different email address!";
             }
             else
             {
-                //Enter user details into DB
-                string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, custUsername, custPassword, custStreetName, custTown, custCity, custStandNo, custUnitNo, custPostCode, custEmail) " +
-                    "VALUES (NULL, '" + txtRegName.Text + "', '" + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + txtRegUsername.Text + "', '" + txtRegPassword.Text + "', NULL, NULL, NULL, NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
+                //Insert a new user's details into DB
+                string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, " +
+                                                        "custUsername, custPassword, custStreetName, " +
+                                                        "custTown, custCity, custStandNo, custUnitNo," +
+                                                        "custPostCode, custEmail) " +
+                            "VALUES (NULL, '" + txtRegName.Text + "', '" 
+                                                    + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + 
+                                                      txtRegUsername.Text + "', '" + 
+                                                      txtRegPassword.Text + "', NULL, NULL, NULL, " +
+                                                     "NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
                 OdbcCommand cmd = new OdbcCommand(str, conn);
                 cmd.ExecuteNonQuery();
-
-               // Response.Redirect("login.aspx");
+                conn.Close();
+                lblReg.Text = "successfully registered";
+                //Response.Redirect("login.aspx");
             }
         }
         catch
@@ -110,28 +117,6 @@ public partial class login : System.Web.UI.Page
             lblReg.Text = "Something went wrong!";
             lblReg.Visible = true;
 
-        }
-        finally
-        {
-
-
-            try
-            {
-                conn.Open();
-                string str = "INSERT INTO tblCustomer (custID, custName, custSurname, custPhoneNo, custUsername, custPassword, custStreetName, custTown, custCity, custStandNo, custUnitNo, custPostCode, custEmail) " +
-                             "VALUES (NULL, '" + txtRegName.Text + "', '" + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + txtRegUsername.Text + "', '" + txtRegPassword.Text + "', NULL, NULL, NULL, NULL, NULL, NULL, '" + txtRegEmail.Text + "')";
-                OdbcCommand cmd = new OdbcCommand(str, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                lblReg.Text = "successfully registered";
-                //Response.Redirect("login.aspx");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(e);
-            }
-
-            conn.Close();
         }
     }
 }

@@ -20,11 +20,8 @@ public partial class home : System.Web.UI.Page
         }
         else
         {
-           // Master.userNameText.Enabled = false;
             Master.LogOutbt.Visible = false;
             Master.loginButton.Visible = true;
-
-            //Response.Redirect("home.aspx")
         } 
     }
 

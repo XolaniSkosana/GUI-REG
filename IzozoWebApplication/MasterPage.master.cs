@@ -38,8 +38,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             return this.LogOutbtn;
         }
-
-
     }
 
 
