@@ -72,8 +72,6 @@
         <asp:TextBox ID="name" CssClass="regTextBox" placeholder="Name" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px;"></asp:TextBox>
         <br />
         <br />
-
-
         <asp:TextBox CssClass="regTextBox" ID="surname" runat="server"  placeholder="Surname" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
         <br />

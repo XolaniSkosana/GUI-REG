@@ -14,7 +14,7 @@ using System.IO;
 using Xceed.Wpf.Toolkit;
 
 public partial class login : System.Web.UI.Page
-    {
+{
 
         //Connection Setup
         OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoWebConnectionString"].ConnectionString);
@@ -22,68 +22,50 @@ public partial class login : System.Web.UI.Page
         protected void Page_Load(object sender, EventArgs e)
         {
             
-        }  
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-        try
-        {
-            conn.Open();
-            string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + 
-                         txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
-            OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
-            DataTable dtbl = new DataTable();
-            sda.Fill(dtbl);
-            if (dtbl.Rows.Count != 0)
+            try
             {
-                Session["User"] = txtLoginUsername.Text.Trim();
-                if (Session["User"] != null)
+                conn.Open();
+                string str = "SELECT * FROM tblcustomer WHERE custUsername = '" + 
+                             txtLoginUsername.Text + "' AND custPassword = '" + txtLoginPassword.Text + "'";
+                OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
+                DataTable dtbl = new DataTable();
+                sda.Fill(dtbl);
+                if (dtbl.Rows.Count != 0)
                 {
-                    //Response.Redirect("home.aspx");
-                    ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                    "alert('log in successful!'); window.location='home.aspx';", true);
+                    Session["User"] = txtLoginUsername.Text.Trim();
+                    if (Session["User"] != null)
+                    {
+                        //Response.Redirect("home.aspx");
+                        ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                        "alert('log in successful!'); window.location='home.aspx';", true);
+                    }
                 }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                    "alert('Invalid login details,please check your username or password')", true);
+
+                }
+                conn.Close();   
             }
-            else
+            catch(Exception ex)
             {
-                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                "alert('Invalid login details,please check your username or password')", true);
+                Response.Write("Error: "+ ex.Message);
 
             }
-            conn.Close();   
-
 
         }
-        catch(Exception ex)
-        {
-
-            //lblLogin.Visible = true;
-            //lblLogin.Text = "Please try again";
-
-            Response.Write("Error: "+ ex.Message);
-
-        }
-
-    }
-
     protected void btnRegister_Click(object sender, EventArgs e)
     {
         try
         {
             conn.Open();
 
-            string str1 = "SELECT * from tblCustomer WHERE custUsername = '" + txtRegUsername + 
-                         "'AND custEmail = '" + txtRegEmail + "'";
+            string str1 = "SELECT * from tblCustomer WHERE custUsername = '" + txtRegUsername.Text + 
+                         "'AND custEmail = '" + txtRegEmail.Text + "'";
             OdbcDataAdapter sda = new OdbcDataAdapter(str1, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
@@ -91,7 +73,9 @@ public partial class login : System.Web.UI.Page
 
             if (dtbl.Rows.Count > 0)//Check if user exists in the DB
             {
-                lblReg.Text = "User email already exists please use a different email address!";
+                //lblReg.Text = "User email already exists please use a different email address!";
+                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                "alert('User email already exists please use a different email address!')", true);
             }
             else
             {
@@ -100,7 +84,7 @@ public partial class login : System.Web.UI.Page
                                                         "custUsername, custPassword, custStreetName, " +
                                                         "custTown, custCity, custStandNo, custUnitNo," +
                                                         "custPostCode, custEmail) " +
-                            "VALUES (NULL, '" + txtRegName.Text + "', '" 
+                             "VALUES (NULL, '" + txtRegName.Text + "', '" 
                                                     + txtRegSurname.Text + "', '" + txtRegPhoneNo.Text + "', '" + 
                                                       txtRegUsername.Text + "', '" + 
                                                       txtRegPassword.Text + "', NULL, NULL, NULL, " +
@@ -109,7 +93,8 @@ public partial class login : System.Web.UI.Page
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 lblReg.Text = "successfully registered";
-                //Response.Redirect("login.aspx");
+                ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                "alert('successfully registered you can continue to login')", true);
             }
         }
         catch

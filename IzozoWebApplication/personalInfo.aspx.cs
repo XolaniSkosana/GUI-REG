@@ -75,39 +75,39 @@ public partial class personalInfo : System.Web.UI.Page
                 }
                 else if (surname.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + surname.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custSurname ='" + surname.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (email.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + email.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custEmail ='" + email.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (streetNo.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + streetNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custStreetNo ='" + streetNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (cellNo.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + cellNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custCellNo ='" + cellNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (postalCode.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + postalCode.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custPostalCode ='" + postalCode.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (standNo.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + standNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custStandNo ='" + standNo.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (username.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + username.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custUsername ='" + username.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (town.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + town.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custTown ='" + town.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 }
                 else if (custCity.Text != null)
                 {
-                    updateQuery = "UPDATE tblCustomer SET custName ='" + custCity.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
+                    updateQuery = "UPDATE tblCustomer SET custCity ='" + custCity.Text + "'WHERE custUsername ='" + Session["User"].ToString() + "'";
                 } 
                 var cmd = new OdbcCommand(updateQuery, con);
                 cmd.ExecuteNonQuery();
