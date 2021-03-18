@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
 
-
+<%@ MasterType VirtualPath="./MasterPage.master" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
  <style>
 	 body{
@@ -530,7 +530,7 @@
 	</div>
 	<!-- End About -->
 	
-
+	
 	
 
 

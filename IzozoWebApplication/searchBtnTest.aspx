@@ -1,37 +1,29 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Order2Test.aspx.cs" Inherits="Order2Test" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="searchBtnTest.aspx.cs" Inherits="searchBtnTest" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-	 <link rel="stylesheet" href="myStyle.css" />
+    <link rel="stylesheet" href="myStyle.css" />
 	
 <script src="JQuery/jquery-3.5.1.js" type="text/javascript"></script>
-	
-	<style>
-	 #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-#img-block {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#img-block img{
-top:100px;
-display:block;
-}
-
-	</style>
+<script>
+    function myFunction() {
+        var input, filter, panel1, h4, img, i, txtValue;
+        input = document.getElementsByClassName("TextBox3.ClientID").value;
+        filter = input.value.toUpperCase();
+        panel1 = document.getElementsById('fruitsPanel.ClientID');
+        img = img.getElementsByTagName("h4");
+        for (i = 0; i < img.length; i++) {
+            h4 = img[i].getElementsByTagName("h4")[0];
+            txtValue = h4.txtValue || h4.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                img[i].style.display = img;
+            } else {
+                li[i].style.display = "Theres nothing";
+            }
+        }
+    }
+</script>	
 	
 <style>
-
 div.scrollmenu {
   
   overflow: auto;
@@ -112,21 +104,14 @@ border:thin;
 .btn-outline-new-white:active{
 	background-color:tan;
 }
-.mySearchBox{
-	Width:700px;
-}
-
-@media screen and (max-width:300px)
-{
-	.mySearchBox{
-	Width:100px;
-	font-size:small;
-}
-}
 
 
 </style>
 	
+<!--Style for search-->
+<style>
+	
+</style>
    <%--<!-- Start All Pages --%>
 				
 
@@ -142,18 +127,30 @@ border:thin;
 			</div>
 		</div>
 	</div>
-
+	 nnnnnn
 	<br />
 	<br /><br />
 	<!-- End All Pages -->
 
 	<!--Search Box-->
-	<div style="position:sticky; position:-webkit-sticky; top:150px; text-align:center; z-index:3 ">
-		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." />
-				
-		<%-- <asp:TextBox ID="TextBox3" runat="server" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px;"></asp:TextBox>
-		<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" ></i></a>--%>
+	<div>
+	<div style="position:sticky; position: -webkit-sticky; top:150px; text-align:center; z-index:3 " >
+
+		 <asp:TextBox ID="txtSearch" runat="server" CssClass="responsive-textbox" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px; "></asp:TextBox>
+		<asp:Button ID="searchBtn" CssClass="btn btn-lg btn-circle btn-outline-new-white" text="Search"  runat="server" ForeColor="Black" BorderColor="Black" />
+	
+	</div>	
+		
+		<!--<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" >
+		            </i></a>-->
 		<%--<asp:Button ID="Button9" runat="server" Text="Search" CssClass="btn btn-lg btn-circle btn-outline-new-white" />--%>
+
+		<%--new search button--%>
+		
+   
+    
+
+
 	</div>
 		<br />
 				<div class="col-lg-12">
@@ -162,36 +159,38 @@ border:thin;
 					</div>
 				</div>
 <!-- Start Takeaway Outlet -->
-	<div class="button-group filter-button-group">
+	
 			<div class=" scrollmenu">
 				
 				 <table style="width: 100%;">
 					<tr>
 						<td>&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
 							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
-							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="~/yamifood/images/Papas.PNG" />
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Papas.PNG" Width="250px" Height="200px" />
+                            
+							
 							<h3 style="color:black; font-weight:bold;">Papas</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
 							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
-							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="~/yamifood/images/Grillos1.PNG" />
+							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Grillos1.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">Grillos</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
 							
-							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="~/yamifood/images/TnT.PNG" />
+							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/TnT.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">TnT</h3>
 						</a></td>
 						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/T-junction.PNG">
 							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
-							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="~/yamifood/images/T-junction.PNG" />
+							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/T-junction.PNG" Width="250px" Height="200px" />
 							<h3 style="color:black; font-weight:bold">T-junction</h3>
 						</a></td>
 						
 					</tr>
 				</table>
 			</div>
-			</div>
+		
 	
 	<!-- Start Customer Reviews -->
 	<br />
@@ -203,10 +202,10 @@ border:thin;
 					
 				
 	<!--Start Meal list-->
-	<div class="row special-list" id="img-block">
+	<div class="row special-list">
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Kota</h4>
 							<p>Currently available at...</p>
@@ -218,12 +217,12 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image">
+						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Pizza</h4>
-							<p>Currently available at ...</p>
+							<p>Currently available at...</p>
 							<h5>Prices range from R20-R200</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnPizza" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
+							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnPizza" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx"  />
 						</div>
 					</div>
 					
@@ -231,7 +230,7 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image">
+						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Burger</h4>
 							<p>Currently available at...</p>
@@ -243,8 +242,7 @@ border:thin;
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image">
-                        
+						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image" />
 						<div class="why-text">
 							<h4>Breakfast/Brunch Meal</h4>
 							<p>Currently available at...</p>
@@ -336,18 +334,18 @@ border:thin;
 							<button data-filter=".beverages">Beverages</button>
 							<button data-filter=".egg-dairy">Egg-Dairy</button>-->
                             
-							<!--<button class="active" id="testBtn" runat="server"  type="button">test button</button>-->
+							
 				
 
 								
-							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="all" runat="server" Text="All" ForeColor="#333333"  />
-                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnFruits" runat="server" Text="Fruits" ForeColor="#333333" />
-                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnVeg" runat="server" Text="Vegetables" ForeColor="#333333" />
-							 <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBakery" runat="server" Text="Bakery" ForeColor="#333333" />
+							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="all" runat="server" Text="All" ForeColor="#333333" OnClick="all_Click"  />
+                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnFruits" runat="server" Text="Fruits" ForeColor="#333333" OnClick="btnFruits_Click"/>
+                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnVeg" runat="server" Text="Vegetables" ForeColor="#333333" OnClick="btnVeg_Click"/>
+							 <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBakery" runat="server" Text="Bakery" ForeColor="#333333" OnClick="btnBakery_Click"/>
                             
-							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBev" runat="server" Text="Beverages" ForeColor="#333333" />
-                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="LinkButton1" runat="server" Text="Egg-Dairy" ForeColor="#333333" /> 
-							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnGroc" runat="server" Text="Other" ForeColor="#333333" />
+							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBev" runat="server" Text="Beverages" ForeColor="#333333" OnClick="btnBev_Click" />
+                            <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="LinkButton1" runat="server" Text="Egg-Dairy" ForeColor="#333333" OnClick="btndairy_Click"/> 
+							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnGroc" runat="server" Text="Other" ForeColor="#333333" OnClick="btnGroc_Click"/>
 		
 		
 						</div>
@@ -363,7 +361,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Apples</h4>
 							<h5> R23.80</h5>
-							<asp:Button CssClass="myButton" ID="btnApples" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx"  />
+							<asp:Button CssClass="myButton" ID="btnApples" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
 						</div>
 					</div>
 				</div>
@@ -374,7 +372,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Bananas</h4>
 							<h5> R27.80</h5>
-							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx"/>
+							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" />
 							
 						</div>
 					</div>
@@ -491,7 +489,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Cake</h4>
 							<h5> R79.99</h5>
-							<asp:Button CssClass="myButton" ID="btnCake" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx"/>
+							<asp:Button CssClass="myButton" ID="btnCake" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
 						</div>
 					</div>
 				</div>
@@ -502,7 +500,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Bread</h4>
 							<h5> R15.99</h5>
-							<asp:Button CssClass="myButton" ID="btnBread" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx"/>
+							<asp:Button CssClass="myButton" ID="btnBread" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
 						</div>
 					</div>
 				</div>
@@ -652,39 +650,5 @@ border:thin;
 		</div>
 	</div>
 
-	<script>
-        function myFunction() {
-            var input, filter, img_block, img, pic, i, txtValue;
-
-            input = document.getElementById('myInput');
-            filter = input.value.toUpperCase();
-            img_block = document.getElementById("img-block");
-            img = img_block.getElementsByTagName('img');
-
-            for (i = 0; i < img.length; i++) {
-                pic = img[i].getElementsByClassName("img-fluid")[0];
-                txtValue = pic.txtValue || pic.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    img[i].style.display = "";
-                } else {
-                    img[i].style.display = "none"
-                }
-            }
-        }
-    </script>
-
-	<script>
-        $('#testBtn').click(function (e) {
-            e.preventDefault();
-            someIdClient.SetVisible(true)
-            return false;
-        }
-    </script>
-	
-	<!-- END GROCERY SECTION -->
-    
 </asp:Content>
-
-
-
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
-
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Drawing;
@@ -18,7 +17,7 @@ public partial class Default2 : System.Web.UI.Page
     {
 
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Button2_Click(object sender, EventArgs e)
     {
         try
         {
@@ -48,7 +47,7 @@ public partial class Default2 : System.Web.UI.Page
                 TextBox3.Enabled = false;
                 TextBox4.Enabled = false;
                 TextBox5.Enabled = false;
-                Button1.Enabled = false;
+                Button2.Enabled = false;
             }
         }
         catch (Exception ex)

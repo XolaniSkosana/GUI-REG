@@ -4,14 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.Odbc;
+using System.Data.SqlClient;
+using System.Configuration;
+
+using System.Threading.Tasks;
+using System.Windows;
+using System.IO;
+
+
 
 
 public partial class order : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
-    }
+        
+}
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
@@ -138,9 +148,45 @@ public partial class order : System.Web.UI.Page
     {
         
     }
+    public bool viewPanel() {  return true;  }
+    public bool MyName
+    {
+        get { return true; }
+    }
 
     protected void btnBananas_Click(object sender, EventArgs e)
     {
+        //Server.Transfer("product.aspx");
+        //Button btn = ((Button)PreviousPage.FindControl("Button67"));
+        //Button67.Text = btn.Text;
+        //Panel name = ((Panel)PreviousPage.FindControl("BananasPanel"));
+        
+        
+
+        
         
     }
+
+
+
+    protected void btnBananas_Click1(object sender, EventArgs e)
+    {
+        Session["Bananas"] = "BananasPanel";
+        Response.Redirect("product.aspx");
+
+        
+    }
+
+    protected void searchBtn_Click(object sender, EventArgs e)
+    {
+        OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString);
+
+        OdbcDataAdapter sda = new OdbcDataAdapter("SELECT * FROM tblItem WHERE (itemName like '%" + txtSearch.Text + "%') OR (itemID like '%"+txtSearch.Text+"%')", conn);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+        
+
+
+    }
 }
+    

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="product.aspx.cs" Inherits="product" %>
-
+<%-- <%@ PreviousPageType VirtualPath="~/order.aspx"  %>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="myStyle.css" />-->
@@ -376,6 +376,7 @@ div.scrollmenu a:hover {
 		</div>
     </div>
 <!-----------------------------------------------------Apples Panel (Done)------------------------------------------------------------------------------>
+   <!--<asp:Panel ID="allPanel" runat="server" Visible ="false">-->
 <div>
 <asp:Panel ID="ApplesPanel" Visible="false" runat="server" >
 <!--Start slideshow-->
@@ -633,7 +634,7 @@ div.scrollmenu a:hover {
 </div>
 <!-----------------------------------------------------Bananas Panel (Done)------------------------------------------------------------------------------>
 <div>
-<asp:Panel ID="BananasPanel" Visible="false" runat="server" OnLoad="BananasPanel_Load" >
+<asp:Panel ID="BananasPanel" Visible="false" runat="server" >
 <!--Start slideshow-->
     <div class="SScontainer">
 
@@ -4243,7 +4244,7 @@ div.scrollmenu a:hover {
 </div>
 <!-----------------------------------------------------Cooking Oil Panel------------------------------------------------------------------------------>
 <div>
-<asp:Panel ID="cookingOilPanel" Visible="true" runat="server" >
+<asp:Panel ID="cookingOilPanel" Visible="false" runat="server" >
 <!--Start slideshow-->
     <div class="SScontainer">
 
@@ -7368,7 +7369,7 @@ div.scrollmenu a:hover {
     </div>
 </asp:Panel>  
 </div>
-
+<!--</asp:Panel>-->
 
 </asp:Content>
  

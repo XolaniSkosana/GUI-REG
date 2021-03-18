@@ -9,7 +9,24 @@ public partial class product : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //if (!IsPostBack)
+        //{
+        //    if (PreviousPage != null)
+        //    {
 
+        //        BananasPanel.Visible = true;
+        //    }
+        //}
+
+        if (Session["Bananas"] != null)
+        {
+            BananasPanel.Visible = true;
+        }
+        else
+        {
+            ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
+                "alert('Session is null!'); window.location='order.aspx';", true);
+        }
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -191,6 +208,8 @@ public partial class product : System.Web.UI.Page
 
     protected void BananasPanel_Load(object sender, EventArgs e)
     {
-       
+        BananasPanel.Visible = true;
+            
     }
+    
 }

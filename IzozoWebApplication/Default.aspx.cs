@@ -1,9 +1,8 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -81,3 +80,22 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
         }
     }
     }
+=======
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["User"] != null)
+        {
+            Response.Write("Welcome" + Session["User"]);
+        }
+    }
+
+    protected void logout_Click(object sender, EventArgs e)
+    {
+        //Session.Remove("User");
+        //Response.Redirect("login.aspx");
+    }
+}
+>>>>>>> c6f736633e685abd59a18c96e621c561fd96fd1b

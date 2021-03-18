@@ -1,17 +1,27 @@
-﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
+﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	 <link rel="stylesheet" href="myStyle.css" />
 	
 <script src="JQuery/jquery-3.5.1.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		var view;
-        view = document.getElementsByClassName("btn btn-lg btn-circle btn-outline-new-white");
-		function viewPanel() {
-			
+<script>
+    function myFunction() {
+        var input, filter, panel1, h4, img, i, txtValue;
+        input = document.getElementsByClassName("TextBox3.ClientID").value;
+        filter = input.value.toUpperCase();
+        panel1 = document.getElementsById('fruitsPanel.ClientID');
+        img = img.getElementsByTagName("h4");
+        for (i = 0; i < img.length; i++) {
+            h4 = img[i].getElementsByTagName("h4")[0];
+            txtValue = h4.txtValue || h4.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                img[i].style.display = img;
+            } else {
+                li[i].style.display = "Theres nothing";
+            }
         }
-
-    </script>
+    }
+</script>	
 	
 <style>
 div.scrollmenu {
@@ -98,6 +108,10 @@ border:thin;
 
 </style>
 	
+<!--Style for search-->
+<style>
+	
+</style>
    <%--<!-- Start All Pages --%>
 				
 
@@ -113,17 +127,32 @@ border:thin;
 			</div>
 		</div>
 	</div>
-
+	 nnnnnn
 	<br />
 	<br /><br />
 	<!-- End All Pages -->
 
 	<!--Search Box-->
-	<div style="position:sticky; position: -webkit-sticky; top:100px; text-align:center; z-index:3 "  >
-		<asp:TextBox ID="TextBox3" runat="server" CssClass="responsive-textbox" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px; "></asp:TextBox>
-		<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" ></i></a>
+	
+	<div style="position:sticky; position: -webkit-sticky; top:150px; text-align:center; z-index:3 " >
+
+		 <asp:TextBox ID="txtSearch" runat="server" CssClass="responsive-textbox" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px; "></asp:TextBox>
+		<!--<asp:Button ID="searchBtn" CssClass="btn btn-lg btn-circle btn-outline-new-white" text="Search"  runat="server" ForeColor="Black" BorderColor="Black" OnClick="searchBtn_Click" />-->
+	
+	
+		
+		<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" >
+		            </i></a>
+		</div>	
 		<%--<asp:Button ID="Button9" runat="server" Text="Search" CssClass="btn btn-lg btn-circle btn-outline-new-white" />--%>
-	</div>
+
+		<%--new search button--%>
+		
+   
+    
+
+
+	
 		<br />
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
@@ -342,7 +371,7 @@ border:thin;
 						<div class="why-text">
 							<h4>Bananas</h4>
 							<h5> R27.80</h5>
-							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
+							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" OnClick="btnBananas_Click1" />
 							
 						</div>
 					</div>
@@ -620,6 +649,8 @@ border:thin;
 		</div>
 	</div>
 
+
+	
 	<script>
         $('#testBtn').click(function (e) {
             e.preventDefault();

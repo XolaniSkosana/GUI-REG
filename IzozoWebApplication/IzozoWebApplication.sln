@@ -3,24 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IzozoWebApplication", ".", "{CAF5E1EB-9980-457D-A46B-79BF89D7BD7F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IzozoWebApplication(1)", ".", "{CAF5E1EB-9980-457D-A46B-79BF89D7BD7F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_60278"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\IzozoWebApplication\"
+		Debug.AspNetCompiler.PhysicalPath = "..\IzozoWebApplication\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60278\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_60278"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\IzozoWebApplication\"
+		Release.AspNetCompiler.PhysicalPath = "..\IzozoWebApplication\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60278\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "60278"
+		SlnRelativePath = "..\IzozoWebApplication\"
 	EndProjectSection
 EndProject
 Global

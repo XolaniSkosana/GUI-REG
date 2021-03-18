@@ -11,4 +11,34 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
     }
+    public string userNameText
+    {
+        get
+        {
+            return custUsername.Text;
+        }
+        set
+        {
+            custUsername.Text = value;
+            
+        }
+    }
+    public LinkButton loginButton
+    {
+        get
+        {
+            return this.loginButto;
+        }
+        
+        
+    }
+    public LinkButton LogOutbt
+    {
+        get
+        {
+            return this.LogOutbtn;
+        }
+    }
+
+
 }

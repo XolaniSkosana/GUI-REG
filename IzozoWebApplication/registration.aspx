@@ -57,11 +57,6 @@
         <br />
         <asp:TextBox ID="txtRegConfPassword" CssClass="regTextBox" placeholder="Confirm Password" runat="server" style="border-bottom-left-radius:4px; border-top-left-radius:4px"></asp:TextBox>
         <br />
-        <br />
-		
-        
+        <br />     
 	</div>
-
-
-
 </asp:Content>
