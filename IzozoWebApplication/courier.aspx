@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="IzozoWebApplication_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="courier.aspx.cs" Inherits="courier" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <br /><br /><br /><br /><br /><br />
@@ -101,7 +101,7 @@
 	</style>
 
        <div class="wrapper">
-   <h2> Supplier Registration Form</h2>
+   <h2> Courier Registration Form</h2>
    <form id="form1">
       <div>
         <table class="auto-style1">
@@ -113,103 +113,106 @@
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label1" runat="server" Text="Name(s)"></asp:Label><br />
+                    <asp:Label ID="Label1" runat="server" Text="Full Name(s)"></asp:Label><br />
                     <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox2" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label8" runat="server" Text="Surname"></asp:Label><br />
+                    <asp:Label ID="Label8" runat="server" Text="Email"></asp:Label><br />
                     <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox3" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label12" runat="server" Text="Position"></asp:Label><br />
+                    <asp:Label ID="Label12" runat="server" Text="Contact Number"></asp:Label><br />
                     <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox6" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
+
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label10" runat="server" Text="Contact Number"></asp:Label><br />
-                    <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox7" runat="server"></asp:TextBox>
+                    <asp:Label ID="Label10" runat="server" Text="Will you be the one driving?"></asp:Label><br />
+                    <asp:RadioButtonList ID="buttonlist1" runat="server">
+                        <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                        <asp:ListItem Value="No">No</asp:ListItem>
+                    </asp:RadioButtonList>
+                   </td>
+                <td>&nbsp;</td>
+            </tr>
+            
+            <tr>
+                <td class="auto-style3">
+                 <asp:Label ID="Label13" runat="server" style="font-weight: 700; font-size: x-large; text-align: justify;" Text="Busines Details"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label9" runat="server" Text="E-mail Address"></asp:Label><br />
-                    <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox4" runat="server"></asp:TextBox>
-                </td>
+                    <asp:Label ID="Label2" runat="server" Text="Are you a Courier Company?"></asp:Label><br />
+                   </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style3">
-                 <asp:Label ID="Label13" runat="server" style="font-weight: 700; font-size: x-large; text-align: justify;" Text="Company Details"></asp:Label>
+                <asp:RadioButtonList ID="buttonlist2" runat="server">
+                        <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                        <asp:ListItem Value="No">No</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label2" runat="server" Text="Head office location"></asp:Label><br />
-                    <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:Label ID="Label5" runat="server" Text="Will you be delivering with your personal vehicle?"></asp:Label><br />
+                    </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-align: left" class="auto-style3">
+                <asp:RadioButtonList ID="buttonlist3" runat="server">
+                        <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                        <asp:ListItem Value="No">No</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label5" runat="server" Text="Holding Company"></asp:Label><br />
-                    <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox9" runat="server"></asp:TextBox>
+                    <asp:Label ID="Label15" runat="server" Text="What is your vehicle type?"></asp:Label><br />
+                    </td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td class="auto-style3">
+                <asp:RadioButtonList ID="buttonlist4" runat="server">
+                        <asp:ListItem Value="Motobike">Motobike</asp:ListItem>
+                        <asp:ListItem Value="Van">Van</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label15" runat="server" Text="Holding Company Registration Number"></asp:Label><br />
-                    <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox13" runat="server"></asp:TextBox>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label16" runat="server" Text="Telephone Number"></asp:Label><br />
+                    <asp:Label ID="Label16" runat="server" Text="In which area/town will you be operating?"></asp:Label><br />
                     <asp:TextBox style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" ID="TextBox14" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
-            <tr>
-                <td style="text-align: justify" class="auto-style3">
-                    <asp:Label ID="Label20" runat="server" Text="Supplier Category"></asp:Label><br />
-                    <asp:DropDownList ID="DropDownList1" style="border:1px solid #456879; border-radius:5px; height: 22px; width: 350px;" runat="server">
-                        <asp:ListItem>Fruits</asp:ListItem>
-                        <asp:ListItem>Vegetables</asp:ListItem>
-                        <asp:ListItem>Bakery</asp:ListItem>
-                        <asp:ListItem>Groceries</asp:ListItem>
-                        <asp:ListItem>Beverages</asp:ListItem>
-                        <asp:ListItem>Egg-Dairy</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-            </asp:DropDownList>
-                </td>
-                <td>&nbsp;</td>
-                </tr>
              <tr>
                 <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style4">
-                    <asp:Button ID="Button2" runat="server" Text="Register" CssClass="btn1" 
-                        Height="40px" Width="142px" onclick="Button2_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="Register" Height="40px" Width="142px" CssClass="btn1" onclick="Button2_Click"  />
                 </td>
                 <td class="auto-style5">&nbsp;</td>
             </tr>
-            <tr>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style5">&nbsp;</td>
-            </tr>
+           
         </table>
 
     

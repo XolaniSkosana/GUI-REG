@@ -13,7 +13,7 @@ using System.Net.Mail;
 using System.Text;
 using System.IO;
 
-public partial class IzozoWebApplication_Default : System.Web.UI.Page
+public partial class courier : System.Web.UI.Page
 {
     SqlCommand cmd;
     SqlConnection con;
@@ -23,33 +23,28 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
     {
 
     }
-    protected void Button1_Click1(object sender, EventArgs e)
-    {
-       
-    }
     protected void Button2_Click(object sender, EventArgs e)
     {
         try
         {
             if (Page.IsValid)
             {
+                
                 MailMessage mailMessage = new MailMessage();
                 mailMessage.From = new MailAddress("izozo.qha@gmail.com");
                 mailMessage.To.Add("izozo.qha@gmail.com");
-                mailMessage.Subject = "Courier Application";
-
-                mailMessage.Body = "<b>Sender Name : </b>" + TextBox2.Text + "<br/>"
-                    + "<b>Sender Surname : </b>" + TextBox3.Text + "<br/>"
-                      + "<b>Sender Position : </b>" + TextBox6.Text + "<br/>"
-                      + "<b>Sender Phone Number : </b>" + TextBox7.Text + "<br/>"
-                      + "<b>Sender Email : </b>" + TextBox4.Text + "<br/>"
-                      + "<b>Company Details </b>" + "<br/>"
-                      + "<b>Head office location : </b>" + TextBox1.Text + "<br/>"
-                      + "<b>Holding Company : </b>" + TextBox9.Text + "<br/>"
-                      + "<b>Holding Company Registration Number : </b>" + TextBox13.Text + "<br/>"
-                      + "<b>Telephone Number : </b>" + TextBox14.Text + "<br/>";
+                mailMessage.Subject = "Supplier Application";
 
 
+                mailMessage.Body = "<b>Sender Full Name(s) : </b>" + TextBox2.Text + "<br/>"
+                    + "<b>Sender Email : </b>" + TextBox3.Text + "<br/>"
+                      + "<b>Sender Contact Number : </b>" + TextBox6.Text + "<br/>"
+                      + "<b>Will you be the one driving? : </b>" + buttonlist1.SelectedItem.Value + "<br/>"
+                       + "<b>Business Details </b>" + "<br/>"
+                      + "<b>Are you a Courier Company? : </b>" + buttonlist2.SelectedItem.Value + "<br/>"
+                      + "<b>Will you be delivering with your personal vehicle? : </b>" + buttonlist3.SelectedItem.Value + "<br/>"
+                      + "<b>What is your vehicle type? : </b>" + buttonlist4.SelectedItem.Value + "<br/>"
+                      + "<b>In which area/town will you be operating? : </b>" + TextBox14.Text + "<br/>";
                 mailMessage.IsBodyHtml = true;
 
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 25);
@@ -63,11 +58,10 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
                 TextBox2.Enabled = false;
                 TextBox3.Enabled = false;
                 TextBox6.Enabled = false;
-                TextBox7.Enabled = false;
-                TextBox4.Enabled = false;
-                TextBox1.Enabled = false;
-                TextBox9.Enabled = false;
-                TextBox13.Enabled = false;
+                buttonlist1.Enabled = false;
+                buttonlist2.Enabled = false;
+                buttonlist3.Enabled = false;
+                buttonlist4.Enabled = false;
                 TextBox14.Enabled = false;
                 Button2.Enabled = false;
             }
@@ -80,4 +74,4 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
             Label1.Text = "The was an unkown problem, please try again later";
         }
     }
-    }
+}
