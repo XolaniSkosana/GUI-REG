@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
 <%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <style>
@@ -13,6 +16,7 @@
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
+<<<<<<< HEAD
 
 
     transition: 0.5s;
@@ -24,17 +28,19 @@
     transition: 0.5s;
     transition: 0.5s;
 
+=======
+    transition: 0.5s;
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
     color: #666;    
  }
  .contactForm .inputBox input:focus ~ span;
- .contactForm .inputBox input:valid ~ span;
- .contactForm .inputBox textarea:focus ~ span;
- .contactForm .inputBox textarea:focus ~ span;
+
  {
      color: #3498db;
      font-size: 12px;
      transform: translateY(-20px);
  }
+<<<<<<< HEAD
 
 
  @media (max-width:991px)
@@ -46,6 +52,11 @@
 
  @media screen and (max-width:991px)
 
+=======
+
+ @media screen and (max-width:991px)
+
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
  {
    .contact
    {
@@ -136,7 +147,11 @@
          </div>
       </div>
                  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+<<<<<<< HEAD
 
+=======
+                 <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
                     <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;"placeholder ="Full Name(s)" />
                     <!--<span>Full Name(s)</span>-->
                  </div>
@@ -149,12 +164,18 @@
                     <!--<span >Type your message...</span>-->
                  </div>
                  <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
+<<<<<<< HEAD
                     <asp:Button ID="Button1" runat="server" Text="Send" style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;"></asp:Button>
 
                     <!--<asp:Button ID="Button2" runat="server" Text="Send" 
                          style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;" 
                          onclick="Button1_Click"></asp:Button>-->
 
+=======
+                    <asp:Button ID="Button2" runat="server" Text="Send" 
+                         style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;" 
+                         onclick="Button2_Click"></asp:Button>
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
                  </div>
                </form>
             </div>
