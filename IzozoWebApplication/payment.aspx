@@ -35,6 +35,24 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+         .wrapper
+{
+  background-color: #fff;
+  width: 600px;
+  padding: 25px;
+  margin: 25px auto 0;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);    
+}
+.wrapper h2
+{
+  background-color: #fcfcfc;
+  color: brown;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px dotted #333;    
+}
     .step_progressbar li.active
 {
  color: green; 

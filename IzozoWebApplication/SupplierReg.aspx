@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="IzozoWebApplication_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SupplierReg.aspx.cs" Inherits="SupplierReg" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <br /><br /><br /><br /><br /><br />
@@ -218,25 +217,6 @@
          </form>
       </div>
    
-
-<br />
+   <br /><br />
 </asp:Content>
 
-=======
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:Button ID="logout" runat="server" Text="LOGOUT" OnClick="logout_Click" />
-        </div>
-    </form>
-</body>
-</html>
->>>>>>> c6f736633e685abd59a18c96e621c561fd96fd1b

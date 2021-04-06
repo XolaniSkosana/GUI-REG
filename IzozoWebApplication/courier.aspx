@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="courier.aspx.cs" Inherits="courier" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="courier.aspx.cs" Inherits="courier" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <br /><br /><br /><br /><br /><br />
 	<style type="text/css">
-	    
 	    .wrapper
 {
   background-color: #fff;
@@ -146,7 +145,7 @@
             
             <tr>
                 <td class="auto-style3">
-                 <asp:Label ID="Label13" runat="server" style="font-weight: 700; font-size: x-large; text-align: justify;" Text="Busines Details"></asp:Label>
+                 <asp:Label ID="Label13" runat="server" style="font-weight: 700; font-size: x-large; text-align: justify;" Text="Business Details"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -158,10 +157,12 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                <asp:RadioButtonList ID="buttonlist2" runat="server">
+                <asp:RadioButtonList ID="buttonlist2" runat="server" 
+                        onselectedindexchanged="buttonlist2_SelectedIndexChanged">
                         <asp:ListItem Value="Yes">Yes</asp:ListItem>
                         <asp:ListItem Value="No">No</asp:ListItem>
                     </asp:RadioButtonList>
+                    <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -189,7 +190,7 @@
              <tr>
                 <td class="auto-style3">
                 <asp:RadioButtonList ID="buttonlist4" runat="server">
-                        <asp:ListItem Value="Motobike">Motobike</asp:ListItem>
+                        <asp:ListItem Value="Motorbike">Motobike</asp:ListItem>
                         <asp:ListItem Value="Van">Van</asp:ListItem>
                     </asp:RadioButtonList>
                 </td>

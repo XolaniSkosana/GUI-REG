@@ -74,4 +74,10 @@ public partial class courier : System.Web.UI.Page
             Label1.Text = "The was an unkown problem, please try again later";
         }
     }
+    protected void buttonlist2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (listItem.) {
+            TextBox.Text = buttonlist2.SelectedValue.ToString();
+        }
+    }
 }

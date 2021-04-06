@@ -1,8 +1,13 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Collections;
+using System.Web.Security;
+using System.Web.UI.WebControls.WebParts;
+using System;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -12,7 +17,7 @@ using System.Net.Mail;
 using System.Text;
 using System.IO;
 
-public partial class IzozoWebApplication_Default : System.Web.UI.Page
+public partial class SupplierReg : System.Web.UI.Page
 {
     SqlCommand cmd;
     SqlConnection con;
@@ -21,10 +26,6 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-    }
-    protected void Button1_Click1(object sender, EventArgs e)
-    {
-       
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
@@ -79,8 +80,7 @@ public partial class IzozoWebApplication_Default : System.Web.UI.Page
             Label1.Text = "The was an unkown problem, please try again later";
         }
     }
-    }
-=======
+}
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -98,4 +98,3 @@ public partial class _Default : System.Web.UI.Page
         //Response.Redirect("login.aspx");
     }
 }
->>>>>>> c6f736633e685abd59a18c96e621c561fd96fd1b
