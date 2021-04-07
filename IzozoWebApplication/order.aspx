@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="order.aspx.cs" Inherits="order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-	 <link rel="stylesheet" href="myStyle.css" />
+     <link rel="stylesheet" href="myStyle.css" />
 	
 <script src="JQuery/jquery-3.5.1.js" type="text/javascript"></script>
 <script>
@@ -18,7 +18,7 @@
                 img[i].style.display = img;
             } else {
                 li[i].style.display = "Theres nothing";
-            }
+            } 
         }
     }
 </script>	
@@ -111,6 +111,11 @@ border:thin;
 <!--Style for search-->
 <style>
 	
+    .auto-style1 {
+        left: 0px;
+        top: 20px;
+    }
+	
 </style>
    <%--<!-- Start All Pages --%>
 				
@@ -137,21 +142,17 @@ border:thin;
 	<div style="position:sticky; position: -webkit-sticky; top:150px; text-align:center; z-index:3 " >
 
 		 <asp:TextBox ID="txtSearch" runat="server" CssClass="responsive-textbox" placeholder="Search for your restaurant/meal" BackColor="White" Width="700px" BorderStyle="Solid" BorderWidth="2px" style="border-bottom-left-radius:1px; border-top-left-radius:1px; "></asp:TextBox>
-		<!--<asp:Button ID="searchBtn" CssClass="btn btn-lg btn-circle btn-outline-new-white" text="Search"  runat="server" ForeColor="Black" BorderColor="Black" OnClick="searchBtn_Click" />-->
+		<asp:Button ID="searchBtn" Height="50px" CssClass="btn btn-lg btn-circle btn-outline-new-white" text="Search"  runat="server" ForeColor="Black" BorderColor="Black" style="background-color:tan; position:absolute;" OnClick="searchBtn_Click" />
 	
 	
 		
-		<a href="#"><i class="fa fa-search fa-2x" style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" >
-		            </i></a>
+		<!--<a href="#" id="searchIcon" runat="server" ><i class="fa fa-search fa-2x"  style="width: 50px; height:50px; background-color:tan; position:absolute; border-left:inherit; border-bottom:1.8px solid; border-top:1.8px solid; border-right:1.8px solid; border-left:1.8px solid" >
+		            </i></a>-->
 		</div>	
 		<%--<asp:Button ID="Button9" runat="server" Text="Search" CssClass="btn btn-lg btn-circle btn-outline-new-white" />--%>
 
 		<%--new search button--%>
-		
-   
-    
-
-
+	
 	
 		<br />
 				<div class="col-lg-12">
@@ -162,33 +163,33 @@ border:thin;
 <!-- Start Takeaway Outlet -->
 	
 			<div class=" scrollmenu">
-				
-				 <table style="width: 100%;">
-					<tr>
-						<td>&nbsp;<a class="lightbox" href="yamifood/images/Papas.PNG">
-							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
-							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl="yamifood/images/Papas.PNG" Width="250px" Height="200px" />
-							<h3 style="color:black; font-weight:bold;">Papas</h3>
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/Grillos1.PNG">
-							<!--<img class="img-fluid" src="yamifood/images/Grillos1.PNG" alt="Gallery Images">-->
-							<asp:ImageButton class="img-fluid" ID="grillos_img" runat="server" ImageUrl="yamifood/images/Grillos1.PNG" Width="250px" Height="200px" />
-							<h3 style="color:black; font-weight:bold">Grillos</h3>
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/TnT.PNG">
-							
-							<asp:ImageButton class="img-fluid" ID="tnt_img" runat="server" ImageUrl="yamifood/images/TnT.PNG" Width="250px" Height="200px" />
-							<h3 style="color:black; font-weight:bold">TnT</h3>
-						</a></td>
-						<td>&nbsp;&nbsp;&nbsp;<a class="lightbox" href="yamifood/images/T-junction.PNG">
-							<%--<img class="img-fluid" src="yamifood/images/T-junction.PNG" alt="Gallery Images">--%>
-							<asp:ImageButton class="img-fluid" ID="tjunc_img" runat="server" ImageUrl="yamifood/images/T-junction.PNG" Width="250px" Height="200px" />
-							<h3 style="color:black; font-weight:bold">T-junction</h3>
-						</a></td>
-						
-					</tr>
+				<table>
 				</table>
+				<asp:DataList ID="DataList1" runat="server" DataSourceID="izozoDS" Height="293px" RepeatDirection="Horizontal"  Width="100%" DataKeyField="outletID">
+                    <ItemTemplate>
+                       <table>
+						   <tr>
+							   <td>&nbsp;&nbsp;&nbsp<a class="lightbox" href="<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>">
+                                   <asp:Image ID="Image1" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>' Width="310px" Height="290px" runat="server" />
+							   </td>
+						   </tr>
+						    <tr>
+							   <td>
+                                   &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp
+								   <asp:Label ID="Label1" runat="server" Text='<%# Eval("outletName") %>' style="font-weight:800; font-size:30px; color:black; text-align:center" ></asp:Label>
+							   </td>
+						   </tr>
+                       </table>
+                    </ItemTemplate>
+				 </asp:DataList>
+
+                <asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:izozoDBConnection %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tbloutlet" OnSelecting="izozoDS_Selecting"></asp:SqlDataSource>
+
+
 			</div>
+
+	
+
 		
 	
 	<!-- Start Customer Reviews -->
@@ -199,125 +200,37 @@ border:thin;
 					</div>
 				</div>
 					
-				
+				   
 	<!--Start Meal list-->
-	<div class="row special-list">
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/Ikota.jfif" class="img-fluid" alt="Image" />
-						<div class="why-text">
-							<h4>Kota</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R10-R30</h5>
-                            <asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnKota" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
+	
+<asp:DataList ID="DataList2" runat="server" DataSourceID="izozoDS2" Height="200px" Width="100%" DataKeyField="itemID" RepeatDirection="Horizontal" RepeatColumns="3">
+	<ItemTemplate>
+		<table>
+			<tr>
+				<td>
+							<div class="gallery-single fix">
+								<asp:Image ID="Image1" runat="server"  class="img-fluid" Height="279px" Width="400px" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("itemImage")) %>' />
+									<div class="why-text">
+										<h4><%# Eval("itemName") %></h4>
+										<p>Currently available at...</p>
+										<h5>Prices range from <%# Eval("itemPriceRange") %></h5>
+										<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnKota" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
+									</div>
+							</div>    
+                 </td>
+             </tr>
+		 </table>
+	</ItemTemplate>
+</asp:DataList>
+
+<asp:SqlDataSource ID="izozoDS2" runat="server" ConnectionString="<%$ ConnectionStrings:izozoDBConnection %>" ProviderName="System.Data.Odbc" SelectCommand="SELECT * FROM tblItem WHERE itemCategory='Meal'" ></asp:SqlDataSource>
 				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/Pizzas.jfif" class="img-fluid" alt="Image" />
-						<div class="why-text">
-							<h4>Pizza</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R20-R200</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnPizza" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" OnClick="btnPizza_Click" />
-						</div>
-					</div>
-					
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/img-04.jpg" class="img-fluid" alt="Image" />
-						<div class="why-text">
-							<h4>Burger</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R40-R120</h5>
-							<asp:Button ID="btnBurger" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" CssClass="btn btn-lg btn-circle btn-outline-new-white" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/breakfast&brunch.jfif" class="img-fluid" alt="Image" />
-						<div class="why-text">
-							<h4>Breakfast/Brunch Meal</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R50-R300</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBrunch" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/salad.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Salad</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R80-R200</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnSalad" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/chicken.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Chicken</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R30-R300</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnChicken" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/dessert.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Dessert</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R20-R150</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnDessert" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/soup.jfif" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Soup</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R10-R30</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnSoup" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
-					<div class="gallery-single fix">
-						<img src="yamifood/images/cookedmeal.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Home-Cooked Meal</h4>
-							<p>Currently available at...</p>
-							<h5>Prices range from R30-R100</h5>
-							<asp:Button CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnCookedMeal" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-			</div>
 	<%--Start grocery Section--%>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2 id="Grocery">Choose your grocery item(s)</h2>
+						<h2 id="Grocery" class="auto-style1">Choose your grocery item(s)</h2>
 					</div>
 				</div>
 			</div>
@@ -325,17 +238,6 @@ border:thin;
 				<div class="col-lg-12">
 					<div class="special-menu text-center">
 						<div class="button-group filter-button-group">
-							<!--<button class="active" data-filter="*">All</button>
-							<button data-filter=".fruits">Fruits</button>
-							<button data-filter=".vegetables">Vegetables</button>
-							<button data-filter=".bakery">Bakery</button>
-							<button data-filter=".groceries">Groceries</button>
-							<button data-filter=".beverages">Beverages</button>
-							<button data-filter=".egg-dairy">Egg-Dairy</button>-->
-                            
-							<!--<button class="active" id="testBtn" runat="server"  type="button" onserverclick="testBtn_ServerClick">test button</button>-->
-				
-
 								
 							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="all" runat="server" Text="All" ForeColor="#333333" OnClick="all_Click"  />
                             <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnFruits" runat="server" Text="Fruits" ForeColor="#333333" OnClick="btnFruits_Click"/>
@@ -345,321 +247,41 @@ border:thin;
 							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnBev" runat="server" Text="Beverages" ForeColor="#333333" OnClick="btnBev_Click" />
                             <asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="LinkButton1" runat="server" Text="Egg-Dairy" ForeColor="#333333" OnClick="btndairy_Click"/> 
 							<asp:LinkButton CssClass="btn btn-lg btn-circle btn-outline-new-white" ID="btnGroc" runat="server" Text="Other" ForeColor="#333333" OnClick="btnGroc_Click"/>
-		
-		
+
 						</div>
 					</div>
 				</div>
 			</div>
-				
-			<div class="row special-list">
-                <asp:Panel ID="fruitsPanel" runat="server">
-				<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-                        <img src="yamifood/grocery/green-apples.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Apples</h4>
-							<h5> R23.80</h5>
-							<asp:Button CssClass="myButton" ID="btnApples" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" OnClick="Button10_Click" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/banana.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Bananas</h4>
-							<h5> R27.80</h5>
-							<asp:Button CssClass="myButton" ID="btnBananas" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" OnClick="btnBananas_Click1" />
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/oranges.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Oranges</h4>
-							<h5> R55.80</h5>
-							<asp:Button CssClass="myButton" ID="btnOranges" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<%--<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/pineapples.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Pineapple</h4>
-							<h5> R107.60</h5>
-							<asp:Button CssClass="myButton" ID="Button12" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/avocados.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Avocados</h4>
-							<h5> R20.00</h5>
-							<asp:Button CssClass="myButton" ID="Button13" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid fruits">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/green-grapes.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Grapes</h4>
-							<h5> R53.00</h5>
-							<asp:Button CssClass="myButton" ID="Button14" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>--%>
-				</asp:Panel>
-				<asp:Panel ID="vegPanel" runat="server">
-				<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/spinach-bunch.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Spinach</h4>
-							<h5> R8.50</h5>
-							<asp:Button CssClass="myButton" ID="btnSpinach" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/tomatoes.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Tomatoes</h4>
-							<h5> R22.80</h5>
-							<asp:Button CssClass="myButton" ID="btnTomatoes" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx"/>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/green-cabbage.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Cabbage</h4>
-							<h5> R10.50</h5>
-							<asp:Button CssClass="myButton" ID="btnCabbage" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<%--<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/pumpkin.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Pumpkin</h4>
-							<h5> R10.00</h5>
-							<asp:Button CssClass="myButton" ID="Button18" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/potatoesjpg.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Potatoes</h4>
-							<h5> R21.50</h5>
-							<asp:Button CssClass="myButton" ID="Button19" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid vegetables">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/onions.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Onions</h4>
-							<h5> R16.33</h5>
-							<asp:Button CssClass="myButton" ID="Button20" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>--%>
-				</asp:Panel>
-				<asp:Panel ID="bakeryPanel" runat="server">
-				<div class="col-lg-4 col-md-6 special-grid bakery">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/cake.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Cake</h4>
-							<h5> R79.99</h5>
-							<asp:Button CssClass="myButton" ID="btnCake" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" OnClick="btnCake_Click" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid bakery">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/bread.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Bread</h4>
-							<h5> R15.99</h5>
-							<asp:Button CssClass="myButton" ID="btnBread" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" OnClick="btnBread_Click" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid bakery">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/muffins.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Muffins</h4>
-							<h5> R20.00</h5>
-							<asp:Button CssClass="myButton" ID="btnMuffins" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				</asp:Panel>
-				<asp:Panel ID="groceryPanel" runat="server">
+</div>
+<!--DataList3_Grocery Section-->
 
-				<div class="col-lg-4 col-md-6 special-grid groceries">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/cooking-oil.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Cooking oil</h4>
-							<h5> R60.00</h5>
-							<asp:Button CssClass="myButton" ID="btnOil" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
 
-				<div class="col-lg-4 col-md-6 special-grid groceries">
+<asp:DataList ID="DataList3" runat="server" DataSourceID="izozoDS3" Height="293px" Width="100%" RepeatDirection="Horizontal" RepeatColumns="3" CaptionAlign="Right" OnItemCommand="DataList3_ItemCommand">	
+	<ItemTemplate>
+<div class="menu-box">	
+	<div class="container">
+	<div class="row special-list">
+		
+				<div class="special-grid fruits">
 					<div class="gallery-single fix">
-						<img src="yamifood/grocery/toilet-paper.jpg" class="img-fluid" alt="Image"/>
+						<asp:Image ID="Image2" runat="server" OnLoad="Image2_Load" class="img-fluid" Height="200px" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("itemImage")) %>'/>
 						<div class="why-text">
-							<h4>Toilet Paper</h4>
-							<h5> R80.77</h5>
-							<asp:Button CssClass="myButton" ID="btnToiletPaper" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
+							<h4><%# Eval("itemName") %></h4>
+							<h5><%# Eval("itemPrice") %></h5>
+							<asp:Button CssClass="myButton" ID="btnView" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" CommandArgument='<%# Eval("itemName") %>' CommandName="ViewProduct" />
 						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid groceries">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/joko.PNG" class="img-fluid" alt="Image" style="width:100%; height:200px"/>
-						<div class="why-text">
-							<h4>JOKO</h4>
-							<h5> R497.99</h5>
-							<asp:Button CssClass="myButton" ID="btnJoko" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-			</asp:Panel>
-				<asp:Panel ID="bevPanel" runat="server">
-				<div class="col-lg-4 col-md-6 special-grid beverages">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/fanta-grape.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Fanta Grape</h4>
-							<h5> R120.99</h5>
-							<asp:Button CssClass="myButton" ID="btnFanta" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid beverages">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/wine.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Wine</h4>
-							<h5> R20.00</h5>
-							<asp:Button CssClass="myButton" ID="btnWine" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid beverages">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/fruit-juice.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Fruit Juice</h4>
-							<h5> R40.00</h5>
-							<asp:Button CssClass="myButton" ID="btnFruitJuice" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				</asp:Panel>
-				<asp:Panel ID="dairyPanel" runat="server">
-				<div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/cheese.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Cheese</h4>
-							<h5> R40.00</h5>
-							<asp:Button CssClass="myButton" ID="btnCheese" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/milk.jpg" class="img-fluid" alt="Image" height="400"/>
-						<div class="why-text">
-							<h4>Milk</h4>
-							<h5> R77.98</h5>
-							<asp:Button CssClass="myButton" ID="btnMilk" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/yoghurt.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Yoghurt</h4>
-							<h5> R38.95</h5>
-							<asp:Button CssClass="myButton" ID="btnYoghurt" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" OnClick="btnYoghurt_Click" />
-						</div>
-					</div>
-				</div>
-				<%-- <div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/eggs.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Eggs</h4>
-							<h5> R60.00</h5>
-							<asp:Button CssClass="myButton" ID="Button32" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/ice-cream.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Ice Cream</h4>
-							<h5> R50.00</h5>
-							<asp:Button Cs sClass="myButton" ID="Button33" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 special-grid egg-dairy">
-					<div class="gallery-single fix">
-						<img src="yamifood/grocery/stock-spread.jpg" class="img-fluid" alt="Image"/>
-						<div class="why-text">
-							<h4>Stock-Spread</h4>
-							<h5> R29.99</h5>
-							<asp:Button CssClass="myButton" ID="Button34" runat="server" Text="View" BorderStyle="Solid" BorderColor="Black" width="100" BackColor="Tan" PostBackUrl="~/product.aspx" />
-						</div>
-					</div>
-				</div>--%>
-				</asp:Panel>
-		</div>
 	</div>
-
+</div>
+</div>		
+                
+			</ItemTemplate>
+			
+	
+</asp:DataList>
+<asp:SqlDataSource ID="izozoDS3" runat="server" ConnectionString="<%$ ConnectionStrings:izozoDBConnection %>" ProviderName="System.Data.Odbc" SelectCommand="SELECT * FROM tblItem WHERE itemCategory LIKE 'Grocery%'" OnSelecting="izozoDS3_Selecting"></asp:SqlDataSource>			
 
 	
-	<script>
-        $('#testBtn').click(function (e) {
-            e.preventDefault();
-            someIdClient.SetVisible(true)
-            return false;
-        }
-    </script>
-	
-	<!-- END GROCERY SECTION -->
-    
-</asp:Content>
+	</asp:Content>
 

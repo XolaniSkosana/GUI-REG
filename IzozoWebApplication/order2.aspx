@@ -140,7 +140,7 @@ border:thin;
 				<td>
 					<a class="lightbox" href='<%# Eval("outletImage") %>'>
 							<!--<img style="border:solid; border-color:black" class="img-fluid" src="yamifood/images/Papas.PNG" alt="Gallery Images" >-->
-							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl='<%# Eval("outletImage") %>' Width="310px" Height="290px" />
+							<asp:ImageButton class="img-fluid" ID="papas_img" runat="server" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>' Width="310px" Height="290px" />
 							
 					</a></td>
 			</tr>
@@ -154,6 +154,10 @@ border:thin;
 		
 		
     </asp:DataList>
+<<<<<<< HEAD
+     <asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblOutlet" OnSelecting="izozoDS_Selecting"></asp:SqlDataSource>
+=======
      <asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:izozoWebConnectionString %>" ProviderName="<%$ ConnectionStrings:izozoWebConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblitem"></asp:SqlDataSource>
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
 </asp:Content>
 

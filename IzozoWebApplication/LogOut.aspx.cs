@@ -9,6 +9,10 @@ public partial class LogOut : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+<<<<<<< HEAD
+
+    }
+=======
         Session.Abandon();
         Session.Clear();
         Session.RemoveAll();
@@ -40,4 +44,5 @@ public partial class LogOut : System.Web.UI.Page
         //}
         //Response.Redirect("~/Login.aspx");
     }
+>>>>>>> 94e98301fadc92de58c14471435aa6023e20af55
 }

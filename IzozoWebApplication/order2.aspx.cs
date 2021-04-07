@@ -16,4 +16,9 @@ public partial class order2 : System.Web.UI.Page
     {
 
     }
+
+    protected void izozoDS_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
 }

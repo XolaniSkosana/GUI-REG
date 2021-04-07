@@ -38,7 +38,7 @@
 			</div>
 				
 			<div class="row special-list">
-				<div class="col-lg-4 col-md-6 special-grid drinks">
+				<div class="special-grid drinks">
 					<div class="gallery-single fix">
 						<img src="yamifood/images/img-01.jpg" class="img-fluid" alt="Image">
 						<div class="why-text">

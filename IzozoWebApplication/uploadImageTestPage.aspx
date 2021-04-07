@@ -122,19 +122,15 @@ border:thin;
     <form id="form1" runat="server">
         <div>
             <asp:TextBox ID="txt1" runat="server" BorderStyle="Solid"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" />
-            <asp:DataList ID="DataList1" runat="server" DataSourceID="izozoDS" Height="293px" Width="100%" DataKeyField="itemID" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" RepeatDirection="Horizontal" RepeatColumns="3">
+            <asp:DataList ID="DataList1" runat="server" DataSourceID="izozoDS" Height="293px" Width="100%" DataKeyField="itemID" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" RepeatDirection="Horizontal" RepeatColumns="4">
                 <ItemTemplate>
                    <table>
-                     <%-- <tr>
-                           <td>
-                               <asp:Label ID="lbl1" Font-Bold="true" Font-Names="Open Sans Extrabold" runat="server" Text='<%# Eval("itemName") %>'></asp:Label>
-                           </td>
-                       </tr>--%>
+                    
                         <tr>
                            <td>
                       
 					<div class="gallery-single fix">
-		            <asp:Image ID="Image1" runat="server" class="img-fluid" Height="279px" Width="400px" ImageUrl='<%# Eval("itemImage") %>' Visible="true" />
+		            <asp:Image ID="Image1" runat="server" class="img-fluid" Height="279px" Width="400px" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("itemImage")) %>' Visible="true" />
 						<div class="why-text">
 							<h4><%# Eval("itemName") %></h4>
 							<p>Currently available at...</p>
@@ -163,7 +159,8 @@ border:thin;
                 </ItemTemplate>
             </asp:DataList>
             
-            &nbsp;<asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblitem"></asp:SqlDataSource>
+            &nbsp;<asp:SqlDataSource ID="izozoDS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM tblitem"></asp:SqlDataSource>  
+            
             
         </div>
     </form>
