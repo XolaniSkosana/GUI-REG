@@ -13,7 +13,7 @@ public partial class product : System.Web.UI.Page
     OdbcConnection conn = new OdbcConnection(ConfigurationManager.ConnectionStrings["izozoDBConnection"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
+        if(!Page.IsPostBack)
         {
             setImageUrl();
         }
@@ -262,4 +262,78 @@ public partial class product : System.Web.UI.Page
     {
 
     }
+
+    protected void reviewButton_Click(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void Button19_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnMinus_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+          
+    }
+
+    protected void DataSource1_Selecting1(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+        
+
+        
+        
+        
+    }
+
+    protected void btnAdd_Click1(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+    {
+
+
+       Label lblQuantity = (Label)e.Item.FindControl("lblQuantity");
+            int quantity = int.Parse(lblQuantity.Text);
+
+        if (e.CommandName == "addItem")
+        {
+            quantity = quantity + 1;
+            lblQuantity.Text = quantity.ToString();
+        }
+
+
+
+
+
+        if (e.CommandName == "minusItem")
+            {
+                
+                if (quantity > 0)
+                {
+                    quantity = quantity - 1;
+                lblQuantity.Text = quantity.ToString();
+            }
+                else
+                {
+                 quantity = 0;
+                lblQuantity.Text = quantity.ToString();
+            }
+            }
+            
+
+        
+    }
+
+
+
+
 }

@@ -255,10 +255,7 @@ public partial class order : System.Web.UI.Page
     {
         
 
-        ;
-        //Response.Redirect("~/Default2.aspx");
-        ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-               "alert('Welcome ' + Session['Product']); window.location='order.aspx';", true);
+       
     }
 
     protected void DataList3_ItemCommand(object source, DataListCommandEventArgs e)

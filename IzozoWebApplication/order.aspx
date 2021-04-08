@@ -132,7 +132,7 @@ border:thin;
 			</div>
 		</div>
 	</div>
-	 nnnnnn
+	 
 	<br />
 	<br /><br />
 	<!-- End All Pages -->
@@ -169,7 +169,7 @@ border:thin;
                     <ItemTemplate>
                        <table>
 						   <tr>
-							   <td>&nbsp;&nbsp;&nbsp<a class="lightbox" href="<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>">
+							   <td>&nbsp;&nbsp;&nbsp<a class="lightbox" href="<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>"/>
                                    <asp:Image ID="Image1" ImageUrl='<%#"data:Image/png;base64,"+ Convert.ToBase64String((byte[]) Eval("outletImage")) %>' Width="310px" Height="290px" runat="server" />
 							   </td>
 						   </tr>
@@ -256,7 +256,7 @@ border:thin;
 <!--DataList3_Grocery Section-->
 
 
-<asp:DataList ID="DataList3" runat="server" DataSourceID="izozoDS3" Height="293px" Width="100%" RepeatDirection="Horizontal" RepeatColumns="3" CaptionAlign="Right" OnItemCommand="DataList3_ItemCommand">	
+<asp:DataList ID="DataList3" runat="server" DataSourceID="izozoDS3" Height="293px" Width="100%" RepeatDirection="Horizontal" RepeatColumns="4" CaptionAlign="Right" OnItemCommand="DataList3_ItemCommand">	
 	<ItemTemplate>
 <div class="menu-box">	
 	<div class="container">
