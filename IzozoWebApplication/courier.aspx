@@ -157,11 +157,11 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                <asp:RadioButtonList ID="buttonlist2" runat="server" 
-                        onselectedindexchanged="buttonlist2_SelectedIndexChanged">
+                <asp:RadioButtonList ID="buttonlist2" runat="server">
                         <asp:ListItem Value="Yes">Yes</asp:ListItem>
                         <asp:ListItem Value="No">No</asp:ListItem>
                     </asp:RadioButtonList>
+                    <asp:Label ID="Label3" runat="server" Text="Are you a Courier Company?"></asp:Label><br />
                     <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>

@@ -32,12 +32,12 @@
       <div class="internalcontainnerR">
         <img src="yamifood/images/Capture9.png" width="250px" height="250px"   alt="" />
         <h2>Sell more products</h2>
-         <p>Customers will see your products whenever we advertise our store all the time everywhere.</p>
+         <p>You can expand your product list without worrying about space.</p>
       </div>
       <div class="internalcontainnerML">
          <img src="yamifood/images/Capture10.png" width="250px" height="250px" alt="" />
          <h2>Free marketing</h2>
-         <p>You can expand your product list without worrying about space.</p>
+         <p>Customers will see your products whenever we advertise our store all the time everywhere.</p>
       </div>
       <div class="internalcontainnerMR">
          <img src="yamifood/images/Capture12.png" width="250px" height="250px"  alt="" />
