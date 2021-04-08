@@ -1,7 +1,4 @@
 
-
-
-
 <%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <style>
@@ -13,40 +10,21 @@
     font-size: 16px;
     margin: 10px 0;
     pointer-events: none;
-
-
-    transition: 0.5s;
-
-    transition: 0.5s;
-
-
     transition: 0.5s;
     transition: 0.5s;
     transition: 0.5s;
-
+    transition: 0.5s;
+    transition: 0.5s;
+    transition: 0.5s;
     color: #666;    
  }
  .contactForm .inputBox input:focus ~ span;
- .contactForm .inputBox input:valid ~ span;
- .contactForm .inputBox textarea:focus ~ span;
- .contactForm .inputBox textarea:focus ~ span;
+
  {
      color: #3498db;
      font-size: 12px;
      transform: translateY(-20px);
  }
-
-
- @media (max-width:991px)
-
- @media screen and (max-width:991px)
-
-
- 
-
- @media screen and (max-width:991px)
-
- {
    .contact
    {
      padding: 50px;
@@ -136,7 +114,7 @@
          </div>
       </div>
                  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
+                 <div class="inputBox" style="position: relative; width: 100%; margin-top: 10px;">
                     <input type="text" name="" required="required" style="width: 100%; padding: 5px 0; font-size: 16px; margin: 10px 0; border: none; border-bottom: 2px solid #333; outline: none; resize: none; border-radius: 0;"placeholder ="Full Name(s)" />
                     <!--<span>Full Name(s)</span>-->
                  </div>
@@ -154,7 +132,9 @@
                     <!--<asp:Button ID="Button2" runat="server" Text="Send" 
                          style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;" 
                          onclick="Button1_Click"></asp:Button>-->
-
+                    <asp:Button ID="Button2" runat="server" Text="Send" 
+                         style="width:100px; background:gray; color: #fff; border: none; cursor: pointer; padding: 10px; font-size: 18px;" 
+                         onclick="Button2_Click"></asp:Button>
                  </div>
                </form>
             </div>

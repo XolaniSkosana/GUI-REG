@@ -29,7 +29,7 @@
       <div class="internalcontainnerML">
          <img src="yamifood/images/Capture11.png" width="350px" height="200px" alt="" />
          <h2>Day or night</h2>
-         <p>YChoose your own shift and work after work if you want. </p>
+         <p>Choose your own shift and work after work if you want. </p>
       </div>
    </div>
 
@@ -60,7 +60,7 @@
             <br />
        <h1>You won’t regret, get started!</h1>
        <center>
-       <asp:Button ID="Button3" CssClass="btn1" runat="server" Text="Sign up" />
+       <asp:Button ID="Button3" CssClass="btn1" runat="server" Text="Sign up" OnClientClick="openPopup();return false;"/>
        </center>
 
  <script  type="text/javascript">
@@ -72,7 +72,7 @@
          'status:no;dialogWidth:250px;dialogHeight:300px;dialogHide:true;help:no;scroll:yes');*/
      function openPopup() {
 
-         window.open("D.aspx", "_blank", "WIDTH=1080,HEIGHT=790,scrollbars=no, menubar=no,resizable=yes,directories=no,location=no");  
+         window.open("courier.aspx", "_blank", "WIDTH=100,HEIGHT=190,scrollbars=no, menubar=no,resizable=yes,directories=no,location=no");  
                
      }
     /* function showpage1() {
