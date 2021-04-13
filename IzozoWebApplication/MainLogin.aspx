@@ -27,14 +27,25 @@
  color: green; 
  font-weight: bold;   
 }
-li.active + li:after
+.name:focus + .icon
 {
-  background-color: Green;    
+  background-color: #7ed321;
+  color: #fff;
+  border-right: 1px solid #7ed321;  
+  border: none;
+  transition: 1s;  
 }
-.step_progressbar + li.active:before
+.name
 {
-  background-color: Green;
-  color: #fff;   
+  padding: 14px 10px 14px 50px;
+  width: 100%;
+  padding-left: 8px;
+  background-color: #fcfcfc;
+  border: 1px solid #00000033;
+  outline: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  color: #333;    
 }
     </style>
 
@@ -45,13 +56,13 @@ li.active + li:after
 
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Username" required class="name" />
+           <asp:TextBox ID="TextBox2" placeholder="username" required="required" class="name" runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
       </div>
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Password" required class="name" />
+         <asp:TextBox ID="TextBox1" placeholder="Password" required="required" class="name" runat="server"></asp:TextBox>
             <i class="fa fa-lock icon"></i>
          </div>
       </div>

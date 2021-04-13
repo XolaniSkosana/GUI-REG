@@ -34,20 +34,18 @@ public partial class SupplierReg : System.Web.UI.Page
             if (Page.IsValid)
             {
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress("izozo.qha@gmail.com");
+                mailMessage.From = new MailAddress(TextBox4.Text);
                 mailMessage.To.Add("izozo.qha@gmail.com");
-                mailMessage.Subject = "Courier Application";
+                mailMessage.Subject = "Supplier Application";
 
                 mailMessage.Body = "<b>Sender Name : </b>" + TextBox2.Text + "<br/>"
                     + "<b>Sender Surname : </b>" + TextBox3.Text + "<br/>"
-                      + "<b>Sender Position : </b>" + TextBox6.Text + "<br/>"
+                      + "<b>Sender Role : </b>" + TextBox6.Text + "<br/>"
                       + "<b>Sender Phone Number : </b>" + TextBox7.Text + "<br/>"
                       + "<b>Sender Email : </b>" + TextBox4.Text + "<br/>"
-                      + "<b>Company Details </b>" + "<br/>"
-                      + "<b>Head office location : </b>" + TextBox1.Text + "<br/>"
-                      + "<b>Holding Company : </b>" + TextBox9.Text + "<br/>"
-                      + "<b>Holding Company Registration Number : </b>" + TextBox13.Text + "<br/>"
-                      + "<b>Telephone Number : </b>" + TextBox14.Text + "<br/>";
+                      + "<b>Business Details </b>" + "<br/>"
+                      + "<b>Business Name : </b>" + TextBox1.Text + "<br/>"
+                      + "<b>Business Address : </b>" + TextBox9.Text + "<br/>";
 
 
                 mailMessage.IsBodyHtml = true;
@@ -67,8 +65,6 @@ public partial class SupplierReg : System.Web.UI.Page
                 TextBox4.Enabled = false;
                 TextBox1.Enabled = false;
                 TextBox9.Enabled = false;
-                TextBox13.Enabled = false;
-                TextBox14.Enabled = false;
                 Button2.Enabled = false;
             }
         }
