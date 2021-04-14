@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MainReg.aspx.cs" Inherits="MainReg" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="./MasterPage.master" AutoEventWireup="true" CodeFile="MainReg.aspx.cs" Inherits="MainReg" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
   <br /><br /><br /><br />
@@ -45,59 +45,56 @@ li.active + li:after
 
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Name(s)" required class="name" />
+         <asp:TextBox ID="TextBox50" placeholder="username" required="required" CssClass="name"  runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
+         </div>
+         <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Surname" required class="name" />
+             <asp:TextBox ID="TextBox1" placeholder="Surname" required="required" CssClass="name" runat="server"></asp:TextBox>
+            <i class="fa fa-user icon"></i>
+         </div>
+         </div>
+      <div class="input-grp">
+         <div class="input-box">
+             <asp:TextBox ID="TextBox2"  placeholder="Username" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
       </div>
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Username" required class="name" />
-            <i class="fa fa-user icon"></i>
-         </div>
-      </div>
-      <div class="input-grp">
-         <div class="input-box">
-            <input type="tel" placeholder="Email" required class="name" />
+             <asp:TextBox ID="TextBox3" placeholder="Email" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-envelope icon"></i>
          </div>
       </div>
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Cellphone Number" required class="name" />
+             <asp:TextBox ID="TextBox4" placeholder="Cellphone Number" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-phone icon"></i>
          </div>
       </div>
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Password" required class="name" />
+             <asp:TextBox ID="TextBox5" placeholder="Password" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-lock icon"></i>
          </div>
       </div>
       <div class="input-grp">
          <div class="input-box">
-            <input type="tel" placeholder="Cornfirm Password" required class="name" />
+             <asp:TextBox ID="TextBox6" placeholder="Confirm Password" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-lock icon"></i>
          </div>
       </div>
       
-      <div class="input-grp">
-         <div class="input-box">
              
  <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Register" />
-         </div>
-      </div><br /><br />
-      <div class="input-grp">
-         <div class="input-box">
-             <asp:Label ID="Label1" runat="server" Text="Already have an account?"></asp:Label>
-         </div>
-         <div class="input-box" style="text-align:center">
+      <br /><br />
+ 
+             <asp:Label ID="Label1" runat="server" Text="Already have an account?"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
          <a href="#">Login</a>
-         </div>
-         </div>
+
+  
    </form>
 </div>
 
