@@ -32,21 +32,26 @@
 
       <div class="input-grp">
          <div class="input-box">
-           <asp:TextBox ID="TextBox50" placeholder="username" required="required" CssClass="name"  runat="server"></asp:TextBox>
+           <asp:TextBox ID="TextBox50" placeholder="username"  CssClass="name"  runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
+          <br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="username is required" ControlToValidate="TextBox50" ForeColor="Red"></asp:RequiredFieldValidator>
       </div>
       <div class="input-grp">
          <div class="input-box">
-         <asp:TextBox ID="TextBox1" placeholder="Password" required="required" class="name" runat="server"></asp:TextBox>
-            <i class="fa fa-lock icon"></i>
+         <asp:TextBox ID="TextBox1" placeholder="Password" class="name" runat="server"></asp:TextBox>
+          <i class="fa fa-lock icon"></i>
          </div>
+          <br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="password is required" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>
       </div>
+
       
 
             <a href="#">Forgot password?</a>
 
-            <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Login" />
+            <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Login" OnClick="Button1_Click" />
 <br /><br />
              <asp:Label ID="Label1" runat="server" Text="Don't have an account?"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          

@@ -40,59 +40,68 @@ li.active + li:after
 
   
     <div class="wrapper">
-   <h2> Register</h2>
+   <h2Register</h2>
    <form method="post">
 
       <div class="input-grp">
          <div class="input-box">
-         <asp:TextBox ID="TextBox50" placeholder="username" required="required" CssClass="name"  runat="server"></asp:TextBox>
+         <asp:TextBox ID="TextBox50" placeholder="Last Name" CssClass="name"  runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Last Name is required" ControlToValidate="TextBox50" ForeColor="Red"></asp:RequiredFieldValidator>
          </div>
          <div class="input-grp">
          <div class="input-box">
-             <asp:TextBox ID="TextBox1" placeholder="Surname" required="required" CssClass="name" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox1" placeholder="First Name"  CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="First Name is required" ForeColor="Red" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
          </div>
       <div class="input-grp">
          <div class="input-box">
-             <asp:TextBox ID="TextBox2"  placeholder="Username" required="required" CssClass="name" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox2"  placeholder="Username"  CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-user icon"></i>
          </div>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Username is required" ForeColor="Red" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
       </div>
       <div class="input-grp">
          <div class="input-box">
-             <asp:TextBox ID="TextBox3" placeholder="Email" required="required" CssClass="name" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox3" placeholder="Email"  CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-envelope icon"></i>
          </div>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is required" ForeColor="Red" ControlToValidate="Textbox3"></asp:RequiredFieldValidator>
       </div>
       <div class="input-grp">
          <div class="input-box">
-             <asp:TextBox ID="TextBox4" placeholder="Cellphone Number" required="required" CssClass="name" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox4" placeholder="Cellphone Number"  CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-phone icon"></i>
          </div>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cellphone is required" ForeColor="Red" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
       </div>
       <div class="input-grp">
          <div class="input-box">
              <asp:TextBox ID="TextBox5" placeholder="Password" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-lock icon"></i>
          </div>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Password is required"  ForeColor="Red" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
       </div>
       <div class="input-grp">
          <div class="input-box">
-             <asp:TextBox ID="TextBox6" placeholder="Confirm Password" required="required" CssClass="name" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox6" placeholder="Confirm Password" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-lock icon"></i>
          </div>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Confirm password is required" ForeColor="Red" ControlToValidate="TextBox6"></asp:RequiredFieldValidator>
+          <br />
+          <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password must match" ForeColor="Red" ControlToCompare="TextBox5" ControlToValidate="TextBox6"></asp:CompareValidator>
       </div>
       
              
- <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Register" />
+ <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Register" OnClick="Button1_Click" />
       <br /><br />
  
              <asp:Label ID="Label1" runat="server" Text="Already have an account?"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   
-         <a href="#">Login</a>
+         <a href="#">Loginin</a>
 
   
    </form>
