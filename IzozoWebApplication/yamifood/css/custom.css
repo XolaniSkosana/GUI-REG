@@ -554,9 +554,9 @@ input-box:last-child
 {
   display: none;    
 }
-.input-box label
+.input-box 
 {
-  width: 50%;
+  width: 100%;
   padding: 13px;
   background-color: #fcfcfc;
   display: inline-block;
