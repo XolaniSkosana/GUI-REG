@@ -31,19 +31,19 @@ public partial class MainLogin : System.Web.UI.Page
         {
             conn.Open();
             string str = "SELECT * FROM tblcustomer WHERE custUsername = '" +
-                         TextBox50.Text + "' AND custPassword = '" + TextBox1.Text + "'";
+                         TextBox2.Text + "' AND custPassword = '" + TextBox1.Text + "'";
             OdbcDataAdapter sda = new OdbcDataAdapter(str, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
             if (dtbl.Rows.Count != 0)
             {
-                Session["User"] = TextBox50.Text.Trim();
+                Session["User"] = TextBox2.Text.Trim();
                 Response.Redirect("home.aspx");
             }
             else
             {
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
-                "alert('Invalid login details,please check your username or password')", true);
+                "alert('Invalid login details, if you have registered, please check your username or password')", true);
 
             }
             conn.Close();

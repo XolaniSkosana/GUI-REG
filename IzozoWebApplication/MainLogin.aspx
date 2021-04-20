@@ -38,11 +38,11 @@
       </div>
       <div class="input-grp">
          <div class="input-box">
-         <asp:TextBox ID="TextBox1" placeholder="Password" class="name" runat="server"></asp:TextBox>
+         <asp:TextBox ID="TextBox1" placeholder="Password" required="required" class="name" TextMode="Password" runat="server"></asp:TextBox>
           <i class="fa fa-lock icon"></i>
          </div>
           <br />
-         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="password is required" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>
+         <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="password is required" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>-->
       </div>
 
       
@@ -54,18 +54,18 @@
              <asp:Label ID="Label1" runat="server" Text="Don't have an account?"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          
          
-         <a href="#" >Register</a>
+         <a href="MainReg.aspx" >Register</a>
 
          </div>
-     <br /><br />
+     <!--<br /><br />
        <div class="input-grp">
          <div class="input-box">
-             <asp:Label ID="Label1" runat="server" Text="Don't have an account?"></asp:Label>
+             <asp:Label ID="Label2" runat="server" Text="Don't have an account?"></asp:Label>
          </div>
          <div class="input-box" style="text-align:center">
          <a href="#">Register</a>
          </div>
-         </div>
+         </div>-->
    </form>
 </div>
 <br /><br />

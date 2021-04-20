@@ -33,13 +33,16 @@ public partial class MainReg : System.Web.UI.Page
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
 
-
-            if (dtbl.Rows.Count > 0)//Check if user exists in the DB
+            if (TextBox5.Text != TextBox6.Text) //Check if passwords are the same
+            {
+                CompareValidator1.ErrorMessage = "Passwords must match!";
+            }
+            else if (dtbl.Rows.Count > 0)//Check if user exists in the DB
             {
                 ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
                 "alert('User already exists!')", true);
                 //lblReg.Text = "User already exists!";
-            }
+            } 
             else
             {
                 //Insert a new user's details into DB
