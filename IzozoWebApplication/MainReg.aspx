@@ -95,7 +95,7 @@ li.active + li:after
              <asp:Label ID="Label1" runat="server" Text="Already have an account?"></asp:Label>
          </div>
          <div class="input-box" style="text-align:center">
-         <a href="#">Login</a>
+         <a href="MainLogin.aspx">Login</a>
          </div>
          </div>
    </form>

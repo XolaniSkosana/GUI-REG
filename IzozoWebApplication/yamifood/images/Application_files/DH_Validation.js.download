@@ -1,0 +1,288 @@
+﻿///////////////////
+// Email Validator
+///////////////////
+
+////////////////////////////////////////////
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
+    return pattern.test(emailAddress);
+};
+
+function isValidUserEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+    return pattern.test(emailAddress);
+};
+
+
+$(".money").maskMoney({
+    thousands : '',
+    decimal: '.'
+});
+
+// money mask
+// $('.moneyTest').mask("000.000.000.000.000,00", { reverse: true });
+
+// phone number mask
+$('.phone').mask('#');
+
+// percent mask
+$('.percent').mask('00.00', { reverse: true });
+
+
+// Allow Everything but CrossSite Scripting and Url Injection Elements
+$('.Secure').on('input', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"]/g, '');
+});
+
+
+
+
+
+
+// Plain Text WITH spaces
+$('.PlainTextWithSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+});
+
+// Plain Text WITHOUT spaces
+$('.PlainTextWithoutSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z]/g, '');
+});
+
+
+
+// Simple Text WITH Spaces
+$('.SimpleTextWithSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.\s]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.\s]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.\s]/g, '');
+});
+
+// Simple Text WITHOUT Spaces
+$('.SimpleTextWithoutSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\(\)\-\_\=\[\]\{\}\,\.]/g, '');
+});
+
+
+
+
+
+// Alphanumeric WITH spaces
+$('.AlphaNumericWithSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '');
+});
+
+// Alphanumeric WITHOUT spaces
+$('.AlphaNumericWithoutSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+});
+
+// Special text WITH spaces
+$('.AlphaNumericSpecialWithSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?\s]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?\s]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?\s]/g, '');
+});
+
+// Special text WITH spaces
+$('.AlphaNumericSpecialWithoutSpaces').on('input', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^a-zA-Z0-9\!\@\#\$\%\^\*\(\)\-\_\=\+\[\{\]\}\;\:\,\.\/\?]/g, '');
+});
+
+
+// Numeric text only
+$('.NumericText').on('input', function (event) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+
+// Screening question option cannot allow these characters as we use them for dynamic controls as a string split function.
+$('.DynamicScreeningQuestionOptions').on('input', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"\|\^]/g, '');
+}).on('paste', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"\|\^]/g, '');
+}).on('keydown', function (event) {
+    this.value = this.value.replace(/[\<\>\'\"\|\^]/g, '');
+});
+
+
+
+
+
+function validateID(idnumber) {
+    //1. numeric and 13 digits
+    if (isNaN(idnumber) || (idnumber.length != 13)) { return false; }
+    //2. first 6 numbers is a valid date
+    var tempDate = new Date(idnumber.substring(0, 2), idnumber.substring(2, 4) - 1, idnumber.substring(4, 6));
+    if (!((tempDate.getYear() == idnumber.substring(0, 2)) && (tempDate.getMonth() == idnumber.substring(2, 4) - 1) && (tempDate.getDate() == idnumber.substring(4, 6)))) { return false; }
+    //3. luhn formula
+    var tempTotal = 0; var checkSum = 0; var multiplier = 1;
+    for (var i = 0; i < 13; ++i) {
+        tempTotal = parseInt(idnumber.charAt(i)) * multiplier;
+        if (tempTotal > 9) { tempTotal = parseInt(tempTotal.toString().charAt(0)) + parseInt(tempTotal.toString().charAt(1)); }
+        checkSum = checkSum + tempTotal;
+        multiplier = (multiplier % 2 == 0) ? 1 : 2;
+    }
+    if ((checkSum % 10) == 0) { return true };
+    return false;
+}
+
+/*  This function accepts the actual date value, a minimum date and a maximum date. The following is true for the 'min' and 'max' arguments:
+The first character should be a '+' or '-' which will indicate whether the amount of time should be added or subtracted from the current date
+The last Character will be either a 'Y', 'M' or 'D' which will indicate what kind of time period to use (year, month, day)
+The characters in between will be the actual number(int) indicating the amount of time periods that will be used
+Alternatively, 'default' and 'today' are two keywords that correspond to specific dates ('today' being the current date) */
+function dateRange(v, min, max) {
+    var minLength = min.length;
+    var maxLength = max.length;
+    var today = new Date();
+    var years = today.getFullYear();
+    var months = today.getMonth();
+    var days = today.getDate();
+    // today is recreated so that it does not include the current time for comparison purposes
+    today = new Date(years, months, days);
+
+    v = new Date(v);
+
+    // Checks that the min argument has a valid length (at least 3 characters)  
+    if (minLength >= 3) {
+        var val = parseInt(min.substr(1, minLength - 1));
+        if (min == 'default')
+            min = new Date(2010, 0, 1);
+        else if (min == 'today')
+            min = today;
+        else if (min.substr(0, 1) == '+') {
+            if (min.substr(minLength - 1, 1) == 'Y')
+                years += val;
+            else if (min.substr(minLength - 1, 1) == 'M')
+                months += val;
+            else if (min.substr(minLength - 1, 1) == 'D')
+                days += val;
+            min = new Date(years, months, days);
+        }
+        else if (min.substr(0, 1) == '-') {
+            if (min.substr(minLength - 1, 1) == 'Y')
+                years -= val;
+            else if (min.substr(minLength - 1, 1) == 'M')
+                months -= val;
+            else if (min.substr(minLength - 1, 1) == 'D')
+                days -= val;
+            min = new Date(years, months, days);
+        }
+    }
+
+    if (maxLength >= 3) {
+        var val = parseInt(max.substr(1, maxLength - 1));
+        if (max == 'default')
+            max = new Date(2010, 0, 1);
+        else if (max == 'today')
+            max = today;
+        else if (max.substr(0, 1) == '+') {
+            if (max.substr(maxLength - 1, 1) == 'Y')
+                years += val;
+            else if (max.substr(maxLength - 1, 1) == 'M')
+                months += val;
+            else if (max.substr(maxLength - 1, 1) == 'D')
+                days += val;
+            max = new Date(years, months, days);
+        }
+        else if (max.substr(0, 1) == '-') {
+            if (max.substr(maxLength - 1, 1) == 'Y')
+                years -= val;
+            else if (max.substr(maxLength - 1, 1) == 'M')
+                months -= val;
+            else if (max.substr(maxLength - 1, 1) == 'D')
+                days -= val;
+            max = new Date(years, months, days);
+        }
+    }
+
+    if (v < min || v > max)
+        return false;
+    else
+        return true;
+}
+
+function dateCompare(v, elementId) {
+    v = new Date(v);
+    var prevDate = new Date($('input#' + elementId).val());
+    return (v > prevDate);
+}
+
+function time(v, format) { // format can be any combination of hh,mm,ss with a separator. Example: 'hh:mm'
+    if (v.length == 5 && format.length == 5) {
+        var s = v[2];
+        var t = v.split(s);
+        var f = format.split(format[2]);
+        var hour = 0;
+        var minute = 0;
+
+        for (var i = 0; i < 2; i++) {
+            if (f[i] == 'hh')
+                hour = t[i];
+            else if (f[i] == 'mm')
+                minute = t[i];
+            //	else if (f[i] == 'ss')
+            //		var second = t[i];
+        }
+        if (hour.length < 2 || minute.length < 2 || hour < 0 || hour > 23 || minute < 0 || minute > 59)
+            return false;
+        else
+            return true;
+    }
+    return false;
+}
+
+function telephone(v) {
+    var regexTel = /^(\+)?(\d){10,16}$/;
+    return regexTel.test(v);
+}
+
+function noAngleBrackets(v, o) {
+    var regex = new RegExp('[' + o + ']');
+    return !regex.test(v);
+}
+
+$(".email").each(function (index) {
+    $(this).focusout(function () {
+        var text = $(this).val();
+        text = $.trim(text);
+        $(this).val(text);
+    });
+});

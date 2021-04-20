@@ -132,7 +132,7 @@ h1 {
        float: left;
   width: 50%;
   padding: 50px 200px;
-  height: 500px; 
+  height: 560px; 
     }
     .Scontainer{
         margin:0 0 80px 100px;
@@ -375,8 +375,28 @@ div.scrollmenu a:hover {
 .btn-outline-new-white:active{
 	background-color:tan;
 }
+/*Rating stars style*/
     </style>
 
+     <style type="text/css">
+        .Star {
+            background-image: url(yamifood/images/ratingStars/Star.gif);
+            height: 17px;
+            width: 17px;
+        }
+
+        .WaitingStar {
+            background-image: url(yamifood/images/ratingStars/WaitingStar.gif);
+            height: 17px;
+            width: 17px;
+        }
+
+        .FilledStar {
+            background-image: url(yamifood/images/ratingStars/FilledStar.gif);
+            height: 17px;
+            width: 17px;
+        }
+        </style>
 <!----------------------------------------------------Heading------------------------------------------------------------------------------>
 <div class="all-page-title page-breadcrumb" style="font-family:'Athiti', sans-serif">
 		<div class="container text-center">
@@ -395,9 +415,7 @@ div.scrollmenu a:hover {
 
 
 <!--Start slideshow-->
-    <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
-       
-    </asp:ScriptManager>
+    <%--
     <asp:UpdatePanel ID="UpdatePanel1"  runat="server" >
         <ContentTemplate >
             <div class="SScontainer" >
@@ -412,6 +430,8 @@ div.scrollmenu a:hover {
     <!--<FooterStyle BackColor="#CCCC99" ForeColor="Black" Wrap="False" />
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />-->
     <!--  <SelectedItemStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" /> -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
     <asp:DataList ID="DataList1" runat="server"  DataSourceID="DataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="5" DataKeyField="itemID" ForeColor="Black" GridLines="Horizontal" OnItemCommand="DataList1_ItemCommand" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" >
        
         <ItemTemplate>
@@ -433,17 +453,17 @@ div.scrollmenu a:hover {
           
             <asp:Label ID="itemSizeLabel" style="height:40px;" runat="server" Font-Size="Small" Font-Bold="true" Text="SIZE" />
                 <br />
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" >
                     <asp:ListItem Text = "item 1"></asp:ListItem>
                     <asp:ListItem Text="item 2"></asp:ListItem>
                     <asp:ListItem Text="Item 3"></asp:ListItem>
+               </asp:RadioButtonList>  
                     
-                    
-                </asp:RadioButtonList>
+                
                 
                 <asp:Label runat="server" Text="QUANTITY" Font-Size="Small" Font-Bold="true"></asp:Label>
                 <br />
-                <asp:Button CssClass="sizeButton" ID="btnMinus" runat="server" Text="-" BackColor="White" Width="30" height="30" BorderStyle="Solid" BorderWidth="1" BorderColor="#cccccc" position="inline-block" UseSubmitBehavior="false" CommandName="minusItem"  />&nbsp; &nbsp;<asp:Label ID="lblQuantity" runat="server" Text="1" ></asp:Label>&nbsp;&nbsp;<asp:Button CssClass="sizeButton" ID="btnAdd" runat="server" Text="+" BackColor="White" opacity="0.5" Width="30" height="30" BorderStyle="Solid" BorderColor="#cccccc" BorderWidth="1" float="left" position="absolute" CommandName="addItem" UseSubmitBehavior="false"  />
+                <asp:Button CssClass="sizeButton" ID="btnMinus" runat="server" Text="-" BackColor="White" Width="30" height="30" BorderStyle="Solid" BorderWidth="1" BorderColor="#cccccc" position="inline-block" UseSubmitBehavior="False"  />&nbsp; &nbsp;<asp:Label ID="lblQuantity" runat="server" Text="1" ></asp:Label>&nbsp;&nbsp;<asp:Button CssClass="sizeButton" ID="btnAdd" runat="server" Text="+" BackColor="White" opacity="0.5" Width="30" height="30" BorderStyle="Solid" BorderColor="#cccccc" BorderWidth="1" float="left" position="absolute" UseSubmitBehavior="False"   />
               
                 <br />
             <br />
@@ -451,22 +471,23 @@ div.scrollmenu a:hover {
                 <asp:Button ID="Button1" CssClass="btnProduct btn-lg btn-circle btn-outline-new-white" runat="server" Text="Add to Cart" /><br /><br />
                 
                 <asp:Label ID="Label10" runat="server" Text="YOUR RATING" Font-Bold="true"></asp:Label><br />
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
-
-                <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>&nbsp; &nbsp;
-                        <asp:Label runat="server" Text="0 Reviews" Font-Size="Small" ForeColor="red"></asp:Label><br />
-                        <asp:Label runat="server" Text="|" ForeColor="#999999"></asp:Label><asp:Label runat="server" Text="Review this item" Font-Size="Small" ForeColor="red"></asp:Label><br />
-
-
+               
+        <asp:Rating ID="Rating1" runat="server" AutoPostBack="true"
+            StarCssClass="Star" WaitingStarCssClass="WaitingStar" EmptyStarCssClass="Star"
+            FilledStarCssClass="FilledStar">
+        </asp:Rating>
+        <br />
+            <asp:Label ID="lbresult" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:TextBox runat="server" ID="txtreview" TextMode="MultiLine"></asp:TextBox>
+        <br />
+        <asp:Button runat="server" Text="Submit Review" ID="btnsubmit" CssClass="btnProduct btn-lg btn-circle btn-outline-new-white" UseSubmitBehavior="False" OnClick="btnsubmit_Click" />
                 </div>
           </div>
                
-            <br /><br /><br />
-            <div class="pc-tab">
+            <div></div><div></div><div></div><div></div>
+            <br /><br /><br /><br /><br /><br />
+            <div class="pc-tab" style="margin-left:250px;">
         <input checked="checked" id ="tab1" type="radio" name="pct" />
         <input id ="tab2" type="radio" name="pct" />
         <input id ="tab3" type="radio" name="pct" />
@@ -485,7 +506,7 @@ div.scrollmenu a:hover {
                 <table style="width: 100%;">
                     <tr>
                         <td style="font-weight:800; width:200px; font-size:20px">Description:</td>
-	<td style="font-size:18px"> <br /><br /><br />Apples are the ideal fruit to eat at any time, having a positive role in the achievement of nourish balance. Their skin may be green, yellow or reddish, and the meat taste ranges from a bitter to sweet flavour.</td>
+	<td style="font-size:18px"> <br /> <%# Eval("itemDesc") %></td>
                         
                     </tr>
                     <tr>
@@ -523,7 +544,7 @@ div.scrollmenu a:hover {
                 
                 <br />
          </asp:Panel>
-         <asp:Panel ID="revPanel2" runat="server" Visible="false">
+         <asp:Panel ID="revPanel2" runat="server" Visible="true">
                    <asp:Label ID="Label8" runat="server" Text="REVIEW TITLE" Font-Bold="true"></asp:Label>
                  <br />
                 <asp:TextBox ID="TextBox4" runat="server"  BorderStyle="Solid" BorderColor="Gray" BorderWidth="1" Height="40" style="border-bottom-left-radius:3px; border-top-left-radius:3px; border-bottom-right-radius:3px; border-top-right-radius:3px;"></asp:TextBox>

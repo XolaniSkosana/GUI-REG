@@ -88,7 +88,7 @@
              <asp:Label ID="Label1" runat="server" Text="Don't have an account?"></asp:Label>
          </div>
          <div class="input-box" style="text-align:center">
-         <a href="#">Register</a>
+         <a href="MainReg.aspx">Register</a>
          </div>
          </div>
    </form>

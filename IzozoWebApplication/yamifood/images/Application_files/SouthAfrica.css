@@ -1,0 +1,479 @@
+﻿
+/* "Layout Page"
+-----------------
+*/
+
+body {
+    font-family: "Helvetica Light Neue", "Helvetica Roman Neue", Helvetica, Georgia;
+    color: #4e4e4e;
+}
+
+#headerImage {
+    width:100%;
+    max-width:200px;
+    margin:10px 0px;
+}
+
+.container-large {
+    background-color: rgb(29, 60, 127);
+    margin: 0px;
+    padding: 0px;
+    height: 52px;
+}
+
+/* Menu Navigation 
+-------------------
+*/
+
+
+.navbar {
+    background-color: rgb(29, 60, 127);
+    border-radius: 0px;
+    height: 50px;
+    z-index:10;
+    font-family: "Helvetica Light Neue", "Helvetica Roman Neue", Helvetica, Georgia;
+}
+
+.navbar span {
+    background-color: #fff;
+}
+
+.navbar a:hover {
+    color: #fff;
+    font-size: 16px;
+    background-color: rgb(65, 125, 223) !important;
+}
+
+.navbar a,
+.navbar a:hover {
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    font-family: "Helvetica Light Neue", "Helvetica Roman Neue", Helvetica, Georgia !important;
+}
+
+.navbar a:active,
+.navbar a:focus {
+    background-color: rgb(65, 125, 223) !important;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+}
+
+.navbar .active {
+    background-color: rgb(65, 125, 223) !important;
+}
+
+.navbar .navbar-brand {
+    font-size: 16px;
+    color: #fff;
+}
+
+#myNavbar {
+    background-color: rgb(29, 60, 127);
+}
+
+/* Footer 
+-----------
+*/
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: #464646;
+    padding: 8px;
+}
+
+footer img {
+    width: 150px;
+}
+
+
+
+/* Search Panel
+---------------
+*/
+
+#AdvancedSearchPanel {
+    border-radius:0px;
+}
+
+.panel-heading {
+}
+
+.panel-title {
+    font-weight:bold;
+    color:#6D6E70;
+}
+
+.panel-title a {
+    display:block;
+    outline:none;
+}
+
+.panel-title a:hover,
+.panel-title a:active,
+.panel-title a:focus
+{
+    display:block;
+    outline:none;
+    text-decoration:none;
+   
+}
+
+.panel-body {
+}
+
+.input-group {
+     border-radius: 0px !important;
+}
+
+.input-group-addon {
+    border-radius: 0px !important;
+}
+
+.input-icon {
+    width:15px;
+}
+
+
+/* Page Content
+----------------
+*/
+
+#content {
+    padding-top: 20px;
+    margin-bottom:60px;
+}
+
+
+.job-container-button {
+    color: #fff;
+    background-color: rgb(29, 60, 127);
+    border-radius: 0px;
+    font-size: 12px;
+    outline: none;
+}
+
+.job-container-button:hover {
+    color: #fff;
+    background-color: rgb(29, 60, 127);
+    border-radius: 0px;
+    font-size: 12px;
+    outline: none;
+}
+
+.job-container-button:active,
+.job-container-button:focus {
+    color: #fff;
+    background-color: rgb(29, 60, 127);
+    border-radius: 0px;
+    font-size: 12px;
+    outline: none;
+}
+
+.label {
+    font-size:14px;
+}
+
+
+/* Job container 
+-----------------
+*/
+
+#JobSearchResultsContainer {
+
+}
+
+.pagination {
+    margin:0px 0px 10px 0px;
+
+}
+
+.page-selection > ul > li a,
+.page-selection > ul > li a:hover {
+    color:rgb(29, 60, 127);
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, a:active, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: rgb(29, 60, 127);
+    border-color: rgb(29, 60, 127);
+    color: #fff;
+    cursor: default;
+    z-index: 3;
+    outline:none;
+}
+
+
+.pager-bottom {
+    margin-bottom:50px;
+}
+
+/* Job Results
+---------------
+
+*/
+
+.paging-container > .panel > .panel-heading {
+    margin:0px;
+    padding:3px;
+    color: #4e4e4e;
+    font-family: "Helvetica Light Neue", "Helvetica Roman Neue", Helvetica, Georgia !important;
+}
+
+.JobTitleLabel {
+    font-size: 22px;
+    font-weight: 200;
+    cursor:pointer;
+}
+
+.paging-container > .panel{
+    border-radius:0px;
+}
+
+.paging-container > .panel > .panel-body {
+    font-size:14px;
+    padding:8px;
+}
+
+.paging-container > .panel > .panel-footer {
+    margin:0px;
+    padding:8px;
+    line-height:10px;
+}
+
+
+#SearchResultJobActionRow {
+   margin-top:10px;
+}
+
+#SearchResultJobActionRowLeft {
+    margin:0px 0px;
+}
+
+#SearchResultJobActionRowright {
+    margin:0px 0px;
+}
+
+/* Job Details  Modal
+-----------------------
+*/
+
+.close {
+    color:#fff !important;
+}
+
+#JobModal .modal-content {
+    border-radius:0px !important;
+}
+
+#JobDetailsModalContainer > .modal-header {
+    margin:0px;
+    padding:8px;
+    font-size:22px;
+    background-color:rgb(29, 60, 127);
+    color:#fff;
+}
+
+.jobdetails-labels {
+    color:rgb(29, 60, 127);
+    font-weight:bold;
+}
+
+#JobDetailsModalContainer > .modal-footer {
+    margin:0px;
+    padding:8px;
+}
+
+
+/* AddThis Buttons
+-------------------
+*/
+.at-icon-wrapper {
+    line-height: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.at-icon {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+
+
+/* Application Page
+-------------------
+*/
+
+#CandidateDetailsContainer {
+    background-color:#fff;
+    margin-bottom:80px;
+}
+
+#ScreeningQuestionsContainer {
+    background-color:#fff;
+    margin-bottom:80px;
+}
+
+.question-controls {
+    border-radius:0px;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    height: 60px;
+    max-height:200px;
+}
+
+
+/* Candidate Application Page */
+/*(Please complete the following details to continue:)*/
+.Candidate-Application-Main-Label {
+    color: rgb(29, 60, 127);
+    font-family: "Helvetica Light Neue", "Helvetica Roman Neue", Helvetica, Georgia !important;
+    font-size: 26px;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.dh-required {
+    border-left:3px solid rgb(65, 125, 223);
+}
+
+.spacing {
+    margin-bottom:5px;
+}
+
+.candidate-controls {
+    border-radius:0px;
+}
+
+/* File Upload Controls */
+
+.kv-fileinput-caption {
+    border-radius:0px !important;
+}
+
+.btn-file {
+    background-color:rgb(29, 60, 127);
+    border:1px solid rgb(29, 60, 127);
+    border-radius:0px;
+}
+
+/* Slider Checkboxes */
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+.validation-error {
+    box-shadow:#f00 0px 0px 3px;
+}
+
+
+/* IFrame */
+
+#IframeBody {
+     border:none !important;
+     padding:0px;
+     margin:0px;
+}
+
+#iframe-content {
+    padding:0px;
+    margin:0px;
+}
+
+
+.iframe-panel {
+    border:none;
+    padding-bottom:20px;
+}
+
+.iframe-panel-heading {
+    background-color:#fff !important;
+    color:#0077C1 !important;
+    border:none;
+}
+
+.iframe-job-details-heading {
+    font-size:28px;
+    color:#003B68;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.iframe-content
+{
+    width:99%;
+    padding:10px;
+}
+
+.iframe-jobdetails-label {
+    font-size:20px !important;
+}
+
+.iframe-content .row {
+    margin-bottom:15px;
+}
+
+#iframe-referral-header {
+    color:#003B68;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.supplierlogobackground {
+    background-color: #fff;
+}
+
+.panel-heading {
+    background-color: #fff !important;
+}
