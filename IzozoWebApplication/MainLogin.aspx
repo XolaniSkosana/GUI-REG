@@ -26,7 +26,7 @@
     </style>
 
   
-    <div class="wrapper">
+  <div class="wrapper">
    <h2> LOGIN</h2>
    <form method="post">
 
@@ -51,12 +51,13 @@
 
             <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Login" OnClick="Button1_Click" />
 <br /><br />
-             <asp:Label ID="Label1" runat="server" Text="Don't have an account?"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:Label ID="Label1" runat="server" style="text-align:left" Text="Don't have an account?"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          
          
-         <a href="MainReg.aspx" >Register</a>
+         <a style="text-align:right" href="MainReg.aspx" >Register</a>
+      </form>
 
-         </div>
+ </div>
      <!--<br /><br />
        <div class="input-grp">
          <div class="input-box">
@@ -66,8 +67,7 @@
          <a href="#">Register</a>
          </div>
          </div>-->
-   </form>
-</div>
+
 <br /><br />
 </asp:Content>
 

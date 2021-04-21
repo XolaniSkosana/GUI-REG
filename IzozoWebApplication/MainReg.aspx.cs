@@ -20,9 +20,22 @@ public partial class MainReg : System.Web.UI.Page
     {
 
     }
-
+    bool IsValidEmail(string email)
+    {
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(email);
+            
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        
         try
         {
             conn.Open();
@@ -33,7 +46,11 @@ public partial class MainReg : System.Web.UI.Page
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
 
-            if (TextBox5.Text != TextBox6.Text) //Check if passwords are the same
+            if(IsValidEmail(TextBox3.Text) == false)
+            {
+                RegularExpressionValidator1.ErrorMessage = "Invalid email address!";
+            }
+            else if (TextBox5.Text != TextBox6.Text) //Check if passwords are the same
             {
                 CompareValidator1.ErrorMessage = "Passwords must match!";
             }
@@ -83,5 +100,13 @@ public partial class MainReg : System.Web.UI.Page
             conn.Close();
 
         }
+    }
+
+    protected void RegularExpressionValidator1_Load(object sender, EventArgs e)
+    {
+        
+            
+            
+        
     }
 }

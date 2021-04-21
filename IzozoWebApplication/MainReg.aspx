@@ -68,7 +68,9 @@ li.active + li:after
          <div class="input-box">
              <asp:TextBox ID="TextBox3" placeholder="Email" required="required" CssClass="name" runat="server"></asp:TextBox>
             <i class="fa fa-envelope icon"></i>
-         </div>
+             </div><br />
+    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" Display="Dynamic" OnLoad="RegularExpressionValidator1_Load" ErrorMessage="Invalid email address" ForeColor="red" controlToValidate="TextBox3" ValidationExpression="\w+([-+.]\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+         
           <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is required" ForeColor="Red" ControlToValidate="Textbox3"></asp:RequiredFieldValidator>-->
       </div>
       <div class="input-grp">
@@ -101,9 +103,9 @@ li.active + li:after
  <asp:Button ID="Button1" runat="server" style="width: 100%; background: transparent; border: none; background: tan; color: #fff; padding:15px; border-radius: 4px; font-size: 16px; transition: all 0.35s ease;" Text="Register" OnClick="Button1_Click" />
       <br /><br />
  
-             <asp:Label ID="Label1" runat="server" Text="Already have an account?"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
-         <a href="MainLogin.aspx">Login</a>
+             <asp:Label ID="Label1" runat="server" style="text-align:left" Text="Already have an account?"></asp:Label>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a style="text-align:right" href="MainLogin.aspx">Login</a>
 
   
    </form>
